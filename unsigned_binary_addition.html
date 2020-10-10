@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><a name="unsigned+"></a><b>Adding unsigned numbers</b></p>
+    <blockquote>
+        <p>Adding unsigned numbers in binary is quite easy.
+        Recall that with 4 bit numbers we can represent numbers from 0 to 15. Addition is done
+        exactly like adding decimal numbers, except that you have only two digits (0 and 1). The
+        only number facts to remember are that</p>
+        <blockquote>
+          <p>0+0 = 0, with no carry,<br>
+          1+0 = 1, with no carry,<br>
+          0+1 = 1, with no carry,<br>
+          1+1 = 0, and you carry a 1.</p>
+        </blockquote>
+        <p>so to add the numbers 06<sub>10</sub>=0110<sub>2</sub> and 07<sub>10</sub>=0111<sub>2</sub>
+        (answer=13<sub>10</sub>=1101<sub>2</sub>) we can write out the calculation (the results of
+        any carry is shown along the top row, in italics).</p>
+        <div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Unsigned Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>   <i>1 </i><font size="2"> (carry)</font>
+         06
+        <u>+07</u>
+         13</pre>
+            </td>
+            <td><pre> <i> 110</i> <font size="2"> (carry)</font>
+        0110
+       <u>+0111</u>
+        1101</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><p>The only difficulty adding unsigned numbers occurs when you add numbers
+        that are too large. Consider 13+5.</p>
+        <div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Unsigned Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>   <i>0</i><font size="2"> (carry)</font>
+         13
+        <u>+05</u>
+         18</pre>
+            </td>
+            <td><pre> <i><b>1</b>101</i> <font size="2">(carry)</font>
+        1101
+       <u>+0101</u>
+       <b>1</b>0010</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><p>The result is a 5 bit number. So the carry bit from adding the two most
+        significant bits represents a results that <i>overflows</i> (because the sum is too big to
+        be represented with the same number of bits as the two addends).</p>
+      </blockquote>
+      <p><a name="signed+"></a><b>Adding signed numbers</b></p>
+      <blockquote>
+        <p>Adding signed numbers is not significantly different from adding unsigned numbers.
+        Recall that signed 4 bit numbers (2's complement) can represent numbers between -8 and 7.
+        To see how this addition works, consider three examples.</p>
+        <p align="center"><a name="AddSignInt"></a></p>
+        <div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Signed Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>&nbsp;
+         -2
+         <u>+3</u>
+          1</pre>
+            </td>
+            <td><pre> <i><b>1</b>110</i> <font size="2">(carry)</font>
+        1110
+       <u>+0011</u>
+        0001</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Signed Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>&nbsp;
+         -5
+         <u>+3</u>
+         -2</pre>
+            </td>
+            <td><pre> <i>011 </i> <font size="2">(carry)</font>
+        1011
+       <u>+0011</u>
+        1110</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Signed Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>&nbsp;
+         -4
+         <u>-3</u>
+         -7</pre>
+            </td>
+            <td><pre> <i><b>1</b>100 </i> <font size="2">(carry)</font>
+        1100
+       <u>+1101</u>
+        1001</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><p>In this case the extra carry from the most significant bit has no
+        meaning. With signed numbers there are two ways to get an overflow -- if the result is
+        greater than 7, or less than -8. Let's consider these occurrences now.</p>
+        <p align="center"><a name="AddSignInt2"></a></p>
+        <div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Signed Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>&nbsp;
+          6
+         <u>+3</u>
+          9</pre>
+            </td>
+            <td><pre> <i> 110 </i> <font size="2">(carry)</font>
+        0110
+       <u>+0011</u>
+        1001</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><div align="center"><center><table border="1" width="230">
+          <tbody><tr>
+            <td><b>Decimal</b> </td>
+            <td><b>Signed Binary</b> </td>
+          </tr>
+          <tr>
+            <td><pre>&nbsp;
+         -7
+        <u> -3</u>
+        -10</pre>
+            </td>
+            <td><pre> <i><b>1</b>001</i> <font size="2">(carry)</font>
+        1001
+       <u>+1101</u>
+        0110</pre>
+            </td>
+          </tr>
+        </tbody></table>
+        </center></div><p>Obviously both of these results are incorrect, but in this case overflow
+        is harder to detect. But you can see that if two numbers with the same sign (either
+        positive or negative) are added and the result has the opposite sign, an overflow has
+        occurred.</p>
+        
+      </blockquote>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+        
+        select {
+           
+            border: 2px solid #044284;
+            border-radius: 2px;
+            box-shadow: 1px 1px 2px #666;
+            font-size: 16px;
+            padding: 4px;
+        }
+        .inlongest{
+            width: 200px;
+            border: 2px solid #044284;
+            border-radius: 2px;
+            box-shadow: 1px 1px 2px #666;
+            font-size: 16px;
+            padding: 4px;
+
+        }
+        table {
+
+            
+            background: #eee;
+            border: solid 1px #bbbbbb;
+            padding: 5px;
+            margin:auto;
+          
+            
+        }
+
+        /* div.cointainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+    </style>
+    <script src="binary.js"></script>
+</head>
+
+<body>
+
+    <table width="50%" class="panel">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <input type="text" name="number1" maxlength="64" id="number1" value="10101010" class="inlongest">
+                    &nbsp;&nbsp;
+                    <select name="c2op" id="c2op">
+                        <option value="+" selected="">+</option>
+                        <option value="-">-</option>
+                        <option value="x">×</option>
+                        <option value="/">÷</option>
+                    </select>
+                    &nbsp;&nbsp;
+                    <input type="text" name="number2" maxlength="64" id="number2" value="11001100" class="inlongest">
+                    <div id="answer"></div>
+                    <span class="bigtext"> = ?</span>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <input type="hidden" name="calctype" value="op">
+                    <input type="image" src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/calculate.svg" value="Calculate"
+                        alt="Calculate" style="margin-top:10px;">
+                    <img src="//d26tpo4cm8sb6k.cloudfront.net/img/svg/clear.svg" onclick="clearyo()" class="clearbtn">
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>
