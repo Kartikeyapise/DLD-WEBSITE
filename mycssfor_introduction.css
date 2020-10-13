@@ -38,7 +38,7 @@ body {
 .col-md-9 {
     box-sizing: border-box;
     width: 80%;
-    margin-top: 611px;
+    margin-top: 400px;
     margin-left: 120px;
 }
 
@@ -82,7 +82,6 @@ p {
     background-color: rgb(204, 204, 204);
     color: black;
     border-radius: 15px;
-    padding: 30px;
 }
 
 h2 {
@@ -119,6 +118,7 @@ li {
 }
 
 .section1 {
+    margin-top: 93px;
     display: block;
     border: 2px solid black;
     border-radius: 15px;
