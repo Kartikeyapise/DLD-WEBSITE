@@ -1,0 +1,15 @@
+git init
+git status
+git add .
+git status
+git commit -m "second commit" .
+git status
+git remote add origin https://github.com/Kartikeyapise/Binary_Arithmatic_by_kartikeya.git
+git branch -M main
+git push -u origin main
+
+to upload on git:-
+git init && git add . && git commit -m "second commit" . && git branch -M main && git push -u origin main
+
+website link:-
+https://kartikeyapise.github.io/Binary_Arithmatic_by_kartikeya/
