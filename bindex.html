@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn  arithmatic. Includes interactive examples.">
+    <meta name="keywords" content="binary addition, binary multiplication, binary subtraction, binary division, binary arithmetic, binary">
+    <meta name="author" content="kartikeya">
+    <title>Binary-Arithmetic-calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link href="intrduction1.css" rel="stylesheet">
+    <link href="introduction2.css" rel="stylesheet">
+    <link href="introduction3.css" rel="stylesheet">
+    <link href="introduction4.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicons/favicon_binary.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script charset="utf-8" src="introduction.js"></script>
+
+</head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style="">
+    <div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+        <div class="container">
+
+            <ul class="nav nav-list">
+                <li class="my_bar"><a class="my_bar" href="./index.html">Home</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_introduction.html">Introduction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_addition.html">Binary Addition</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_multiplication.html">Binary Multiplication</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_subtraction.html">Binary Subtraction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_division.html">Binary Division</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_practice.html">Practice</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="my_ktitle">Binary Arithmetic</div>
+            <div class="col-md-9">
+
+
+                <h2 id="introduction" class="introduction">Introduction</h2>
+
+                <div class="pull-right">
+                    <style>
+                        .ryanstutorials-binary-top {
+                            width: 300px;
+                            height: 250px;
+                        }
+                        
+                        @media(min-width: 500px) {
+                            .ryanstutorials-binary-top {
+                                width: 336px;
+                                height: 280px;
+                            }
+                        }
+                        
+                        @media(min-width: 800px) {
+                            .ryanstutorials-binary-top {
+                                width: 336px;
+                                height: 280px;
+                            }
+                        }
+                    </style>
+                    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+                    <script async="" src="introduction2.js"></script>
+
+                    <ins class="adsbygoogle ryanstutorials-binary-top" style="display:inline-block" data-ad-client="ca-pub-9971420945046594" data-ad-slot="3575700871"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+                <div class="section1">
+                    <div class="col-custom content sidebar-both-content">
+
+                        <div class="w3-container hide-print" style="padding:20px 0;">
+
+                        </div>
+                        <div class="grid">
+                            <div class="col-half tablet-col-half">
+
+                                <!-- id="lesson" marks beginning of content -->
+                                <p class="text" id="lesson">Converting between different number bases is actually fairly simple, but the thinking behind it can seem a bit confusing at first. And while the topic of different bases may seem somewhat pointless to you, the rise of computers
+                                    and computer graphics has increased the need for knowledge of how to work with different (non-decimal) base systems, particularly binary systems (ones and zeroes) and hexadecimal systems (the numbers zero through nine,
+                                    followed by the letters A through F).</p>
+                                <div class="hide-print">
+                                    <!-- hiding YT text on printed pages -->
+
+                                </div>
+                                <!-- /hiding YT text on printed pages -->
+                            </div>
+                            <!-- col-half tablet-col-half -->
+
+                            <div class="col-half tablet-col-half hide-print">
+                                <!-- START MathHelp.com Lesson Page Insert -->
+                                <div id="mh_callout">
+
+
+                                    <!-- mh_lesson_display -->
+                                </div>
+                                <!-- mh_callout-->
+                                <!-- END MathHelp.com Lesson Page Insert -->
+                            </div>
+                            <!-- col-half tablet-col-half hide-print -->
+
+                        </div>
+                        <!-- grid -->
+
+                        <p class="text">In our customary base-ten system, we have digits for the numbers zero through nine. We do not have a single-digit numeral for "ten". (The Romans did, in their character "<span class="math">X</span>".) Yes, we write "<span class="math">10</span>",
+                            but this stands for "<span class="math">1</span> ten and <span class="math">0</span> ones". This is two digits; we have no single solitary digit that stands for "ten".</p>
+                        <p class="text">Instead, when we need to count to one more than nine, we zero out the ones column and add one to the tens column. When we get too big in the tens column -- when we need one more than nine tens and nine ones ("<span class="math">99</span>"),
+                            we zero out the tens and ones columns, and add one to the ten-times-ten, or hundreds, column. The next column is the ten-times-ten-times-ten, or thousands, column. And so forth, with each bigger column being ten times larger
+                            than the one before. We place digits in each column, telling us how many copies of that power of ten we need.</p>
+                        <!-- contracted ad for mobile -->
+                        <div class="alignright display-mobile nomargin hide-print" style="width:180px;">
+
+                            <div id="contract_ad" style="text-align:center; margin:10px 0px 10px 15px;">
+                                <ins data-revive-zoneid="2" data-revive-id="22fb12d5af67c91fb385a68f631b6803"></ins>
+                                <script src="//www.purplemath.com/mathads/www/delivery/asyncjs.php"></script>
+                            </div>
+                        </div>
+                        <!-- /contracted ad for mobile -->
+                        <p class="text">The only reason base-ten math seems "natural" and the other bases don't is that you've been doing base-ten since you were a child. And (nearly) every civilization has used base-ten math probably for the simple reason that we have
+                            ten fingers. If instead we lived in a cartoon world, where we would have only four fingers on each hand (count them next time you're watching TV or reading the comics), then the "natural" base system would likely have been
+                            base-eight, or "octal".</p>
+                        <h2 class="text answer">
+                            <a name="Binary"></a>Binary Numbers</h2>
+
+                        <!-- /non-mobile box ad -->
+                        <p class="text">Let's look at base-two, or binary, numbers. How would you write, for instance, <span class="math">12<sub>10</sub></span> ("twelve, base ten") as a binary number? You would have to convert to base-two columns, the analogue of base-ten
+                            columns. In base ten, you have columns or "places" for <span class="math">10<sup>0</sup> = 1</span>, <span class="math">10<sup>1</sup> = 10</span>, <span class="math">10<sup>2</sup> = 100</span>, <span class="math">10<sup>3</sup> = 1000</span>,
+                            and so forth. Similarly in base two, you have columns or "places" for <span class="math">2<sup>0</sup> = 1</span>, <span class="math">2<sup>1</sup> = 2</span>, <span class="math">2<sup>2</sup> = 4</span>, <span class="math">2<sup>3</sup> = 8</span>,
+                            <span class="math">2<sup>4</sup> = 16</span>, and so forth.</p>
+                        <p class="text">The first column in base-two math is the units column. But only "<span class="math">0</span>" or "<span class="math">1</span>" can go in the units column. When you get to "two", you find that there is no single solitary digit that
+                            stands for "two" in base-two math. Instead, you put a "<span class="math">1</span>" in the twos column and a "<span class="math">0</span>" in the units column, indicating "<span class="math">1</span> two and <span class="math">0</span>                            ones". The base-ten "two" (<span class="math">2<sub>10</sub></span>) is written in binary as <span class="math">10<sub>2</sub></span>.</p>
+                        <p class="text">A "three" in base two is actually "<span class="math">1</span> two and <span class="math">1</span> one", so it is written as <span class="math">11<sub>2</sub></span>. "Four" is actually two-times-two, so we zero out the twos column
+                            and the units column, and put a "<span class="math">1</span>" in the fours column; <span class="math">4<sub>10</sub></span> is written in binary form as <span class="math">100<sub>2</sub></span>. Here is a listing of the first
+                            few numbers:</p>
+                        <div class="clearfix_table" style="margin-left:20px;">
+                            <div class="section img-scroller" style="padding-top:5px; padding-bottom:5px;">
+
+                                <table border="1" style=" width:515px; border-collapse:collapse;">
+                                    <thead>
+                                        <tr>
+                                            <td style="width:70px;">
+                                                <p class="text" style="text-align:center;">decimal<br>(base <span class="math">10</span>)</p>
+                                            </td>
+                                            <td style="width:65px;">
+                                                <p class="text" style="text-align:center;">binary<br>(base <span class="math">2</span>)</p>
+                                            </td>
+                                            <td style="width:380px;">
+                                                <p class="text" style="text-align:left;">&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;expansion</p>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">0</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">0</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">2</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">10</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> two and zero ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">3</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">11</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> two and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">4</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">100</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> four, <span class="math">0</span> twos, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">5</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">101</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> four, <span class="math">0</span> twos, and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">6</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">110</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> four, <span class="math">1</span> two, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">7</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">111</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> four, <span class="math">1</span> two, and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">8</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1000</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">0</span> fours, <span class="math">0</span> twos, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">9</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1001</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">0</span> fours, <span class="math">0</span> twos, and <span class="math">1</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">10</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1010</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">0</span> fours, <span class="math">1</span> two, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">11</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1011</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">0</span> fours, <span class="math">1</span> two, and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">12</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1100</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">1</span> four, <span class="math">0</span> twos, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">13</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1101</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">1</span> four, <span class="math">0</span> twos, and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">14</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1110</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">1</span> four, <span class="math">1</span> two, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">15</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">1111</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text" style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> eight, <span class="math">1</span> four, <span class="math">1</span> two, and <span class="math">1</span> one</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <p class="math" style="text-align:center;">16</p>
+                                            </td>
+                                            <td>
+                                                <p class="math" style="text-align:center;">10000</p>
+                                            </td>
+                                            <td style="width:300px;">
+                                                <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;<span class="math">1</span> sixteen, <span class="math">0</span> eights, <span class="math">0</span> fours, <span class="math">0</span> twos, and <span class="math">0</span> ones</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="hide-print">
+                            <!-- hiding ad on printed pages -->
+
+                            <div class="in-lesson-resp-ad align-center">
+                                <!-- Media.net you-might-like box -->
+                                <div id="Media.net">
+                                    <script id="mNCC" language="javascript">
+                                        medianet_width = "600";
+                                        medianet_height = "250";
+                                        medianet_crid = "196071468";
+                                        medianet_versionId = "111299";
+                                        (function() {
+                                            var isSSL = 'https:' == document.location.protocol;
+                                            var mnSrc = (isSSL ? 'https:' : 'http:') + '//contextual.media.net/nmedianet.js?cid=8CU2W7CG1' + (isSSL ? '&https=1' : '');
+                                            document.write('<scr' + 'ipt type="text/javascript" id="mNSC" src="' + mnSrc + '"></scr' + 'ipt>');
+                                        })();
+                                    </script>
+                                    <script type="text/javascript" id="mNSC" src="https://contextual.media.net/nmedianet.js?cid=8CU2W7CG1&amp;https=1"></script>
+                                    <div id="1602342742574793458"><iframe id="_mN_gpt_196071468" marginwidth="0" marginheight="0" scrolling="NO" width="300" height="250" frameborder="NO" sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-pointer-lock allow-popups-to-escape-sandbox"
+                                            style="display: none !important;"></iframe></div>
+                                </div>
+
+                                <!-- /Media.net box -->
+                                <script type="text/javascript" data-cookieconsent="marketing">
+                                    $(function() {
+                                        postscribe('#Media.net', '<script id=\"mNCC\" language=\"javascript\">\n                    medianet_width = \"600\";\n                    medianet_height = \"250\";\n                    medianet_crid = \"196071468\";\n                    medianet_versionId = \"111299\";\n                    (function() {\n                    var isSSL = \'https:\' == document.location.protocol;\n                    var mnSrc = (isSSL ? \'https:\' : \'http:\') + \'\/\/contextual.media.net\/nmedianet.js?cid=8CU2W7CG1\' + (isSSL ? \'&https=1\' : \'\');\n                    document.write(\'<scr\' + \'ipt type=\"text\/javascript\" id=\"mNSC\" src=\"\' + mnSrc + \'\"><\/scr\' + \'ipt>\');\n                    })();\n                  <\/script>');
+                                    });
+                                </script>
+                            </div>
+                            <hr>
+                        </div>
+                        <!-- /hiding ad on printed pages -->
+                        <p class="text">Converting between binary and decimal numbers is fairly simple, as long as you remember that each digit in the binary number represents a power of two.</p>
+                        <ul>
+                            <li>
+                                <h4 class="text question">Convert <span class="math">101100101<sub>2</sub></span> to the corresponding base-ten number.</h4>
+                            </li>
+                        </ul>
+                        <div class="indent_prob">
+                            <p class="text">I will list the digits in order, as they appear in the number they've given me. Then, in another row, I'll count these digits off from the RIGHT, starting with zero:</p>
+                            <div class="clearfix_table" style="margin-left:20px;">
+                                <div class="section img-scroller" style="padding-top:5px; padding-bottom:5px;">
+                                    <table border="1" style=" width:560px; border-collapse:collapse;">
+                                        <tbody>
+                                            <tr>
+                                                <td style="width:83px;">
+                                                    <p class="text" style="text-align:right;">digits:&nbsp;</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">0</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">0</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">0</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">0</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width:83px;">
+                                                    <p class="text" style="text-align:right;">numbering:&nbsp;</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">8</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">7</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">6</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">5</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">4</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">3</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">2</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">1</p>
+                                                </td>
+                                                <td style="width:22px;">
+                                                    <p class="math narrow" style="text-align:center;">0</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <p class="text">The first row above (labelled "digits") contains the digits from the binary number; the second row (labelled "numbering") contains the power of <span class="math">2</span> (the base) corresponding to each digit. I will use
+                                this listing to convert each digit to the power of two that it represents:</p>
+                            <div class="indent_prob">
+                                <p class="math">1×2<sup>8</sup> + 0×2<sup>7</sup> + 1×2<sup>6</sup> + 1×2<sup>5</sup> + 0×2<sup>4</sup> + 0×2<sup>3</sup> + 1×2<sup>2</sup> + 0×2<sup>1</sup> + 1×2<sup>0</sup></p>
+                                <div class="indent_prob">
+                                    <p class="math">= 1×256 + 0×128 + 1×64 + 1×32 + 0×16 + 0×8 + 1×4 + 0×2 + 1×1</p>
+                                    <p class="math">= 256 + 64 + 32 + 4 + 1</p>
+                                    <p class="math">= 357</p>
+                                </div>
+                            </div>
+                            <p class="text">Then <span class="answer"><span class="math">101100101<sub>2</sub></span> converts to <span class="math">357<sub>10</sub></span>.</span>
+                            </p>
+                        </div>
+                        <hr>
+                        <p class="text">Converting decimal numbers to binaries is nearly as simple: just divide by <span class="math">2</span>.</p>
+                        <ul>
+                            <li>
+                                <h4 class="text question">Convert <span class="math">357<sub>10</sub></span> to the corresponding binary number.</h4>
+                            </li>
+                        </ul>
+                        <div class="indent_prob">
+                            <p class="text">To do this conversion, I need to divide repeatedly by <span class="math">2</span>, keeping track of the remainders as I go. Watch below:</p>
+                            <div class="indent_prob">
+                                <p><img src="https://www.purplemath.com/modules/base/baseanim.gif" alt="357 ÷ 2 = 178, R1; 178 ÷ 2 = 89, R0; 89 ÷ 2 = 44, R1; 44 ÷ 2 = 22, R0; 22 ÷ 2 = 11, R0; 11 ÷ 2 = 5, R1; 5 ÷ 2 = 2, R1; 2 ÷ 2 = 1, R0" width="60" height="218"></p>
+                            </div>
+                            <p class="text hide-screen"><em>The above graphic is animated on the "live" web page.</em></p>
+                            <p class="text">As you can see, after dividing repeatedly by <span class="math">2</span>, I ended up with these remainders:</p>
+                            <div class="indent_prob">
+                                <p><img style="background-color: white" src="https://www.purplemath.com/modules/base/base01.gif" alt="remainders, from the last to the first: 1, 0, 1, 1, 0, 0, 1, 0, 1" width="60" height="218"></p>
+                            </div>
+                            <p class="text">These remainders tell me what the binary number is. I read the numbers from around the outside of the division, starting on top with the final value and its remainder, and wrapping my way around and down the right-hand side
+                                of the sequential division. Then:</p>
+                            <div class="indent_prob">
+                                <p class="text answer"><span class="math">357<sub>10</sub></span> converts to <span class="math">101100101<sub>2</sub></span>.</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- WyzAnt mobile-only ad -->
+
+                        <!-- /WyzAnt mobile-only ad -->
+
+                        <!-- WyzAnt text-link ad for non-mobile -->
+
+
+
+                    </div>
+                    <!-- /hiding ads on printed pages -->
+                    <p class="text">This method of conversion will work for converting to any non-decimal base. Just don't forget to include that first digit on the top, before the list of remainders.</p>
+                    <p class="text">You can convert from base-ten (decimal) to any other base. When you study this topic in class, you will probably be expected to convert numbers to various other bases.
+
+
+
+
+
+                        <!-- 300x250 box for mobile only -->
+                        <div id="mobile_only_box"></div>
+                        <script type="text/javascript">
+                            window['nitroAds'].createAd('mobile_only_box', {
+                                "refreshLimit": 2,
+                                "refreshTime": 120,
+                                "renderVisibleOnly": false,
+                                "refreshVisibleOnly"
+                                true,
+                                "sizes": [
+                                    [300, 250]
+                                ],
+                                "report": {
+                                    "enabled": true,
+                                    "wording": "Report Ad",
+                                    "position": "bottom-center"
+                                }
+                            });
+                        </script>
+                        <!-- /300x250 box for mobile only -->
+
+                </div>
+            </div>
+            <hr>
+            <h2 id="addition">Binary Addition</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="additioncontrols">
+                        <input type="button" value="New Example" id="additiongenerate">
+                        <input type="button" value="Next Step" id="additionnextstep">
+                        <input type="button" value="Start Again" id="additionstartover">
+                    </div>
+                    <div id="additionwrapper">
+
+                        <div id="additionworking" class="workingarea">
+                            <div id="additiontoprow" class="workingrow">
+                                <div id="additiontoprow5" class="colour5" title="2^4 : 16">1</div>
+                                <div id="additiontoprow4" class="colour4" title="2^3 : 8">0</div>
+                                <div id="additiontoprow3" class="colour3" title="2^2 : 4">0</div>
+                                <div id="additiontoprow2" class="colour2" title="2^1 : 2">0</div>
+                                <div id="additiontoprow1" class="colour1" title="2^0 : 1">1</div>
+                                <div class="decimal">17</div>
+                            </div>
+                            <div id="additionsecondrow" class="workingrow">
+                                <div id="additionsecondrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                <div id="additionsecondrow4" class="colour4" title="2^3 : 8">1</div>
+                                <div id="additionsecondrow3" class="colour3" title="2^2 : 4">1</div>
+                                <div id="additionsecondrow2" class="colour2" title="2^1 : 2">0</div>
+                                <div id="additionsecondrow1" class="colour1" title="2^0 : 1">0</div>
+                                <div class="decimal">12</div>
+                            </div>
+                            <div id="additioncarryrow" class="workingrow">
+                                <div id="additioncarryrow6">&nbsp;</div>
+                                <div id="additioncarryrow5">&nbsp;</div>
+                                <div id="additioncarryrow4">&nbsp;</div>
+                                <div id="additioncarryrow3">&nbsp;</div>
+                                <div id="additioncarryrow2">&nbsp;</div>
+                                <div id="additioncarryrow1">&nbsp;</div>
+                            </div>
+                            <div id="additionanswerrow" class="workingrow">
+                                <div id="additionanswerrow6" title="2^5 : 32">&nbsp;</div>
+                                <div id="additionanswerrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                <div id="additionanswerrow4" class="colour4" title="2^3 : 8">&nbsp;</div>
+                                <div id="additionanswerrow3" class="colour3" title="2^2 : 4">&nbsp;</div>
+                                <div id="additionanswerrow2" class="colour2" title="2^1 : 2">&nbsp;</div>
+                                <div id="additionanswerrow1" class="colour1" title="2^0 : 1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgc-white p30 mb20 pm15">
+
+                    <h2>What is Binary Addition</h2>
+                    <p align="justify">The binary addition operation works similarly to the base 10 decimal system, except that it is a base 2 system. The binary system consists of only two digits, 1 and 0. Most of the functionalities of the computer system use the binary
+                        number system. The binary code uses the digits 1’s and 0’s to make certain processes turn off or on. The process of the addition operation is very familiar to the decimal system by adjusting to the base 2.</p>
+                    <p align="justify">Before attempting the binary addition process, we should have complete knowledge of how the place works in the binary number system. Because most of the modern digital computers and electronic circuits perform the binary operation
+                        by representing each bit as a voltage signal. The bit 0 represents the “OFF” state, and the bit 1 represents the “ON” state.</p>
+                    <p>
+                        <a id="rules" name="Rules"></a>
+                    </p>
+                    <h3>Rules of Binary Addition</h3>
+                    <p>Binary addition is much easier than the decimal addition when you remember the following tricks or rules. Using these rules, any binary number can be easily added. The four rules of binary addition are:</p>
+                    <ul>
+                        <li>0 + 0 = 0</li>
+                        <li>0 + 1 = 1</li>
+                        <li>1 + 0 = 1</li>
+                        <li>1 + 1 =10</li>
+                    </ul>
+                    <p>
+                        <a name="Method"></a>
+                    </p>
+                    <h3>How To Do Binary Addition?</h3>
+                    <p>Now, look at the example of the binary addition:101 + 101</p>
+                    <p><strong>Procedure for Binary Addition of Numbers:</strong></p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> First consider the 1’s column, and add the one’s column,( 1+1 ) and it gives the result 10 as per the condition of binary addition.</li>
+                        <li><strong>Step 2:</strong> Now, leave the 0 in the one’s column and carry the value 1 to the 10’s column.</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</p>
+                    <ul>
+                        <li><strong>Step 3: Now add 10’s place, 1+( 0 + 0 ) = 1.</strong> So, nothing carries to the 100’s place and leave the value 1 in the 10’s place</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————-</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 10</p>
+                    <ul>
+                        <li><strong>Step 4:</strong> Now add the 100’s place ( 1 + 1 ) = 10. Leave the value 0 in the 100’s place and carries 1 to the 1000’s place.</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————-</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; 1010</p>
+                    <p>So, the resultant of the addition operation is 1010.</p>
+                    <p>When you cross-check the binary value with the decimal value, the resultant value should be the same.</p>
+                    <p>The binary value 101 is equal to the decimal value 5</p>
+                    <p>So, 5 + 5 = 10</p>
+                    <p>The decimal number 10 is equal to the binary number 1010.<br>
+                        <a id="table" name="Table"></a>
+                    </p>
+                    <h3>Binary Addition Table</h3>
+                    <p>The table of adding two binary numbers 0 and 1 is given below:</p>
+                    <div class="table-responsive">
+                        <table class="table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td><strong>x</strong></td>
+                                    <td><strong>y</strong></td>
+                                    <td><strong>x+y</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">0&nbsp; &nbsp; &nbsp; (where 1 is carried over)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>You can see from the above table, x and y are the two binary numbers. So when we give the input for x = 0 and y = 0, then the output is equal to 0. When x = 0 or 1 and y = 1 or 0, then x+y = 1. But when both x and y are equal to 1,
+                        then their addition equals to 0, but the carryover number will equal to 1, which means basically&nbsp; 1 + 1 = 10 in binary addition, where 1 is carry forwarded to the next digit.<br>
+                        <a id="examples" name="Examples"></a>
+                    </p>
+                    <h3>Examples of Binary Addition</h3>
+                    <p>A few examples of binary additions are as follows:</p>
+                    <p><strong>Example 1:</strong> 10001 + 11101</p>
+                    <p><strong>Solution:</strong></p>
+                    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</strong></p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; 1 0 0 0 1</p>
+                    <p style="text-align: left;">(+) 1 1 1 0 1</p>
+                    <p>———————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp;1 0 1 1 1 0</p>
+                    <p><strong>Example 2:</strong> 10111 + 110001</p>
+                    <p><strong>Solution:</strong></p>
+                    <p style="text-align: left;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 1 1</strong></p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 0 1 1 1</p>
+                    <p>(+) 1 1 0 0 0 1</p>
+                    <p>———————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp;1 0 0 1 0 0 0</p>
+
+
+
+                </div>
+            </div>
+            <hr>
+            <h2 id="multiplication">Binary Multiplication</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="multiplicationcontrols">
+                        <input type="button" value="Generate new example" id="multiplicationgenerate">
+                        <input type="button" value="Next Step" id="multiplicationnextstep">
+                        <input type="button" value="Start Over" id="multiplicationstartover">
+                    </div>
+
+
+                    <div id="multiplicationwrapper">
+                        <div id="multiplicationworking" class="workingarea">
+                            <div id="multiplicationtoprow" class="workingrow">
+                                <div id="multiplicationtoprow5" class="colour5">1</div>
+                                <div id="multiplicationtoprow4" class="colour4">1</div>
+                                <div id="multiplicationtoprow3" class="colour3">0</div>
+                                <div id="multiplicationtoprow2" class="colour2">0</div>
+                                <div id="multiplicationtoprow1" class="colour1">1</div>
+                                <div class="decimal">25</div>
+                            </div>
+                            <div id="multiplicationsecondrow" class="workingrow">
+                                <div id="multiplicationsecondrow3">1</div>
+                                <div id="multiplicationsecondrow2">0</div>
+                                <div id="multiplicationsecondrow1">1</div>
+                                <div class="decimal">5</div>
+                            </div>
+                            <div id="multiplicationanswerrow1" class="workingrow">
+                                <div id="multiplication1answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication1answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication1answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication1answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication1answerrow1" class="colour1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationanswerrow2" class="workingrow">
+                                <div id="multiplication2answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication2answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication2answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication2answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication2answerrow1" class="colour1">&nbsp;</div>
+                                <div id="multiplication2answerrow0">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationanswerrow3" class="workingrow">
+                                <div id="multiplication3answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication3answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication3answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication3answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication3answerrow1" class="colour1">&nbsp;</div>
+                                <div id="multiplication3answerrow01">&nbsp;</div>
+                                <div id="multiplication3answerrow02">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationtotalrow" class="workingrow">
+                                <div id="multiplicationtotalrow8">&nbsp;</div>
+                                <div id="multiplicationtotalrow7">&nbsp;</div>
+                                <div id="multiplicationtotalrow6">&nbsp;</div>
+                                <div id="multiplicationtotalrow5">&nbsp;</div>
+                                <div id="multiplicationtotalrow4">&nbsp;</div>
+                                <div id="multiplicationtotalrow3">&nbsp;</div>
+                                <div id="multiplicationtotalrow2">&nbsp;</div>
+                                <div id="multiplicationtotalrow1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgc-white p30 mb20 pm15">
+
+
+                    <div class="h1-banner-title">
+                        <h1>Binary Multiplication</h1>
+                    </div>
+
+
+
+                    <!-- article -->
+                    <article id="post-1065208" class="post-1065208 page type-page status-publish hentry">
+
+                        <p>Binary multiplication is one of the four binary arithmetic. The other three fundamental operations are addition, subtraction and division. In the case of a binary operation , we deal with only two digits, i.e. 0 and 1. The operation
+                            performed while finding the binary product is similar to the conventional multiplication method. The four major steps in binary digit multiplication are:
+                        </p>
+                        <div class="table-responsive">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">0 × 0 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">0 × 1 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">1 × 0 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">1 × 1 = 1&nbsp;&nbsp;</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><span style="font-weight: 400;">Note: The binary product of the two binary numbers 1 and 1 is equal to 1 only. And no additional number is borrowed or carried forward in this operation.</span></p>
+                        <p><span style="font-weight: 400;">Based on the above specification, we will solve here the problems online based on the multiplication of binary numbers.&nbsp;&nbsp;</span></p>
+                        <p align="justify">In this section, you will get answers for the questions about binary multiplication, including:</p>
+                        <ul>
+                            <li>What is Binary multiplication?</li>
+                            <li>Procedure to multiply two binary numbers</li>
+                            <li>Steps to Solve Binary multiplication using examples</li>
+                        </ul>
+                        <h2>What is Binary Multiplication?</h2>
+                        <p align="justify">The binary multiplication operation is actually a process of addition and shifting operation. This process has to be continued until all the multiplier is done, and finally, the addition operation is made.</p>
+                        <p align="justify">Similar to the decimal system, the multiplication of the binary numbers is done by multiplying the multiplicand with the multiplier. It is noted that the multiplication by zero makes all the bits zero, and this step may be ignored
+                            in the intermediate steps. The multiplication by 1 makes all the multiplicand value unchanged.</p>
+                        <h3><span style="font-weight: 400;">Binary Multiplication Table</span></h3>
+                        <p><span style="font-weight: 400;">The multiplication table for binary numbers is given below.</span></p>
+                        <div class="table-responsive">
+                            <table class="table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Binary Number</b></td>
+                                        <td><b>Multiplication Value</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0 x 0</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1 x 0</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0 x 1</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1 x 1</span></td>
+                                        <td><span style="font-weight: 400;">1</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <h2>Binary Multiplication Rules</h2>
+                        <p>Binary multiplication, like other binary operations, is much easier, unlike the decimal multiplication when you remember the following multiplication rules. The rules of binary multiplication are:</p>
+                        <ul>
+                            <li>0 × 0 = 0</li>
+                            <li>0 × 1 = 0</li>
+                            <li>1 × 0 = 0</li>
+                            <li>1 × 1 = 1&nbsp;<span style="font-weight: 400;">[No borrow or carry method is applicable here]</span></li>
+                        </ul>
+                        <p><span style="font-weight: 400;">As per these rules, it very clear, that if the binary multiplication includes 0, then it will result in zero itself. Hence,</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 0 and 0 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 0 and 1 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 1 and 0 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">But,</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 1 and 1 is equal to 1.</span></p>
+                        <p><span style="font-weight: 400;">To differentiate the rules for multiplication of binary numbers from other binary operations such as addition, subtraction and division, please refer to below given table:</span></p>
+                        <div class="table-responsive">
+                            <table class="table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">Addition</span></td>
+                                        <td><span style="font-weight: 400;">Subtraction</span></td>
+                                        <td><span style="font-weight: 400;">Division</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0+0 = 0</span></td>
+                                        <td><span style="font-weight: 400;">0-0 = 0</span></td>
+                                        <td><span style="font-weight: 400;">0÷0 = 0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0+1 = 1</span></td>
+                                        <td><span style="font-weight: 400;">0-1 = 1 (1 is borrowed)</span></td>
+                                        <td><span style="font-weight: 400;">0÷1 = 0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1+0 = 1</span></td>
+                                        <td><span style="font-weight: 400;">1-0 = 1</span></td>
+                                        <td><span style="font-weight: 400;">1÷1 = 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1+1 = 0 (1 is carry forwarded)</span></td>
+                                        <td><span style="font-weight: 400;">1-1 = 0</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2>Examples of Binary Multiplication</h2>
+                        <p>Some binary multiplication examples are given below for a better understanding of this concept.</p>
+                        <p><strong>Example 1</strong>: Solve 1010 × 101</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>1010 × 101</p>
+                        <p>1010</p>
+                        <p>(×) 101</p>
+                        <p>—————–</p>
+                        <p>1010</p>
+                        <p>0000</p>
+                        <p>——————</p>
+                        <p>01010 ……. First Intermediate Sum</p>
+                        <p>1010</p>
+                        <p>——————–</p>
+                        <p>110010</p>
+                        <p>Comparison with Decimal values:</p>
+                        <p>1010<sub>2 </sub>= 10<sub>10</sub></p>
+                        <p>1010<sub>2</sub> = 5<sub>10</sub></p>
+                        <p>10 x 5 = 50<sub>10</sub></p>
+                        <p>(110010)<sub>2</sub> = 50<sub>10</sub></p>
+                        <p>Another example of binary multiplication with a decimal point is as follows:</p>
+                        <p><strong>Question:</strong> 1011.01 × 110.1</p>
+                        <p><strong>Solution:</strong></p>
+                        <p><img class="wp-image-1065211" src="https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps.png" alt="Binary Multiplication-steps" srcset="https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps.png 379w, https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps-250x183.png 250w, https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps-120x88.png 120w"
+                                sizes="(max-width: 379px) 100vw, 379px"></p>
+                        <p>Here, the decimal point is placed three places from the least significant bit. Because, the binary number 1011.01, the decimal point is 2 places from the LSB and 110.1 the decimal point is placed 1 place from the LSB.</p>
+                    </article>
+                    <!-- /article -->
+
+                </div>
+            </div>
+            <hr>
+            <h2 id="subtraction">Binary Subtraction</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="subtractioncontrols">
+                        <input type="button" value="Generate new example" id="subtractiongenerate">
+                        <input type="button" value="Next Step" id="subtractionnextstep">
+                        <input type="button" value="Start Over" id="subtractionstartover">
+                    </div>
+
+                    <div id="subtractionwrapper">
+                        <div id="subtractionworking" class="workingarea">
+                            <div id="subtractioncarry2row" class="workingrow">
+                                <div id="subtractioncarry2row5" class="colour5">&nbsp;</div>
+                                <div id="subtractioncarry2row4" class="colour4">&nbsp;</div>
+                                <div id="subtractioncarry2row3" class="colour3">&nbsp;</div>
+                                <div id="subtractioncarry2row2" class="colour2">&nbsp;</div>
+                                <div id="subtractioncarry2row1" class="colour1">&nbsp;</div>
+                            </div>
+                            <div id="subtractioncarry1row" class="workingrow">
+                                <div id="subtractioncarry1row5" class="colour5">&nbsp;</div>
+                                <div id="subtractioncarry1row4" class="colour4">&nbsp;</div>
+                                <div id="subtractioncarry1row3" class="colour3">&nbsp;</div>
+                                <div id="subtractioncarry1row2" class="colour2">&nbsp;</div>
+                                <div id="subtractioncarry1row1" class="colour1">&nbsp;</div>
+                            </div>
+                            <div id="subtractiontoprow" class="workingrow">
+                                <div id="subtractiontoprow5" class="colour5">1</div>
+                                <div id="subtractiontoprow4" class="colour4">0</div>
+                                <div id="subtractiontoprow3" class="colour3">0</div>
+                                <div id="subtractiontoprow2" class="colour2">1</div>
+                                <div id="subtractiontoprow1" class="colour1">1</div>
+                                <div class="decimal">19</div>
+                            </div>
+                            <div id="subtractionsecondrow" class="workingrow">
+                                <div id="subtractionsecondrow4" class="colour4">1</div>
+                                <div id="subtractionsecondrow3" class="colour3">0</div>
+                                <div id="subtractionsecondrow2" class="colour2">1</div>
+                                <div id="subtractionsecondrow1" class="colour1">1</div>
+                                <div class="decimal">11</div>
+                            </div>
+                            <div id="subtractionanswerrow" class="workingrow">
+                                <div id="subtractionanswerrow5" class="colour5">&nbsp;</div>
+                                <div id="subtractionanswerrow4" class="colour4">&nbsp;</div>
+                                <div id="subtractionanswerrow3" class="colour3">&nbsp;</div>
+                                <div id="subtractionanswerrow2" class="colour2">&nbsp;</div>
+                                <div id="subtractionanswerrow1" class="colour1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h1-banner-title">
+                    <h1>Binary Subtraction</h1>
+                </div>
+
+
+
+                <!-- article -->
+                <article id="post-1065194" class="post-1065194 page type-page status-publish hentry">
+
+                    <p><span style="font-weight: 400;">Binary subtraction is one of the four binary operations, where we perform the subtraction method for two binary numbers (comprising of only two digits, 0 and 1). This operation is similar to the basic arithmetic subtraction performed on decimal numbers in Maths. Hence, when we subtract 1 from 0, we need to borrow 1 from the next higher order digit, to reduce the digit by 1 and the remainder left here is also 1. Read other 
+                            binary operation<span style="font-weight: 400;"> here.</span></p>
+                    <div class="table-responsive">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><span style="font-weight: 400;">Binary Subtraction</span>
+                                        <p></p>
+                                        <ul>
+                                            <li style="font-weight: 400;"><span style="font-weight: 400;">0 – 0 = 0</span></li>
+                                            <li style="font-weight: 400;"><span style="font-weight: 400;">1 – 0 = 1</span></li>
+                                            <li style="font-weight: 400;"><span style="font-weight: 400;">1 – 1 = 0</span></li>
+                                            <li style="font-weight: 400;"><span style="font-weight: 400;">0 – 1 = 1 (Borrow 1)</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><span style="font-weight: 400;"><br>
+    
+                            <p align="justify">Can you subtract binary numbers? The answer is yes. Subtraction of binary numbers is an arithmetic operation similar to the subtraction of decimal numbers or base 10 numbers. For example, 1 + 1 + 1 = 3 in base 10 and 1 + 1 + 1
+                                = 11 in binary number system. When you add and subtract binary numbers, you will need to be careful when borrowing as these will take place more often.</p>
+                            <p align="justify">When you subtract several columns of binary digits, you must take into account the borrowing.&nbsp;<span style="font-weight: 400;">When 1 is to be subtracted from 0, the result is 1 where 1 is borrowed from the next highest order bit or digit.</span></p>
+
+                    <p>
+                        <a id="table" name="Table"></a>
+                    </p>
+                    <h2><span style="font-weight: 400;">Binary Subtraction Table</span></h2>
+                    <p><span style="font-weight: 400;">The subtraction of binary numbers is given by:</span></p>
+                    <div class="table-responsive">
+                        <table class="table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td><b>Binary Number</b></td>
+                                    <td><b>Subtraction Value</b></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0 – 0</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1 – 0</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0 – 1</span></td>
+                                    <td><span style="font-weight: 400;">1 (Borrow 1 from next high order digit)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1 – 1</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><strong>Note:&nbsp;</strong></p>
+                    <p><span style="font-weight: 400;">The addition of two binary number 1 and 1 is 10, where we consider 0 and carry forward 1 to next high order. But in the case of subtraction of 1 and 1, the answer is equal to 0, and nothing is carried forward.</span></p>
+                    <p><span style="font-weight: 400;">In case of decimal subtraction, when 1 is subtracted from 0, then we borrow 1 from next preceding number and make it 10, and after subtraction, it results in 9, i.e. 10 – 1 = 9. But for binary subtraction, it results in 1 only.</span><br>
+                        <a id="rules" name="Rules"></a>
+                    </p>
+                    <h2>Binary Subtraction Rules</h2>
+                    <p><strong>Rules and tricks:&nbsp;</strong>Binary subtraction is much easier than the decimal subtraction when you remember the following rules:</p>
+                    <ul>
+                        <li>0 – 0 = 0</li>
+                        <li>0 – 1 = 1 ( with a borrow of 1)</li>
+                        <li>1 – 0 = 1</li>
+                        <li>1 – 1 = 0</li>
+                    </ul>
+                    <p>Now, look at the example of the binary subtraction: 101 from 1010<br>
+                        <a id="how-to-subtract-binary-numbers" name="How to Subtract Binary Numbers?"></a>
+                    </p>
+                    <h2>How to Subtract Binary Numbers?</h2>
+                    <p>Learn how to do binary subtraction using the example: 1010 – 101</p>
+                    <h3>Procedure to do Binary Subtraction:</h3>
+                    <p>1010</p>
+                    <p>(-) 101</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> First consider the 1’s column, and subtract the one’s column,( 0 – 1 ) and it gives the result 1 as per the condition of binary subtraction with a borrow of 1 from the 10’s place.</li>
+                        <li><strong>Step 2:</strong> After borrowed 1 from the 10’s column, the value 1 in the 10’s column is changed into the value 0</li>
+                    </ul>
+                    <p>1 Borrow</p>
+                    <p>1 0 1 0</p>
+                    <p>(-) 1 0 1</p>
+                    <p>——————</p>
+                    <p>1</p>
+                    <ul>
+                        <li><strong>Step 3:</strong> So, subtract the value in the 10’s place, ( 0 – 0 ) = 0.</li>
+                    </ul>
+                    <p>1 Borrow</p>
+                    <p>1 0 1 0</p>
+                    <p>(-) 1 0 1</p>
+                    <p>——————</p>
+                    <p>0 1</p>
+                    <ul>
+                        <li><strong>Step 4:</strong> Now subtract the values in 100’s place. Borrow 1 from the 1000’s place ( 0 – 1 ) = 1.</li>
+                    </ul>
+                    <p>1 1 Borrow</p>
+                    <p>1 0 1 0</p>
+                    <p>(-) 1 0 1</p>
+                    <p>——————</p>
+                    <p>0 1 0 1</p>
+                    <p>So, the resultant of the subtraction operation is 0101.</p>
+                    <p>When you cross-check the binary subtraction resultant value with the decimal value, the resultant value should be the same.</p>
+                    <p>The binary value 1010 is equal to the decimal value 10, and 101 is equivalent to 5</p>
+                    <p>So, 10 – 5 = 5</p>
+                    <p>Therefore, the decimal number 5 is equal to the binary number 0101.<br>
+                        <a id="solved-examples" name="Solved Examples"></a>
+                    </p>
+                    <h2>Binary Subtraction Examples</h2>
+                    <p>Consider other examples of binary subtractions are as follows:</p>
+                    <p><strong>Example 1:</strong> 0011010 – 001100</p>
+                    <p><strong>Solution:</strong></p>
+                    <p>1 1 Borrow</p>
+                    <p>0 0 1 1 0 1 0</p>
+                    <p>(-) 0 0 1 1 0 0</p>
+                    <p>——————</p>
+                    <p>0 0 0 1 1 1 0</p>
+                    <p><strong>Decimal Equivalent :</strong></p>
+                    <p>0 0 1 1 0 1 0 = 26</p>
+                    <p>0 0 1 1 0 0 = 12</p>
+                    <p>Therefore, 26 – 12 = 14</p>
+                    <p>The binary resultant 0 0 0 1 1 1 0 is equivalent to the 14</p>
+                    <p><strong>Example 2:</strong> 0100010 – 0001010</p>
+                    <p><strong>Solution:</strong></p>
+                    <p>1 1 Borrow</p>
+                    <p>0 1 0 0 0 1 0 = 34<sub>10</sub></p>
+                    <p>(-) 0 0 0 1 0 1 0 = 10<sub>10</sub></p>
+                    <p>——————</p>
+                    <p>0 0 1 1 0 0 0 = 24<sub>10</sub><br>
+                        <a id="using-one-complement" name="Binary Subtraction Using One's Complement"></a>
+                    </p>
+
+            </div>
+            <hr>
+            <h2 id="division">Binary Division</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="divisioncontrols">
+                        <input type="button" value="Generate new example" id="divisiongenerate">
+                        <input type="button" value="Next Step" id="divisionnextstep">
+                        <input type="button" value="Start Over" id="divisionstartover">
+                    </div>
+
+                    <div id="divisionwrapper">
+                        <div id="divisionworking" class="workingarea">
+                            <div id="divisionanswerrow" class="workingrow">
+                                <div id="divisionanswerrow4" class="colour4">&nbsp;</div>
+                                <div id="divisionanswerrow3" class="colour3">&nbsp;</div>
+                                <div id="divisionanswerrow2" class="colour2">&nbsp;</div>
+                                <div id="divisionanswerrow1" class="colour1">&nbsp;</div>
+                                <div class="rightdecimal">&nbsp;</div>
+                            </div>
+                            <div id="divisiondivisor" class="workingrow">
+                                <div id="divisiondivisor3">1</div>
+                                <div id="divisiondivisor2">0</div>
+                                <div id="divisiondivisor1">0</div>
+                                <div class="decimal">4</div>
+                            </div>
+                            <div id="divisiondividend" class="workingrow">
+                                <div id="divisiondividend5" class="colour5">1</div>
+                                <div id="divisiondividend4" class="colour4">0</div>
+                                <div id="divisiondividend3" class="colour3">1</div>
+                                <div id="divisiondividend2" class="colour2">0</div>
+                                <div id="divisiondividend1" class="colour1">1</div>
+                                <div class="rightdecimal">21</div>
+                            </div>
+                            <div id="divisionworkingarea"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <!-- article -->
+                    <article id="post-1069011" class="post-1069011 page type-page status-publish hentry">
+
+                        <h2>What is Binary Division?</h2>
+                        <p align="justify">The binary division operation is similar to the base 10 decimal system, except the base 2. The division&nbsp;is probably one of the most challenging operations of the basic arithmetic operations. There are different ways to solve
+                            division problems using binary operations. Long division is one of them and the easiest and the most efficient way. This section has been designed to answer questions about binary division, including:</p>
+                        <ul>
+                            <li>What is Binary division?</li>
+                            <li>Procedure to add two binary numbers</li>
+                            <li>Examples to Solve Binary division</li>
+                        </ul>
+                        <h2>Binary Division Rules</h2>
+                        <p>The binary division is much easier than the decimal division when you remember the following division rules. The main rules of the binary division include:</p>
+                        <ul>
+                            <li>1÷1 = 1</li>
+                            <li>1÷0 = 0</li>
+                            <li>0÷1 = Meaningless</li>
+                            <li>0÷0 = Meaningless</li>
+                        </ul>
+                        <p>Similar to the decimal number system, the binary division is similar, which follows the four-step process:</p>
+                        <ul>
+                            <li>Divide</li>
+                            <li>Multiply</li>
+                            <li>Subtract</li>
+                            <li>Bring down</li>
+                        </ul>
+                        <p><strong>Important Note:&nbsp;</strong>Binary division follows the long division method to find the resultant in an easy way.</p>
+                        <h3>Comparison with Decimal Value</h3>
+                        <p>(01111100)<sub>2</sub> = (1111100)<sub>2 </sub>= 124<sub>10</sub></p>
+                        <p>(0010)<sub>2</sub> = (10)<sub>2</sub> = 2<sub>10</sub></p>
+                        <p>You will get the resultant value as 62 when you divide 124 by 2.</p>
+                        <p>So the binary equivalent of 62 is (111110)<sub>2 </sub></p>
+                        <p>(111110)<sub>2 </sub>= 62<sub>10</sub></p>
+                        <p>Both the binary and the decimal system produce the same result.</p>
+                        <h2>Binary Division Examples</h2>
+                        <p><strong>Question:</strong> Solve 01111100 ÷ 0010</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given</p>
+                        <p>01111100 ÷ 0010</p>
+                        <p>Here the dividend is 01111100, and the divisor is 0010</p>
+                        <p>Remove the zero’s in the <strong>Most Significant Bit</strong> in both the dividend and divisor, that doesn’t change the value of the number.</p>
+                        <p>So the dividend becomes 1111100, and the divisor becomes 10.</p>
+                        <p>Now, use the long division method.</p>
+                        <p><img class="alignnone" src="https://cdn1.byjus.com/wp-content/uploads/2020/02/binary-division-1.png" alt="Binary Division Example-1" width="315" height="470"></p>
+                        <ul>
+                            <li><strong>Step 1:</strong> First, look at the first two numbers in the dividend and compare with the divisor. Add the number 1 in the quotient place. Then subtract the value, you get 1 as remainder.</li>
+                            <li><strong>Step 2:</strong> Then bring down the next number from the dividend portion and do the step 1 process again</li>
+                            <li><strong>Step 3:</strong> Repeat the process until the remainder becomes zero by comparing the dividend and the divisor value.</li>
+                            <li><strong>Step 4:</strong> Now, in this case, after you get the remainder value as 0, you have zero left in the dividend portion, so bring that zero to the quotient portion.</li>
+                        </ul>
+                        <p>Therefore, the resultant value is quotient value which is equal to 111110</p>
+                        <p>So, 01111100 ÷ 0010 = 111110</p>
+                        <p><strong>Example 2:</strong> Solve using the long division method:&nbsp;101101 ÷ 101</p>
+                        <p><strong>Solution:</strong></p>
+                        <p><img class="alignnone" src="https://cdn1.byjus.com/wp-content/uploads/2020/02/Bianry-division-2.png" alt="Binary Division Example-2" width="286" height="169"></p>
+                        <p>So, when you bring down the fourth bit of the dividend, it does not match with the divisor. In order to bring down the 5<sup>th</sup> and 6<sup>th</sup> bit of the dividend, add two zeros in the quotient value.</p>
+                    </article>
+                </div>
+            </div>
+
+            <hr>
+            <h2 id="activities">PRACTICE</h2>
+            <div class="section1">
+                <p>Use this section to generate questions for practice.Check if the answer is correct</p>
+                <div class="yooo">
+                    <ul class="activities">
+                        <li><span class="questiontitle">Addition</span> <br><input type="button" value="Generate" id="questionadditiongenerate"> <span id="additionactivity" class="activityquestion"></span> <input type="button" value="Show answer" id="additionshow">                            <span id="additionanswer" class="activityanswer"></span></li>
+                        <hr>
+                        <li><span class="questiontitle">Multiplication </span> <br><input type="button" value="Generate" id="questionmultiplicationgenerate"> <span id="multiplicationactivity" class="activityquestion"></span> <input type="button" value="Show answer"
+                                id="multiplicationshow"> <span id="multiplicationanswer" class="activityanswer"></span></li>
+                        <hr>
+                        <li><span class="questiontitle">Subtraction</span><br> <input type="button" value="Generate" id="questionsubtractiongenerate"> <span id="subtractionactivity" class="activityquestion"></span> <input type="button" value="Show answer"
+                                id="subtractionshow"> <span id="subtractionanswer" class="activityanswer"></span></li>
+                        <hr>
+                        <li><span class="questiontitle">Division</span><br> <input type="button" value="Generate" id="questiondivisiongenerate"> <span id="divisionactivity" class="activityquestion"></span> <input type="button" value="Show answer" id="divisionshow">                            <span id="divisionanswer" class="activityanswer"></span> </li>
+                        <hr>
+                        <li><span class="questiontitle"></span> <input type="button" value="Generate all" id="generateall">
+                        </li>
+                    </ul>
+                </div>
+                <div class="block-center">
+                    <style>
+                        .ryanstutorials-binary-bottom {
+                            width: 320px;
+                            height: 50px;
+                        }
+                        
+                        @media(min-width: 500px) {
+                            .ryanstutorials-binary-bottom {
+                                width: 468px;
+                                height: 60px;
+                            }
+                        }
+                        
+                        @media(min-width: 750px) {
+                            .ryanstutorials-binary-bottom {
+                                width: 728px;
+                                height: 90px;
+                            }
+                        }
+                    </style>
+                    <script async="" src="introduction4.js"></script>
+                    <!-- RyansTutorials Binary Bottom -->
+                    <ins class="adsbygoogle ryanstutorials-binary-bottom" style="display:inline-block" data-ad-client="ca-pub-9971420945046594" data-ad-slot="9482633679"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+
+
+
+                <hr>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="container-fluid footer-background margin-top">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h4>THANK YOU FOR VISITING THIS WEBSITE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20188827-12', 'ryanstutorials.net');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="introduction5.js"></script>
+    <script src="introduction6.js"></script>
+    <script src="introduction.js"></script>
+
+
+
+
+
+
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe>
+    <iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+    <link rel="stylesheet" href="mycssfor_introduction.css">
+    <style>
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_1280.jpg");
+            background-repeat: repeat-y;
+        }
+        
+        td {
+            padding: 10px;
+        }
+    </style>
+</body>
+
+</html>

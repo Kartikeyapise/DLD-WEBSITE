@@ -1,11 +1,11 @@
-git init
+git init 
 git status
 git add .
 git status
-git commit -m "second commit" .
+git commit -m "first commit" .
 git status
-git remote add origin https://github.com/Kartikeyapise/Binary_Arithmatic_by_kartikeya.git
 git branch -M main
+git remote add origin https://github.com/Kartikeyapise/Binary_Arithmatic_by_kartikeya.git
 git push -u origin main
 
 to upload on git:-

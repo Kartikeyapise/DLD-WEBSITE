@@ -27,7 +27,7 @@
             /* background: #d1fb5d; */
             width: 70%;
             margin: auto;
-            /* margin-top: 100px; */
+            margin-top: 100px;
             /* z-index: -9; */
             /* background-image: url("https://cdn.pixabay.com/photo/2018/05/14/16/54/cyber-3400789_1280.jpg");
             /* background-repeat: repeat-y; */
@@ -52,17 +52,11 @@
             background-size: contain;
             color: #351919;
         }
-        
-        .box:hover {
-            cursor: pointer;
-            background-image: url("https://cdn.pixabay.com/photo/2016/11/08/17/15/abacus-1808917_1280.jpg");
-            background-size: cover;
-        }
     </style>
 </head>
 
 <body>
-    <div id="mytitle">DIGITAL LOGIC DESIGN Dr. Neeraj Goel</div>
+    <div id="mytitle">DIGITAL LOGIC DESIGN</div>
     <div class="boxes">
         <div id="box1" class="box">STATE <br> MACHINES
             <hr>
@@ -70,29 +64,16 @@
         <div id="box2" class="box">BINARY ARITHMETIC
             <hr>
         </div>
-        <div id="box3" class="box">CIRCUIT <br> SIMULATION
-            <hr>
-        </div>
     </div>
 
 </body>
 <script>
-    // function mouseOver(){
-
-    // }
-    document.getElementById("box3").addEventListener("click", function() {
-        window.location.href = "./boolean_algebra.html";
+    document.getElementById("box1").addEventListener("click", function() {
+        window.location.href = "http://www.w3schools.com";
     });
     document.getElementById("box2").addEventListener("click", function() {
-        window.location.href = "./bindex.html";
+        window.location.href = "http://www.w3schools.com";
     });
-    document.getElementById("box1").addEventListener("click", function() {
-        window.location.href = "./s_r_theory.html";
-    });
-    // // document.getElementById("box1").onmouseover = function() {mouseOver()};
-    // // document.getElementById("box2").onmouseover = function() {mouseOver()};
-    // document.getElementById("box1").style.cursor = "pointer";
-    // document.getElementById("box2").style.cursor = "pointer";
 </script>
 
 </html>
