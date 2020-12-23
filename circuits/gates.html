@@ -1087,34 +1087,34 @@
             </div>
         </div>
     </div>
-    <div class="moduleProperty noSelect effect1 properties-panel draggable-panel draggable-panel-css guide_2 ui-draggable ui-draggable-handle ui-draggable-disabled" id="moduleProperty" style="z-index: 100">
-        <div id="moduleProperty-title" class="noSelect panel-header" style="display: none;">Properties
-            <span class="fas fa-minus-square minimize" style="display: none;"></span>
-            <span class="fas fa-external-link-square-alt maximize" style="display: inline;"></span>
+    <!-- <div class="moduleProperty noSelect effect1 properties-panel draggable-panel draggable-panel-css guide_2 ui-draggable ui-draggable-handle ui-draggable-disabled" id="moduleProperty" style="z-index: 100"> -->
+    <div id="moduleProperty-title" class="noSelect panel-header" style="display: none;">Properties
+        <span class="fas fa-minus-square minimize" style="display: none;"></span>
+        <span class="fas fa-external-link-square-alt maximize" style="display: inline;"></span>
+    </div>
+    <div class="panel-body" style="display: none;">
+        <div id="moduleProperty-inner">
+            <div id="moduleProperty-header">Input</div>
+            <p><span>BitWidth:</span> <input class="objectPropertyAttribute" type="number" name="newBitWidth" min="1" max="32" value="1" style="display: none;">
+                <div class="input-group  ">
+                    <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
+                        placeholder="">
+                    <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
+                </div>
+            </p>
+            <p><span>Delay:</span> <input class="objectPropertyAttribute" type="number" name="changePropagationDelay" min="0" max="100000" value="0" style="display: none;">
+                <div class="input-group  ">
+                    <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
+                        placeholder="">
+                    <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
+                </div>
+            </p>
+            <p><span>Label:</span> <input class="objectPropertyAttribute" type="text" name="setLabel" autocomplete="off" value=""></p>
+            <p><span>Label Direction:</span> <select class="objectPropertyAttribute" name="newLabelDirection"><option value="RIGHT">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="" selected="">LEFT</option><option value="UP" <option="">UP</option></select></p>
+            <p><span>Orientation:</span> <select class="objectPropertyAttribute" name="newDirection"><option value="RIGHT" selected="">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="">LEFT</option><option value="UP" <option="">UP</option></select></p>
+            <p class="btn-parent"><button id="HelpButton" class="btn btn-primary btn-xs" type="button">ⓘ Help</button></p>
         </div>
-        <div class="panel-body" style="display: none;">
-            <div id="moduleProperty-inner">
-                <div id="moduleProperty-header">Input</div>
-                <p><span>BitWidth:</span> <input class="objectPropertyAttribute" type="number" name="newBitWidth" min="1" max="32" value="1" style="display: none;">
-                    <div class="input-group  ">
-                        <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
-                            placeholder="">
-                        <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
-                    </div>
-                </p>
-                <p><span>Delay:</span> <input class="objectPropertyAttribute" type="number" name="changePropagationDelay" min="0" max="100000" value="0" style="display: none;">
-                    <div class="input-group  ">
-                        <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
-                            placeholder="">
-                        <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
-                    </div>
-                </p>
-                <p><span>Label:</span> <input class="objectPropertyAttribute" type="text" name="setLabel" autocomplete="off" value=""></p>
-                <p><span>Label Direction:</span> <select class="objectPropertyAttribute" name="newLabelDirection"><option value="RIGHT">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="" selected="">LEFT</option><option value="UP" <option="">UP</option></select></p>
-                <p><span>Orientation:</span> <select class="objectPropertyAttribute" name="newDirection"><option value="RIGHT" selected="">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="">LEFT</option><option value="UP" <option="">UP</option></select></p>
-                <p class="btn-parent"><button id="HelpButton" class="btn btn-primary btn-xs" type="button">ⓘ Help</button></p>
-            </div>
-        </div>
+    </div>
     </div>
     <div id="customShortcutDialog" title="Keybinding Preference">
         <div id="edit" tabindex="0">
