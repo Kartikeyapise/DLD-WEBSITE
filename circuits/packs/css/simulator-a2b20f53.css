@@ -717,13 +717,14 @@ li.CodeMirror-hint-active {
     background-color: var(--bg-icons)
 }
 
-.panelHeader:after,
+
+/* .panelHeader:after,
 .panelHeader:before {
     background-color: $borderDefault;
     background-color: var(--br-primary);
     border: 1px solid $borderDefault;
     border: 1px solid var(--br-primary)
-}
+} */
 
 .icon,
 .ui-accordion .ui-accordion-content {
@@ -2423,8 +2424,10 @@ input:checked+.slider:before {
     visibility: hidden!important
 }
 
-!Adding color variables to root,
-required later for hokey binding@font-face {
+
+/*!Adding color variables to root, required later for hokey binding*/
+
+@font-face {
     font-family: Raleway;
     src: url(https://fonts.gstatic.com/s/raleway/v18/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff)
 }
@@ -2517,7 +2520,10 @@ input[type=text]:focus {
     background: 0 0
 }
 
-!Global styles ends here.noSelect {
+
+/*!Global styles ends here*/
+
+.noSelect {
     -moz-user-select: none;
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -2898,7 +2904,8 @@ input[type=text]:focus {
     border-radius: 3px
 }
 
-.panelHeader:after,
+
+/* .panelHeader:after,
 .panelHeader:before {
     content: "";
     height: 8px;
@@ -2910,7 +2917,7 @@ input[type=text]:focus {
     transform: translateY(-50%) rotate(132deg);
     transition: .2s ease-out;
     background-color: #fff
-}
+} */
 
 .panelHeader:after {
     transform: translate(325%, -50%) rotate(226deg)
@@ -3949,8 +3956,4 @@ input[type=range]::-webkit-slider-thumb {
     padding: 3px;
     margin-left: 5px;
     border-radius: 3px
-}
-
-.mydelete {
-    display: none;
 }
