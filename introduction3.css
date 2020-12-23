@@ -87,6 +87,7 @@ ul.activities li {
 }
 
 #tutorialheader.affix {
+    background-color: rgb(8, 61, 41);
     top: 0px;
     left: 0px;
     right: 0px;
@@ -97,8 +98,9 @@ ul.activities li {
 }
 
 #tutorialheader.affix-top {
+    background-color: rgb(8, 61, 41);
     padding: 21px;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
     right: 0px;

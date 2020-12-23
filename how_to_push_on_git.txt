@@ -9,7 +9,7 @@ git remote add origin https://github.com/Kartikeyapise/Binary_Arithmatic_by_kart
 git push -u origin main
 
 to upload on git:-
-git init && git add . && git commit -m "second commit" . && git branch -M main && git push -u origin main
+git init && git add . && git commit -m "my commit" . && git branch -M main && git push -u origin main
 
 website link:-
 https://kartikeyapise.github.io/Binary_Arithmatic_by_kartikeya/
