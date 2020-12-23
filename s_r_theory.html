@@ -152,33 +152,33 @@
         Fig. (1). In this example, only the input-output sequences are important; the internal states are used merely to provide the required sequences. For this reason, the states marked inside the circles are denoted by letter symbols instead of their
         binary values. This is in constant to a binary counter, where the binary value sequence of the state themselves is taken as the outputs.
         <br>
-        <img src="../images/photo1.png">
+        <img src="./images/photo1.png">
         <br> There are an infinite number of input sequences that may be applied to the circuit; each results in a unique output sequence. As an example, consider the input sequence [01010110100] starting from the initial state (a). Each input of 0 or
         1 produces an output of 0 or 1 and causes the circuit to go to the next state. the output and state sequence for the given input sequence as follows: With the circuit in initial state (a), an input of 0 produces an output of 0 and the circuit
         remains in state (a). With present state (a) and input of 1, the output is 0 and the next state is (b). With present state (b) and input of 0, the output is 0 and next state is (c). Continuing this process, we find the complete sequence to be
         as follows:
         <br>
-        <img src="../images/photo2.png" alt="">
+        <img src="./images/photo2.png" alt="">
         <br> In each column, we have the present state, input value, and output value. The next state is written on top of the next column. It is important to realize that in this circuit, the states themselves are of secondary importance because we are
         interested only in output sequences caused by input sequences. Now let us assume that we have found a sequential circuit whose state diagram has less than seven states and we wish to compare it with the circuit whose state diagram is given by
         Fig. (1). If identical input sequences are applied to the two circuits and identical outputs occur for all input sequences, then the two circuits are said to be equivalent (as far as the input-output is concerned) and one may be replaced by the
         other. The problem of state reduction is to find ways of reducing the number of states in a sequential circuit without altering the input-output relationships. We now proceed to reduce the number of states for this example. First, we need the
         state table; it is more convenient to apply procedures for state reduction using a table rather than a diagram. The state table of the circuit is listed in Table (1) and is obtained directly from the state diagram.
         <br>
-        <img src="../images/photo3.png" alt="">
+        <img src="./images/photo3.png" alt="">
         <br> An algorithm for the state reduction of a completely specified state table is given here without proof:"Two states are said to be equivalent if, for each member of the set of inputs, they give exactly the same output and send the circuit
         either to the same state or to an equivalent state." When two states are equivalent, one of them can be removed without altering the input-output relationships.Now apply this algorithm to Table (1). Going through the state table, we look for two
         present states that go to the same next state and have the same output for both input combinations. States (g) and (e) are two such states: they both go to states (a & se) are equivalent and one of these states can be removed. The procedure of
         removing a state and replacing it by its equivalent is demonstrated in Table (2). The row with present state (g) is removed and state (g) is replaced by state (e) each time it occurs in the next-state columns.
         <br>
-        <img src="../images/photo4.png" alt="">
+        <img src="./images/photo4.png" alt="">
         <br>
-        <img src="../images/photo5.png" alt="">
+        <img src="./images/photo5.png" alt="">
         <br> Present state (f) now has next states (e and f) and outputs 0 and 1 for x=0 and x=1, respectively. The same next states and outputs appear in the row with present (d). Therefore, states (f and d) are equivalent and state (f) can be removed
         and replaced by (d). The final reduced table is shown in Table (3). The state diagram for the reduced table consists of only five states and is shown in Fig. (2). This state diagram satisfies the original input-output specifications and will produce
         the required output sequence for any given input sequence. The following list derived from the state diagram of Fig. (2) is for the input sequence used previously (note that the same output sequence results, although the state sequence is different):
         <br>
-        <img src="../images/photo6.png" alt="">
+        <img src="./images/photo6.png" alt="">
         <br> In fact, this sequence is exactly the same as that obtained for Fig. (1), if we replace (g by e and f by d). Checking each pair of states for possible equivalency can be done systematically by means of a procedure that employs an implication
         table. The implication table consists of squares, one for every suspected pair of possible equivalent states. By judicious use of the table, it is possible to determine all pairs of equivalent states in a state table. The use of the implication
         table for reducing the number of states in a state table is demonstrated in the next section. The sequential circuit of this example was reduced from seven to five state. In general, reducing the number of states in a state table may result in
@@ -197,7 +197,7 @@
         is as follows. First, we place a cross in any square corresponding to a pair of states whose outputs are not equal for every input. In this case, state (c) has a different output than any other state, so a cross is placed in the two squares of
         row (c) and the four squares of column (c). There are nine other squares in this category in the implication table.
         <br>
-        <img src="../images/photo7.png" alt="">
+        <img src="./images/photo7.png" alt="">
         <br> Next, we enter in the remaining squares the pairs of states that are implied by the pair of states representing the squares. We do that starting from the top square in the left column and going down and then proceeding with the next column
         to the right. From the state table, we see that pair (a,b) imply (d,e), so (d,e) is recorded in the square defined by column (a and row b). We proceed in this manner until the entire table is completed. Note that states (d,e) are equivalent because
         they go to the same next state and have the some output. Therefore, a check mark is recorded in the square defined by column (d and row e), indicating that the two states are equivalent and independent of any implied pair. The next step is to
@@ -205,12 +205,12 @@
         by (a) and (f) is marked with a cross next to (c,d) because the pair (c,d) defines a square that contains a cross. This procedure is repeated until no additional squares can be crossed out. Finally, all the squares that have no crosses are recorded
         with check marks. These squares define pairs of equivalent states. In this example, the equivalent states are: (a,b) (d,e) (d,g) (e,g)
         <br>
-        <img src="../images/photo8.png" alt="">
+        <img src="./images/photo8.png" alt="">
         <br> We now combine pairs of states into larger groups of equivalent states. The last three pairs can be combined into a set of three equivalent states (d,e,g) because each one of the states in the group is equivalent to the other two. The final
         partition of the states consists of the equivalent states found from the implication table, together with all the remaining states in the state table that are not equivalent to any other state. (a,b) (c) (d,e,g) (f) This means that Table (5) can
         be reduced from seven states to four states, one for each member of the above partition. The reduced table is obtained by replacing state (b by a and states e and g by d).
         <br>
-        <img src="../images/photo9.png" alt="">
+        <img src="./images/photo9.png" alt="">
         <br>
     </div>
 
