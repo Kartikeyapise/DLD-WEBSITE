@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y;
+            background-size: cover; */
+            background-size: contain;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        img {
+            margin: auto;
+        }
+        
+        .text-gray-700 {
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            color: rgb(31, 4, 4);
+        }
+        /* table {
+            height: 94px;
+            width: 61%;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+         */
+        
+        table {
+            margin: auto;
+            display: table;
+            border-collapse: separate;
+            /* border: black; */
+            /* border-width: 2px; */
+            box-sizing: border-box;
+            text-indent: initial;
+            white-space: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            /* border-color: rgb(187, 7, 7); */
+            font-variant: normal;
+        }
+        
+        .border {
+            border-width: 2px;
+            border-color: black;
+            /* background-color: chartreuse; */
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        /*         
+        tr {
+          
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./boolean_algebra.html" class="mr-5 hover:text-gray-900">BOOLEAN-ALGEBRA</a>
+                <a href="./bol_A_examples.html" class="mr-5 hover:text-gray-900">EXAMPLES</a>
+                <a href="./logic_editor.html" class="mr-5 hover:text-gray-900">TRUTH-TABLE-GENERATOR</a>
+                <a href="./circuits/gates.html" class="mr-5 hover:text-gray-900">GATE-SIMULATION</a>
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">BOOLEAN ALGEBRA</div>
+    <div class="content">
+        <p>The table used to represent the boolean expression of a logic gate function is commonly called a Truth Table. A logic gate truth table shows each possible input combination to the gate or circuit with the resultant output depending upon the combination
+            of these input(s).</p><br>
+        <p>For example, consider a single 2-input logic circuit with input variables labelled as A and B. There are “four” possible input combinations or 22 of “OFF” and “ON” for the two inputs. However, when dealing with Boolean expressions and especially
+            logic gate truth tables, we do not general use “ON” or “OFF” but instead give them bit values which represent a logic level “1” or a logic level “0” respectively.</p><br>
+        <p>Then the four possible combinations of A and B for a 2-input logic gate is given as: </p>
+
+        <ul class="pointslist">
+            <li><span class="ntxt"> Input Combination 1. – “OFF” – “OFF” or (&nbsp;0, 0&nbsp;)</span></li>
+            <li><span class="ntxt"> Input Combination 2. – “OFF” – “ON” or (&nbsp;0, 1&nbsp;)</span></li>
+            <li><span class="ntxt"> Input Combination 3. – “ON” – “OFF” or (&nbsp;1, 0&nbsp;)</span></li>
+            <li><span class="ntxt"> Input Combination 4. – “ON” – “ON” or (&nbsp;1, 1&nbsp;)</span></li>
+        </ul>
+        <p>Therefore, a 3-input logic circuit would have 8 possible input combinations or 2<sup>3</sup> and a 4-input logic circuit would have 16 or 2<sup>4</sup>, and so on as the number of inputs increases. Then a logic circuit with <span class="ntxt">“n”</span>            number of inputs would have <span class="ntxt">2<sup>n</sup></span> possible input combinations of both “OFF” and “ON”.</p>
+        <p>So in order to keep things simple to understand, in this tutorial we will only deal with standard <b>2-input</b> type logic gates, but the principals are still the same for gates with more than two inputs.</p>
+        <p>Then the Truth tables for a 2-input <span class="ntxt">AND</span> Gate, a 2-input <span class="ntxt">OR</span> Gate and a single input <span class="ntxt">NOT</span> Gate are given as:</p>
+        <h2>2-input AND Gate</h2>
+        <p>For a 2-input <span class="ntxt">AND</span> gate, the output <span class="ntxt">Q</span> is true if BOTH input <span class="ntxt">A</span> “<span class="ntxt">AND</span>” input <span class="ntxt">B</span> are both true, giving the Boolean Expression
+            of: (&nbsp;<span class="ntxt">Q = A and B</span>&nbsp;).</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo22.gif" alt="boolean algebra AND gate truth table" title="Boolean Algebra AND Gate Truth Table" width="222" height="91" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo22.gif" alt="boolean algebra AND gate truth table" title="Boolean Algebra AND Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = A.B</td>
+                    <td colspan="3">Read as A AND B gives Q</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>Note that the Boolean Expression for a two input <span class="ntxt">AND</span> gate can be written as: <span class="ntxt">A.B</span> or just simply <span class="ntxt">AB</span> without the decimal point.</p>
+        <h2>2-input OR (Inclusive OR) Gate</h2><br>
+        <p>For a 2-input <span class="ntxt">OR</span> gate, the output <span class="ntxt">Q</span> is true if EITHER input <span class="ntxt">A</span> “<span class="ntxt">OR</span>” input <span class="ntxt">B</span> is true, giving the Boolean Expression
+            of: (&nbsp;<span class="ntxt">Q = A or B</span>&nbsp;).</p><br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo23.gif" alt="boolean algebra OR gate truth table" title="Boolean Algebra OR Gate Truth Table" width="222" height="91" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo23.gif" alt="boolean algebra OR gate truth table" title="Boolean Algebra OR Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = A+B</td>
+                    <td colspan="3">Read as A OR B gives Q</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>NOT Gate (Inverter)</h2>
+        <p>For a single input <span class="ntxt">NOT</span> gate, the output <span class="ntxt">Q</span> is ONLY true when the input is “<span class="ntxt">NOT</span>” true, the output is the inverse or complement of the input giving the Boolean Expression
+            of: (&nbsp;<span class="ntxt">Q = NOT A</span>&nbsp;).</p><br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="2">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo21.gif" alt="boolean algebra NOT gate truth table" title="Boolean Algebra NOT Gate Truth Table" width="180" height="95" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo21.gif" alt="boolean algebra NOT gate truth table" title="Boolean Algebra NOT Gate Truth Table" width="180" height="95"></noscript></td>
+                    <td style="width:115px;">A</td>
+                    <td style="width:115px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = NOT A or <span class="otxt">A</span></td>
+                    <td colspan="2">Read as inversion of A gives Q</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <p class="text-left">The <span class="ntxt">NAND</span> and the <span class="ntxt">NOR</span> Gates are a combination of the <span class="ntxt">AND</span> and <span class="ntxt">OR</span> Gates respectively with that of a <span class="ntxt">NOT</span> Gate (inverter).</p>
+        <h2>2-input NAND (Not AND) Gate</h2>
+        <p>For a 2-input <span class="ntxt">NAND</span> gate, the output <span class="ntxt">Q</span> is NOT true if BOTH input <span class="ntxt">A</span> and input <span class="ntxt">B</span> are true, giving the Boolean Expression of: (&nbsp;<span class="ntxt">Q = not(A AND B)</span>&nbsp;).</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo32.gif" alt="NAND gate truth table" title="NAND Gate Truth Table" width="222" height="91" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo32.gif" alt="NAND gate truth table" title="NAND Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = <span class="otxt">A .B</span></td>
+                    <td colspan="3">Read as A AND B gives NOT-Q</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>2-input NOR (Not OR) Gate</h2>
+        <p>For a 2-input <span class="ntxt">NOR</span> gate, the output <span class="ntxt">Q</span> is true if BOTH input <span class="ntxt">A</span> and input <span class="ntxt">B</span> are NOT true, giving the Boolean Expression of: (&nbsp;<span class="ntxt">Q = not(A OR B)</span>&nbsp;).</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo33.gif" alt="NOR gate truth table" title="NOR Gate Truth Table" width="222" height="91" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo33.gif" alt="NOR gate truth table" title="NOR Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = <span class="otxt">A+B</span></td>
+                    <td colspan="3">Read as A OR B gives NOT-Q</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p>As well as the standard logic gates there are also two special types of logic gate function called an <span class="ntxt">Exclusive-OR</span> Gate and an <span class="ntxt">Exclusive-NOR</span> Gate. The Boolean expression to indicate an Exclusive-OR
+            or Exclusive-NOR function is to a symbol with a plus sign inside a circle, (&nbsp;<span class="mtxt">⊕</span>&nbsp;).</p>
+        <p>The switching actions of both of these types of gates can be created using the above standard logic gates. However, as they are widely used functions they are now available in standard IC form and have been included here as reference.</p>
+        <h2>2-input EX-OR (Exclusive OR) Gate</h2>
+        <p>For a 2-input <span class="ntxt">Ex-OR</span> gate, the output <span class="ntxt">Q</span> is true if EITHER input <span class="ntxt">A</span> or if input <span class="ntxt">B</span> is true, but NOT both giving the Boolean Expression of: (&nbsp;
+            <span class="ntxt">Q = (A and NOT B)</span> or <span class="ntxt">(NOT A and B)</span>&nbsp;).</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo34.gif" alt="Ex-OR gate truth table" title="Ex-OR Gate Truth Table" width="222" height="91" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo34.gif" alt="Ex-OR gate truth table" title="Ex-OR Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = A&nbsp;<span class="ntxt">⊕</span>&nbsp;B</td>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <h2>2-input EX-NOR (Exclusive NOR) Gate</h2>
+        <p>For a 2-input <span class="ntxt">Ex-NOR</span> gate, the output <span class="ntxt">Q</span> is true if BOTH input <span class="ntxt">A</span> and input <span class="ntxt">B</span> are the same, either true or false, giving the Boolean Expression
+            of: (&nbsp;<span class="ntxt">Q = (A and B)</span> or <span class="ntxt">(NOT A and NOT B)</span>&nbsp;).</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:285px;">Symbol</td>
+                    <td colspan="3">Truth Table</td>
+                </tr>
+                <tr>
+                    <td rowspan="5"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo35.gif" alt="Ex-NOR gate truth table" title="Ex-NOR Gate Truth Table" width="222" height="91" data-lazy-src="/wp-content/uploads/2018/05/boolean-boo35.gif?is-pending-load=1"
+                            srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" class=" jetpack-lazy-image"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo35.gif" alt="Ex-NOR gate truth table" title="Ex-NOR Gate Truth Table" width="222" height="91"></noscript></td>
+                    <td style="width:75px;">A</td>
+                    <td style="width:75px;">B</td>
+                    <td style="width:75px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Boolean Expression Q = <span class="otxt">A&nbsp;⊕&nbsp;B</span></td>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>Summary of 2-input Logic Gates</h2>
+        <p>The following Truth Table compares the logical functions of the 2-input logic gates above.</p>
+
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td colspan="2">Inputs</td>
+                    <td colspan="6">Truth Table Outputs For Each Gate</td>
+                </tr>
+                <tr>
+                    <td style="width:50px;">A</td>
+                    <td style="width:50px;">B</td>
+                    <td style="width:60px;">AND</td>
+                    <td style="width:70px;">NAND</td>
+                    <td style="width:60px;">OR</td>
+                    <td style="width:60px;">NOR</td>
+                    <td style="width:70px;">EX-OR</td>
+                    <td style="width:80px;">EX-NOR</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <p class="text-left">The following table gives a list of the common logic functions and their equivalent Boolean notation.</p>
+        <br>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td style="width:150px;">Logic Function</td>
+                    <td style="width:200px;">Boolean Notation</td>
+                </tr>
+                <tr>
+                    <td>AND</td>
+                    <td>A.B</td>
+                </tr>
+                <tr>
+                    <td>OR</td>
+                    <td>A+B</td>
+                </tr>
+                <tr>
+                    <td>NOT</td>
+                    <td><span class="otxt">A</span></td>
+                </tr>
+                <tr>
+                    <td>NAND</td>
+                    <td><span class="otxt">A .B</span></td>
+                </tr>
+                <tr>
+                    <td>NOR</td>
+                    <td><span class="otxt">A+B</span></td>
+                </tr>
+                <tr>
+                    <td>EX-OR</td>
+                    <td>(A.<span class="otxt">B</span>)&nbsp;+&nbsp;(<span class="otxt">A</span>.B) or A&nbsp;<span class="ntxt">⊕</span>&nbsp;B</td>
+                </tr>
+                <tr>
+                    <td>EX-NOR</td>
+                    <td>(A.B)&nbsp;+&nbsp;(<span class="otxt">A</span>.<span class="otxt">B</span>)&nbsp;or&nbsp;<span class="otxt">A&nbsp;⊕&nbsp;B</span></td>
+                </tr>
+            </tbody>
+        </table><br>
+        <p>2-input logic gate truth tables are given here as examples of the operation of each logic function, but there are many more logic gates with 3, 4 even 8 individual inputs. The multiple input gates are no different to the simple 2-input gates above,
+            So a 4-input AND gate would still require ALL 4-inputs to be present to produce the required output at <span class="ntxt">Q</span> and its larger truth table would reflect that.</p>
+    </div>
+
+
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>

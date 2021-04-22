@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y; */
+            background-size: contain;
+            /* background-size: cover; */
+        }
+        
+        img {
+            margin: auto;
+        }
+        
+        .text-gray-700 {
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./state_machines.html" class="mr-5 hover:text-gray-900">STATE-MACHINES</a>
+                <a href="./s_r_theory.html" class="mr-5 hover:text-gray-900">STATE-REDUCTION</a>
+                <a href="./s_r_example.html" class="mr-5 hover:text-gray-900">EXAMPLE</a>
+                <a href="./statemachine_simulation.html" class="mr-5 hover:text-gray-900">SIMULATION</a>
+
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">STATE MACHINES</div>
+    <div class="content">
+        We know that synchronous sequential circuits change affect their states for every positive ornegative transition of the clock signal based on the input. So, this behavior of synchronous sequential circuits can be represented in the graphical form and
+        it is known as state diagram. A synchronous sequential circuit is also called as Finite State Machine FSM, if it has finite number of states.
+        <br> <br> There are two types of FSMs.
+        <ul class="list">
+            <li>Moore State Machine</li>
+            <li>Mealy State Machine</li>
+        </ul>
+        <br><br>
+
+        <h2>Mealy State Machine</h2>
+        A Finite State Machine is said to be Mealy state machine, if outputs depend on both present inputs & present states. The block diagram of Mealy state machine is shown in the following figure.
+        <img src="https://www.tutorialspoint.com/digital_circuits/images/mealy_state_machine.jpg" alt="Mealy State Machine"><br><br> As shown in figure, there are two parts present in Mealy state machine. Those are combinational logic and memory. Memory
+        is useful to provide some or part of previous outputs presentstates as inputs of combinational logic. <br><br> So, based on the present inputs and present states, the Mealy state machine produces outputs. Therefore, the outputs will be valid only
+        at positive ornegative transition of the clock signal. <br><br> The state diagram of Mealy state machine is shown in the following figure. <br><br>
+        <img src="https://www.tutorialspoint.com/digital_circuits/images/state_diagram.jpg" alt="State Diagram"><br><br> In the above figure, there are three states, namely A, B & C. These states are labelled inside the circles & each circle corresponds
+        to one state. Transitions between these states are represented with directed lines. Here, 0 / 0, 1 / 0 & 1 / 1 denotes input / output. In the above figure, there are two transitions from each state based on the value of input, x. <br><br>In general,
+        the number of states required in Mealy state machine is less than or equal to the number of states required in Moore state machine. There is an equivalent Moore state machine for each Mealy state machine. <br>
+        <h2>Moore State Machine</h2>
+        A Finite State Machine is said to be Moore state machine, if outputs depend only on present states. The block diagram of Moore state machine is shown in the following figure. <br>
+        <img src="https://www.tutorialspoint.com/digital_circuits/images/moore_state_machine.jpg" alt="Moore State Machine">
+        <br><br> As shown in figure, there are two parts present in Moore state machine. Those are combinational logic and memory. In this case, the present inputs and present states determine the next states. So, based on next states, Moore state machine
+        produces the outputs. Therefore, the outputs will be valid only after transition of the state. <br><br> The state diagram of Moore state machine is shown in the following figure.
+        <img src="https://www.tutorialspoint.com/digital_circuits/images/state_diagram_of_moore_state_machine.jpg" alt="State Diagram Moore State Machine">
+        <br><br> In the above figure, there are four states, namely A, B, C & D. These states and the respective outputs are labelled inside the circles. Here, only the input value is labeled on each transition. In the above figure, there are two transitions
+        from each state based on the value of input, x. <br><br> In general, the number of states required in Moore state machine is more than or equal to the number of states required in Mealy state machine. There is an equivalent Mealy state machine
+        for each Moore state machine. So, based on the requirement we can use one of them.
+
+    </div>
+
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>

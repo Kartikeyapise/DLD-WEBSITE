@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Create a table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://visjs.github.io/vis-network/examples/network/../../standalone/umd/vis-network.min.js"></script>
+    <script src="./statemachine_simulation.js"></script>
+    <style type="text/css">
+        /* body {
+            margin: 30px;
+        } */
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y; */
+            background-size: cover;
+            /* background-size: cover; */
+        }
+        
+        .text-gray-700 {
+            z-index: 10;
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        .center_div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .state_diagram {
+            /* border: 2px solid black; */
+            margin: 10px 0px;
+        }
+        
+        .myinput {
+            border-radius: 10px;
+            margin-right: 5px;
+            display: block;
+            width: 420px;
+            height: 58px;
+            padding: 8px;
+            border-bottom: solid .3vh gray;
+        }
+        
+        .myinput:hover {
+            border-bottom: solid .3vh green;
+        }
+        
+        .myButton {
+            background-color: #220006;
+            border-radius: 10px;
+            border: 2px solid #0c0202;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 17px;
+            padding: 16px 31px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #2f6627;
+        }
+        
+        .myButton:hover {
+            background-color: #222222;
+        }
+        
+        .myButton1 {
+            margin-top: 10px;
+            width: 80%;
+        }
+        
+        table {
+            margin-top: 20px;
+        }
+        
+        table,
+        th,
+        td {
+            font-size: small;
+            border: 1px solid black;
+        }
+        
+        .input_cells {
+            background-color: #d2d2d2;
+            color: black;
+            margin: 0px;
+            padding: 8px 0px;
+            text-align: center;
+        }
+        /*         
+        .input_cells {
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 8px 0px;
+            text-align: center;
+        }
+        
+        td {
+            padding: 0px;
+        } */
+        
+        .graph_next_buttons {
+            display: inline-block;
+            padding: 0.3em 1.2em;
+            margin: 50px 44%;
+            border-radius: 2em;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            color: #FFFFFF;
+            background-color: #4eb5f1;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        
+        p {
+            text-align: center;
+            vertical-align: middle;
+            /* display: table-cell; */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./state_machines.html" class="mr-5 hover:text-gray-900">STATE-MACHINES</a>
+                <a href="./s_r_theory.html" class="mr-5 hover:text-gray-900">STATE-REDUCTION</a>
+                <a href="./s_r_example.html" class="mr-5 hover:text-gray-900">EXAMPLE</a>
+                <a href="./statemachine_simulation.html" class="mr-5 hover:text-gray-900">SIMULATION</a>
+
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">SIMULATION</div>
+    <div class="content">
+        <div class="center_div">
+            <input class="myinput" id="no_of_states" type="number" placeholder="NUMBER OF STATES IN STATE TABLE">
+
+            <input class="myButton" type="button" onclick="createTable()" value="INPUT TABLE">
+        </div>
+        <div class="center_div">
+            <table id="myTable" border="1">
+            </table>
+        </div>
+        <div class="center_div">
+            <input class="myButton myButton1" id="display_graph_button" type="button" onclick="user_input_over()" value="STATE REDUCTION" style="display: none;">
+        </div>
+        <div class="center_div">
+            <div id="allgraphs"></div>
+        </div>
+    </div>
+</body>
+
+</html>

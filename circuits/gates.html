@@ -1,0 +1,1756 @@
+<html style="--text-navbar--alt:#000; --br-secondary:#7d7d7d; --br-circuit-cur:#fff; --br-circuit:#454545; --cus-radio_label:#656565; --primary:#454545; --text-lite:#fff; --text-dark:#000; --text-panel:white; --bg-navbar:#454545; --qp-br-tl:#333333; --qp-br-rd:#535353; --qp-box-shadow-1:#3b3b3b; --qp-box-shadow-2:#4f4f4f; --bg-circuit:#ddd; --br-primary:#fff; --bg-primary-moz:#454545e6; --bg-primary-chr:#454545b3; --bg-tabs:#8b8b8b; --bg-icons:#7d7d7d; --bg-text:#cacaca; --bg-secondary:#bbbbbb; --canvas-stroke:#eee; --canvas-fill:white; --context-text:white; --bg-toggle-btn-primary:#42b983; --primary-btn-hov:#3ca877; --btn-danger:#dc5656; --btn-danger-darken:#b03662; --disable:#6c8b93; --cus-btn-hov--bg:#ddd; --cus-btn-hov-text:#000; --node:green; --stroke:black; --fill:white; --hover-and-sel:rgba(255, 255, 32, 0.8); --wire-draw:black; --wire-cnt:green; --wire-pow:lightgreen; --wire-sel:blue; --wire-lose:red; --mini-map:green; --mini-map-stroke:darkgreen; --input-text:green; --secondary-stroke:red; --text:black; --wire-norm:black; --node-norm:green; --splitter:black; --output-rect:blue;"
+    class="js-focus-visible" data-js-focus-visible="">
+
+<head>
+    <script type="text/javascript" src="https://bam.nr-data.net/1/NRJS-1f6f48535eccc44d6a0?a=637893211&amp;v=1184.ab39b52&amp;to=IFpcQUpXWA1WFhhHXA5AXlRMV0ZOXQFA&amp;rst=1064&amp;ck=1&amp;ref=https://circuitverse.org/simulator&amp;ap=6&amp;be=71&amp;fe=1029&amp;dc=296&amp;perf=%7B%22timing%22:%7B%22of%22:1608722505069,%22n%22:0,%22u%22:14,%22ue%22:14,%22f%22:3,%22dn%22:3,%22dne%22:3,%22c%22:3,%22ce%22:3,%22rq%22:3,%22rp%22:11,%22rpe%22:14,%22dl%22:15,%22di%22:296,%22ds%22:296,%22de%22:406,%22dc%22:1028,%22l%22:1028,%22le%22:1030%7D,%22navigation%22:%7B%22ty%22:2%7D%7D&amp;fp=238&amp;fcp=238&amp;jsonp=NREUM.setToken"></script>
+    <script src="https://js-agent.newrelic.com/nr-1184.min.js"></script>
+    <script type="text/javascript" async="false" src="https://www.google-analytics.com/analytics.js"></script>
+    <script>
+        window.NREUM || (NREUM = {});
+        NREUM.info = {
+            "beacon": "bam.nr-data.net",
+            "errorBeacon": "bam.nr-data.net",
+            "licenseKey": "NRJS-1f6f48535eccc44d6a0",
+            "applicationID": "637893211",
+            "transactionName": "IFpcQUpXWA1WFhhHXA5AXlRMV0ZOXQFA",
+            "queueTime": 0,
+            "applicationTime": 6,
+            "agent": ""
+        }
+    </script>
+    <script>
+        (window.NREUM || (NREUM = {})).loader_config = {
+            licenseKey: "NRJS-1f6f48535eccc44d6a0",
+            applicationID: "637893211"
+        };
+        window.NREUM || (NREUM = {}), __nr_require = function(e, t, n) {
+            function r(n) {
+                if (!t[n]) {
+                    var i = t[n] = {
+                        exports: {}
+                    };
+                    e[n][0].call(i.exports, function(t) {
+                        var i = e[n][1][t];
+                        return r(i || t)
+                    }, i, i.exports)
+                }
+                return t[n].exports
+            }
+            if ("function" == typeof __nr_require) return __nr_require;
+            for (var i = 0; i < n.length; i++) r(n[i]);
+            return r
+        }({
+            1: [function(e, t, n) {
+                function r() {}
+
+                function i(e, t, n) {
+                    return function() {
+                        return o(e, [u.now()].concat(c(arguments)), t ? null : this, n), t ? void 0 : this
+                    }
+                }
+                var o = e("handle"),
+                    a = e(6),
+                    c = e(7),
+                    f = e("ee").get("tracer"),
+                    u = e("loader"),
+                    s = NREUM;
+                "undefined" == typeof window.newrelic && (newrelic = s);
+                var d = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                    p = "api-",
+                    l = p + "ixn-";
+                a(d, function(e, t) {
+                    s[t] = i(p + t, !0, "api")
+                }), s.addPageAction = i(p + "addPageAction", !0), s.setCurrentRouteName = i(p + "routeName", !0), t.exports = newrelic, s.interaction = function() {
+                    return (new r).get()
+                };
+                var m = r.prototype = {
+                    createTracer: function(e, t) {
+                        var n = {},
+                            r = this,
+                            i = "function" == typeof t;
+                        return o(l + "tracer", [u.now(), e, n], r),
+                            function() {
+                                if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try {
+                                    return t.apply(this, arguments)
+                                } catch (e) {
+                                    throw f.emit("fn-err", [arguments, this, e], n), e
+                                } finally {
+                                    f.emit("fn-end", [u.now()], n)
+                                }
+                            }
+                    }
+                };
+                a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function(e, t) {
+                    m[t] = i(l + t)
+                }), newrelic.noticeError = function(e, t) {
+                    "string" == typeof e && (e = new Error(e)), o("err", [e, u.now(), !1, t])
+                }
+            }, {}],
+            2: [function(e, t, n) {
+                function r() {
+                    return c.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a
+                }
+
+                function i() {
+                    return o
+                }
+                var o = (new Date).getTime(),
+                    a = o,
+                    c = e(8);
+                t.exports = r, t.exports.offset = a, t.exports.getLastTimestamp = i
+            }, {}],
+            3: [function(e, t, n) {
+                function r(e, t) {
+                    var n = e.getEntries();
+                    n.forEach(function(e) {
+                        "first-paint" === e.name ? d("timing", ["fp", Math.floor(e.startTime)]) : "first-contentful-paint" === e.name && d("timing", ["fcp", Math.floor(e.startTime)])
+                    })
+                }
+
+                function i(e, t) {
+                    var n = e.getEntries();
+                    n.length > 0 && d("lcp", [n[n.length - 1]])
+                }
+
+                function o(e) {
+                    e.getEntries().forEach(function(e) {
+                        e.hadRecentInput || d("cls", [e])
+                    })
+                }
+
+                function a(e) {
+                    if (e instanceof m && !g) {
+                        var t = Math.round(e.timeStamp),
+                            n = {
+                                type: e.type
+                            };
+                        t <= p.now() ? n.fid = p.now() - t : t > p.offset && t <= Date.now() ? (t -= p.offset, n.fid = p.now() - t) : t = p.now(), g = !0, d("timing", ["fi", t, n])
+                    }
+                }
+
+                function c(e) {
+                    d("pageHide", [p.now(), e])
+                }
+                if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) {
+                    var f, u, s, d = e("handle"),
+                        p = e("loader"),
+                        l = e(5),
+                        m = NREUM.o.EV;
+                    if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) {
+                        f = new PerformanceObserver(r);
+                        try {
+                            f.observe({
+                                entryTypes: ["paint"]
+                            })
+                        } catch (v) {}
+                        u = new PerformanceObserver(i);
+                        try {
+                            u.observe({
+                                entryTypes: ["largest-contentful-paint"]
+                            })
+                        } catch (v) {}
+                        s = new PerformanceObserver(o);
+                        try {
+                            s.observe({
+                                type: "layout-shift",
+                                buffered: !0
+                            })
+                        } catch (v) {}
+                    }
+                    if ("addEventListener" in document) {
+                        var g = !1,
+                            y = ["click", "keydown", "mousedown", "pointerdown", "touchstart"];
+                        y.forEach(function(e) {
+                            document.addEventListener(e, a, !1)
+                        })
+                    }
+                    l(c)
+                }
+            }, {}],
+            4: [function(e, t, n) {
+                function r(e, t) {
+                    if (!i) return !1;
+                    if (e !== i) return !1;
+                    if (!t) return !0;
+                    if (!o) return !1;
+                    for (var n = o.split("."), r = t.split("."), a = 0; a < r.length; a++)
+                        if (r[a] !== n[a]) return !1;
+                    return !0
+                }
+                var i = null,
+                    o = null,
+                    a = /Version\/(\S+)\s+Safari/;
+                if (navigator.userAgent) {
+                    var c = navigator.userAgent,
+                        f = c.match(a);
+                    f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1])
+                }
+                t.exports = {
+                    agent: i,
+                    version: o,
+                    match: r
+                }
+            }, {}],
+            5: [function(e, t, n) {
+                function r(e) {
+                    function t() {
+                        e(a && document[a] ? document[a] : document[i] ? "hidden" : "visible")
+                    }
+                    "addEventListener" in document && o && document.addEventListener(o, t, !1)
+                }
+                t.exports = r;
+                var i, o, a;
+                "undefined" != typeof document.hidden ? (i = "hidden", o = "visibilitychange", a = "visibilityState") : "undefined" != typeof document.msHidden ? (i = "msHidden", o = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (i = "webkitHidden", o = "webkitvisibilitychange", a = "webkitVisibilityState")
+            }, {}],
+            6: [function(e, t, n) {
+                function r(e, t) {
+                    var n = [],
+                        r = "",
+                        o = 0;
+                    for (r in e) i.call(e, r) && (n[o] = t(r, e[r]), o += 1);
+                    return n
+                }
+                var i = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}],
+            7: [function(e, t, n) {
+                function r(e, t, n) {
+                    t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                    for (var r = -1, i = n - t || 0, o = Array(i < 0 ? 0 : i); ++r < i;) o[r] = e[t + r];
+                    return o
+                }
+                t.exports = r
+            }, {}],
+            8: [function(e, t, n) {
+                t.exports = {
+                    exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart
+                }
+            }, {}],
+            ee: [function(e, t, n) {
+                function r() {}
+
+                function i(e) {
+                    function t(e) {
+                        return e && e instanceof r ? e : e ? f(e, c, o) : o()
+                    }
+
+                    function n(n, r, i, o) {
+                        if (!p.aborted || o) {
+                            e && e(n, r, i);
+                            for (var a = t(i), c = v(n), f = c.length, u = 0; u < f; u++) c[u].apply(a, r);
+                            var d = s[w[n]];
+                            return d && d.push([b, n, r, a]), a
+                        }
+                    }
+
+                    function l(e, t) {
+                        h[e] = v(e).concat(t)
+                    }
+
+                    function m(e, t) {
+                        var n = h[e];
+                        if (n)
+                            for (var r = 0; r < n.length; r++) n[r] === t && n.splice(r, 1)
+                    }
+
+                    function v(e) {
+                        return h[e] || []
+                    }
+
+                    function g(e) {
+                        return d[e] = d[e] || i(n)
+                    }
+
+                    function y(e, t) {
+                        u(e, function(e, n) {
+                            t = t || "feature", w[n] = t, t in s || (s[t] = [])
+                        })
+                    }
+                    var h = {},
+                        w = {},
+                        b = {
+                            on: l,
+                            addEventListener: l,
+                            removeEventListener: m,
+                            emit: n,
+                            get: g,
+                            listeners: v,
+                            context: t,
+                            buffer: y,
+                            abort: a,
+                            aborted: !1
+                        };
+                    return b
+                }
+
+                function o() {
+                    return new r
+                }
+
+                function a() {
+                    (s.api || s.feature) && (p.aborted = !0, s = p.backlog = {})
+                }
+                var c = "nr@context",
+                    f = e("gos"),
+                    u = e(6),
+                    s = {},
+                    d = {},
+                    p = t.exports = i();
+                p.backlog = s
+            }, {}],
+            gos: [function(e, t, n) {
+                function r(e, t, n) {
+                    if (i.call(e, t)) return e[t];
+                    var r = n();
+                    if (Object.defineProperty && Object.keys) try {
+                        return Object.defineProperty(e, t, {
+                            value: r,
+                            writable: !0,
+                            enumerable: !1
+                        }), r
+                    } catch (o) {}
+                    return e[t] = r, r
+                }
+                var i = Object.prototype.hasOwnProperty;
+                t.exports = r
+            }, {}],
+            handle: [function(e, t, n) {
+                function r(e, t, n, r) {
+                    i.buffer([e], r), i.emit(e, t, n)
+                }
+                var i = e("ee").get("handle");
+                t.exports = r, r.ee = i
+            }, {}],
+            id: [function(e, t, n) {
+                function r(e) {
+                    var t = typeof e;
+                    return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, o, function() {
+                        return i++
+                    })
+                }
+                var i = 1,
+                    o = "nr@id",
+                    a = e("gos");
+                t.exports = r
+            }, {}],
+            loader: [function(e, t, n) {
+                function r() {
+                    if (!E++) {
+                        var e = b.info = NREUM.info,
+                            t = p.getElementsByTagName("script")[0];
+                        if (setTimeout(u.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return u.abort();
+                        f(h, function(t, n) {
+                            e[t] || (e[t] = n)
+                        });
+                        var n = a();
+                        c("mark", ["onload", n + b.offset], null, "api"), c("timing", ["load", n]);
+                        var r = p.createElement("script");
+                        r.src = "https://" + e.agent, t.parentNode.insertBefore(r, t)
+                    }
+                }
+
+                function i() {
+                    "complete" === p.readyState && o()
+                }
+
+                function o() {
+                    c("mark", ["domContent", a() + b.offset], null, "api")
+                }
+                var a = e(2),
+                    c = e("handle"),
+                    f = e(6),
+                    u = e("ee"),
+                    s = e(4),
+                    d = window,
+                    p = d.document,
+                    l = "addEventListener",
+                    m = "attachEvent",
+                    v = d.XMLHttpRequest,
+                    g = v && v.prototype;
+                NREUM.o = {
+                    ST: setTimeout,
+                    SI: d.setImmediate,
+                    CT: clearTimeout,
+                    XHR: v,
+                    REQ: d.Request,
+                    EV: d.Event,
+                    PR: d.Promise,
+                    MO: d.MutationObserver
+                };
+                var y = "" + location,
+                    h = {
+                        beacon: "bam.nr-data.net",
+                        errorBeacon: "bam.nr-data.net",
+                        agent: "js-agent.newrelic.com/nr-1184.min.js"
+                    },
+                    w = v && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                    b = t.exports = {
+                        offset: a.getLastTimestamp(),
+                        now: a,
+                        origin: y,
+                        features: {},
+                        xhrWrappable: w,
+                        userAgent: s
+                    };
+                e(1), e(3), p[l] ? (p[l]("DOMContentLoaded", o, !1), d[l]("load", r, !1)) : (p[m]("onreadystatechange", i), d[m]("onload", r)), c("mark", ["firstbyte", a.getLastTimestamp()], null, "api");
+                var E = 0
+            }, {}],
+            "wrap-function": [function(e, t, n) {
+                function r(e) {
+                    return !(e && e instanceof Function && e.apply && !e[a])
+                }
+                var i = e("ee"),
+                    o = e(7),
+                    a = "nr@original",
+                    c = Object.prototype.hasOwnProperty,
+                    f = !1;
+                t.exports = function(e, t) {
+                    function n(e, t, n, i) {
+                        function nrWrapper() {
+                            var r, a, c, f;
+                            try {
+                                a = this, r = o(arguments), c = "function" == typeof n ? n(r, a) : n || {}
+                            } catch (u) {
+                                p([u, "", [r, a, i], c])
+                            }
+                            s(t + "start", [r, a, i], c);
+                            try {
+                                return f = e.apply(a, r)
+                            } catch (d) {
+                                throw s(t + "err", [r, a, d], c), d
+                            } finally {
+                                s(t + "end", [r, a, f], c)
+                            }
+                        }
+                        return r(e) ? e : (t || (t = ""), nrWrapper[a] = e, d(e, nrWrapper), nrWrapper)
+                    }
+
+                    function u(e, t, i, o) {
+                        i || (i = "");
+                        var a, c, f, u = "-" === i.charAt(0);
+                        for (f = 0; f < t.length; f++) c = t[f], a = e[c], r(a) || (e[c] = n(a, u ? c + i : i, o, c))
+                    }
+
+                    function s(n, r, i) {
+                        if (!f || t) {
+                            var o = f;
+                            f = !0;
+                            try {
+                                e.emit(n, r, i, t)
+                            } catch (a) {
+                                p([a, n, r, i])
+                            }
+                            f = o
+                        }
+                    }
+
+                    function d(e, t) {
+                        if (Object.defineProperty && Object.keys) try {
+                            var n = Object.keys(e);
+                            return n.forEach(function(n) {
+                                Object.defineProperty(t, n, {
+                                    get: function() {
+                                        return e[n]
+                                    },
+                                    set: function(t) {
+                                        return e[n] = t, t
+                                    }
+                                })
+                            }), t
+                        } catch (r) {
+                            p([r])
+                        }
+                        for (var i in e) c.call(e, i) && (t[i] = e[i]);
+                        return t
+                    }
+
+                    function p(t) {
+                        try {
+                            e.emit("internal-error", t)
+                        } catch (n) {}
+                    }
+                    return e || (e = i), n.inPlace = u, n.flag = a, n
+                }
+            }, {}]
+        }, {}, ["loader"]);
+    </script>
+    <title>SIMULATION</title>
+    <meta name="csrf-param" content="authenticity_token">
+    <meta name="csrf-token" content="ZvOj61uypvTpptnyQMBDVylL1ipkWzJUvJr+SY3x9ROU7Xz1OsZghJQiV+U66no/2GqKSFZcpWoizSNOTP9e9w==">
+    <script src="./js/pace.js"></script>
+    <link rel="stylesheet" media="screen" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" media="all" href="./assets/simulator-1c500ca3af29acd6dfacb110c8cb4f8c78c47528b72b1d56d73e7847b4751478.css" data-turbolinks-track="reload">
+    <script src="./packs/js/simulator-5bcc0009cb148caa712c.js" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="screen" href="./packs/css/simulator-a2b20f53.css" data-turbolinks-track="reload">
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="https://circuitverse.org/assets/favicon-883466d663265ece7d1bee2ee72b99faee70ef83d3459d1cd2e8c549463a5416.ico"> -->
+
+    <script async="false" src="https://www.googletagmanager.com/gtag/js?id=UA-112678513-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112678513-1');
+    </script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        @font-face {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 500;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Medium-d74eac43c78bd5852478998ce63dceb3.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Bold-83b8ceaf77f49c7cffa44107561909e4.woff2') format('woff2');
+        }
+        
+        @font-face {
+            font-weight: 900;
+            font-style: normal;
+            font-family: 'Circular-Loom';
+            src: url('https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Black-bf067ecb8aa777ceb6df7d72226febca.woff2') format('woff2');
+        }
+        
+        .text-gray-700 {
+            z-index: 10000;
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        #tabsBar {
+            margin-top: 69px;
+        }
+        
+        #mysidebar {
+            margin-top: 65px;
+            background-color: rgb(8, 61, 41);
+        }
+        
+        .moduleProperty {
+            display: none;
+        }
+        
+        .panel-header {
+            background-color: black;
+        }
+        
+        #tabsBar {
+            background-color: white;
+        }
+        
+        .timing-diagram-panel {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="  pace-done pace-done" data-new-gr-c-s-check-loaded="14.990.0" data-gr-ext-installed="">
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="../index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="../boolean_algebra.html" class="mr-5 hover:text-gray-900">BOOLEAN-ALGEBRA</a>
+                <a href="../bol_A_examples.html" class="mr-5 hover:text-gray-900">EXAMPLES</a>
+                <a href="../logic_editor.html" class="mr-5 hover:text-gray-900">TRUTH-TABLE-GENERATOR</a>
+                <a href="./gates.html" class="mr-5 hover:text-gray-900">GATE-SIMULATION</a>
+
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div class="pace  pace-inactive pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
+    </div>
+
+
+
+    <script src="./js/plugins/jquery.twbs-toggle-buttons.min.js"></script>
+    <script src="./js/plugins/checkBo.min.js"></script>
+    <script src="./js/plugins/bootstrap-input-spinner.js"></script>
+    <script>
+        userSignedIn = false;
+        __logix_project_id = "0";
+        __projectName = ""
+    </script>
+    <div id="exitView"></div>
+    <nav id="mynavbar" class="navbar navbar-expand-lg navbar-dark header">
+        <a href="/"><span class="logo"></span></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="collapsedNavbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="navbar-nav navbar-menu noSelect pointerCursor" id="toolbar">
+                <li class="dropdown nav-dropdown">
+                    <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Project<span></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="newProject">New Project</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="save">Save Online</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="saveOffline">Save Offline</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="createOpenLocalPrompt">Open Offline</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="clearProject">Clear Project</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="recoverProject">Recover Project</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="fullViewOption">Preview Circuit</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" onclick="old_ui_redirect()">View Previous UI</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown nav-dropdown">
+                    <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Circuit<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-left logixButton pl-1" id="newCircuit">New Circuit + </a></li>
+                        <li><a class="dropdown-item text-left logixButton pl-1" id="newVerilogModule">New Verilog <br> Module</a></li>
+                        <li><a class="dropdown-item logixButton text-left pl-1" id="createSubCircuitPrompt">Insert SubCircuit</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown nav-dropdown">
+                    <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tools<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="createCombinationalAnalysisPrompt">Combinational<br>Analysis</a></li>
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="bitconverter">Hex-Bin-Dec<br>Converter</a></li>
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="createSaveAsImgPrompt">Download Image</a>
+                        </li>
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="colorThemes">Themes</a>
+                        </li>
+                        <li><a class="dropdown-item text-left pl-1" id="customShortcut">Custom Shortcut</a></li>
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="generateVerilog">Export Verilog</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown tour-help nav-dropdown">
+                    <a href="#" class="" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Help<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-left pl-1 logixButton" id="showTourGuide">Tutorial Guide</a></li>
+                        <li><a class="dropdown-item text-left pl-1" href="https://docs.circuitverse.org" target="_blank" role="button" aria-haspopup="true" aria-expanded="false">User Manual</a></li>
+                        <li><a class="dropdown-item text-left pl-1" href="https://learn.circuitverse.org" target="_blank" role="button" aria-haspopup="true" aria-expanded="false">Learn Digital Logic</a></li>
+                        <li><a class="dropdown-item text-left pl-1" href="https://circuitverse.org/forum" target="_blank" role="button" aria-haspopup="true" aria-expanded="false">Discussion Forum</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <span class="projectName noSelect defaultCursor font-weight-bold" id="projectName">
+    Untitled
+    </span>
+            <div ondrag="(() => {$('.quick-btn').css({'box-shadow': 'none', 'background': 'var(--bg-navbar)'})})()" class="quick-btn">
+                <div id="dragQPanel" class="panel-drag">
+                    <span><svg style="height: 20px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18" height="31" viewBox="0 0 18 31">
+    <defs>
+        <clipPath id="clip-path">
+            <rect width="18" height="31" fill="none"></rect>
+        </clipPath>
+    </defs>
+    <g id="Repeat_Grid_1" data-name="Repeat Grid 1" clip-path="url(#clip-path)">
+        <g transform="translate(-21 -29)">
+            <circle id="Ellipse_1" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+        <g transform="translate(-12 -29)">
+            <circle id="Ellipse_1-2" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+        <g transform="translate(-21 -18)">
+            <circle id="Ellipse_1-3" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+        <g transform="translate(-12 -18)">
+            <circle id="Ellipse_1-4" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+        <g transform="translate(-21 -7)">
+            <circle id="Ellipse_1-5" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+        <g transform="translate(-12 -7)">
+            <circle id="Ellipse_1-6" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(22 30)" fill="#fff"></circle>
+        </g>
+    </g>
+    </svg>
+    </span>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-save-online logixButton" id="save" title="Save Online" onclick="">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-save logixButton" id="saveOffline" title="Save Offline" onclick="">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-delete" title="Delete Selected" id="deleteSelected">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-download logixButton" id="createSaveAsImgPrompt" title="Download as Image" onclick="">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-zoom-fit" title="Fit to Screen" onclick="globalScope.centerFocus(false)">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-undo" title="Undo" id="undoButton">
+    </button>
+                </div>
+                <div>
+                    <button type="button" class="quick-btn-view" title="Preview Circuit" id="viewButton"><i style="color: #ddd;" class="fas fa-expand-arrows-alt"></i>
+    </button>
+                </div>
+
+                <div class="zoom-slider">
+                    <input type="range" class="custom-range" min="0" max="45" step="1" id="customRange1">
+                    <span id="slider_value"></span>
+                </div>
+            </div>
+        </div>
+        <ul class="nav navbar-nav noSelect pointerCursor pull-right account-btn">
+            <li class="dropdown pull-right">
+                <a class="navbar-nav signIn-btn user-field" href="/users/sign_in"> Sign In </a>
+            </li>
+        </ul>
+
+
+    </nav>
+    <div id="tabsBar" class="noSelect pointerCursor ui-sortable">
+        <div style="" class="circuits toolbarButton current ui-sortable-handle" draggable="true" id="919188266"><span class="circuitName noSelect">Main</span><span class="tabsCloseButton" id="919188266">x</span></div><button class="logixButton" id="newCircuit" onclick="">+</button>
+    </div>
+    <div title="Export Verilog" id="verilog-export-code-window-div" style="display:none"><textarea id="verilog-export-code-window" style="display: none;"></textarea>
+        <div class="CodeMirror cm-s-default">
+            <div style="overflow: hidden; position: relative; width: 3px; height: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+            <div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true">
+                <div style="min-width: 1px;"></div>
+            </div>
+            <div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
+                <div style="height: 100%; min-height: 1px;"></div>
+            </div>
+            <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+            <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+            <div class="CodeMirror-scroll" tabindex="-1">
+                <div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px;">
+                    <div style="position: relative;">
+                        <div class="CodeMirror-lines" role="presentation">
+                            <div role="presentation" style="position: relative; outline: none;">
+                                <div class="CodeMirror-measure"><span><span>​</span>x</span>
+                                </div>
+                                <div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="" style="display: inline-block; width: 1px; margin-right: -1px;">&nbsp;</span></span></pre></div>
+                                <div style="position: relative; z-index: 1;"></div>
+                                <div class="CodeMirror-cursors"></div>
+                                <div class="CodeMirror-code" role="presentation"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; height: 50px; width: 1px;"></div>
+                <div class="CodeMirror-gutters">
+                    <div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="code-window" class="code-window"><textarea id="codeTextArea" style="display: none;"></textarea>
+        <div class="CodeMirror cm-s-default">
+            <div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div>
+            <div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true">
+                <div style="min-width: 1px;"></div>
+            </div>
+            <div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true">
+                <div style="height: 100%; min-height: 1px;"></div>
+            </div>
+            <div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div>
+            <div class="CodeMirror-gutter-filler" cm-not-content="true"></div>
+            <div class="CodeMirror-scroll" tabindex="-1">
+                <div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px;">
+                    <div style="position: relative;">
+                        <div class="CodeMirror-lines" role="presentation">
+                            <div role="presentation" style="position: relative; outline: none;">
+                                <div class="CodeMirror-measure"></div>
+                                <div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Write Some Verilog Code Here!</span></span></pre></div>
+                                <div style="position: relative; z-index: 1;"></div>
+                                <div class="CodeMirror-cursors"></div>
+                                <div class="CodeMirror-code" role="presentation"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; height: 50px; width: 1px;"></div>
+                <div class="CodeMirror-gutters" style="left: 0px;">
+                    <div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mysidebar" class="modules noSelect defaultCursor ce-panel elementPanel draggable-panel draggable-panel-css " id="guide_1" style="z-index: 99;">
+        <div class="panel-header">Circuit Elements
+            <span class="fas fa-minus-square minimize"></span>
+            <span class="fas fa-external-link-square-alt maximize"></span>
+        </div>
+        <div class="panel-body" id="testid">
+            <div style="position: relative;">
+                <!-- <input type="text" class="search-input" value="" placeholder="Search.."> -->
+                <span><i class="fas search-close fa-times-circle"></i></span>
+            </div>
+            <div class="search-results"></div>
+            <div class="accordion ui-accordion ui-widget ui-helper-reset" id="menu" role="tablist">
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Input</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="Input" title="Input">
+                        <img id="myimage1" src="https://circuitverse.org/img/Input.svg">
+                    </div>
+                    <div class="icon logixModules" id="Button" title="Button">
+                        <img src="./img/Button.svg">
+                    </div>
+                    <div class="icon logixModules" id="Power" title="Power">
+                        <img src="./img/Power.svg">
+                    </div>
+                    <div class="icon logixModules" id="Ground" title="Ground">
+                        <img src="./img/Ground.svg">
+                    </div>
+                    <div class="icon logixModules" id="ConstantVal" title="ConstantVal">
+                        <img src="./img/ConstantVal.svg">
+                    </div>
+                    <div class="icon logixModules" id="Stepper" title="Stepper">
+                        <img src="./img/Stepper.svg">
+                    </div>
+                    <div class="icon logixModules" id="Random" title="Random">
+                        <img src="./img/Random.svg">
+                    </div>
+                    <div class="icon logixModules" id="Counter" title="Counter">
+                        <img src="./img/Counter.svg">
+                    </div>
+                </div>
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-collapsed ui-corner-all" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Output</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="Output" title="Output">
+                        <img src="https://circuitverse.org/img/Output.svg">
+                    </div>
+                    <div class="icon logixModules" id="RGBLed" title="RGBLed">
+                        <img src="/img/RGBLed.svg">
+                    </div>
+                    <div class="icon logixModules" id="DigitalLed" title="DigitalLed">
+                        <img src="/img/DigitalLed.svg">
+                    </div>
+                    <div class="icon logixModules" id="VariableLed" title="VariableLed">
+                        <img src="/img/VariableLed.svg">
+                    </div>
+                    <div class="icon logixModules" id="HexDisplay" title="HexDisplay">
+                        <img src="/img/HexDisplay.svg">
+                    </div>
+                    <div class="icon logixModules" id="SevenSegDisplay" title="SevenSegDisplay">
+                        <img src="/img/SevenSegDisplay.svg">
+                    </div>
+                    <div class="icon logixModules" id="SixteenSegDisplay" title="SixteenSegDisplay">
+                        <img src="/img/SixteenSegDisplay.svg">
+                    </div>
+                    <div class="icon logixModules" id="SquareRGBLed" title="SquareRGBLed">
+                        <img src="/img/SquareRGBLed.svg">
+                    </div>
+                    <div class="icon logixModules" id="RGBLedMatrix" title="RGBLedMatrix">
+                        <img src="/img/RGBLedMatrix.svg">
+                    </div>
+                </div>
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-state-default ui-accordion-icons ui-accordion-header-active ui-state-active" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>Gates</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content ui-accordion-content-active" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="false" style="">
+                    <div class="icon logixModules" id="AndGate" title="AndGate">
+                        <img src="https://circuitverse.org/img/AndGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="OrGate" title="OrGate">
+                        <img src="https://circuitverse.org/img/OrGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="NotGate" title="NotGate">
+                        <img src="https://circuitverse.org/img/NotGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="XorGate" title="XorGate">
+                        <img src="https://circuitverse.org/img/XorGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="NandGate" title="NandGate">
+                        <img src="https://circuitverse.org/img/NandGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="NorGate" title="NorGate">
+                        <img src="https://circuitverse.org/img/NorGate.svg">
+                    </div>
+                    <div class="icon logixModules" id="XnorGate" title="XnorGate">
+                        <img src="https://circuitverse.org/img/XnorGate.svg">
+                    </div>
+                </div>
+                <div class="mydelete panelHeader ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Decoders &amp; Plexers</div>
+                <div class="mydelete panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="Multiplexer" title="Multiplexer">
+                        <img src="/img/Multiplexer.svg">
+                    </div>
+                    <div class="icon logixModules" id="Demultiplexer" title="Demultiplexer">
+                        <img src="/img/Demultiplexer.svg">
+                    </div>
+                    <div class="icon logixModules" id="BitSelector" title="BitSelector">
+                        <img src="/img/BitSelector.svg">
+                    </div>
+                    <div class="icon logixModules" id="MSB" title="MSB">
+                        <img src="/img/MSB.svg">
+                    </div>
+                    <div class="icon logixModules" id="LSB" title="LSB">
+                        <img src="/img/LSB.svg">
+                    </div>
+                    <div class="icon logixModules" id="PriorityEncoder" title="PriorityEncoder">
+                        <img src="/img/PriorityEncoder.svg">
+                    </div>
+                    <div class="icon logixModules" id="Decoder" title="Decoder">
+                        <img src="/img/Decoder.svg">
+                    </div>
+                </div>
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-9" aria-controls="ui-id-10" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Sequential Elements</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-10" aria-labelledby="ui-id-9" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="DflipFlop" title="DflipFlop">
+                        <img src="/img/DflipFlop.svg">
+                    </div>
+                    <div class="icon logixModules" id="Dlatch" title="Dlatch">
+                        <img src="/img/Dlatch.svg">
+                    </div>
+                    <div class="icon logixModules" id="TflipFlop" title="TflipFlop">
+                        <img src="/img/TflipFlop.svg">
+                    </div>
+                    <div class="icon logixModules" id="JKflipFlop" title="JKflipFlop">
+                        <img src="/img/JKflipFlop.svg">
+                    </div>
+                    <div class="icon logixModules" id="SRflipFlop" title="SRflipFlop">
+                        <img src="/img/SRflipFlop.svg">
+                    </div>
+                    <div class="icon logixModules" id="TTY" title="TTY">
+                        <img src="/img/TTY.svg">
+                    </div>
+                    <div class="icon logixModules" id="Keyboard" title="Keyboard">
+                        <img src="/img/Keyboard.svg">
+                    </div>
+                    <div class="icon logixModules" id="Clock" title="Clock">
+                        <img src="/img/Clock.svg">
+                    </div>
+                    <div class="icon logixModules" id="Rom" title="Rom">
+                        <img src="/img/Rom.svg">
+                    </div>
+                    <div class="icon logixModules" id="RAM" title="RAM">
+                        <img src="/img/RAM.svg">
+                    </div>
+                    <div class="icon logixModules" id="EEPROM" title="EEPROM">
+                        <img src="/img/EEPROM.svg">
+                    </div>
+                </div>
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-11" aria-controls="ui-id-12" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Annotation</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-12" aria-labelledby="ui-id-11" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="Rectangle" title="Rectangle">
+                        <img src="/img/Rectangle.svg">
+                    </div>
+                    <div class="icon logixModules" id="Arrow" title="Arrow">
+                        <img src="/img/Arrow.svg">
+                    </div>
+                    <div class="icon logixModules" id="ImageAnnotation" title="ImageAnnotation">
+                        <img src="/img/ImageAnnotation.svg">
+                    </div>
+                    <div class="icon logixModules" id="Text" title="Text">
+                        <img src="/img/Text.svg">
+                    </div>
+                </div>
+                <div class="panelHeader ui-accordion-header ui-corner-top ui-accordion-header-collapsed ui-corner-all ui-state-default ui-accordion-icons" role="tab" id="ui-id-13" aria-controls="ui-id-14" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Misc</div>
+                <div class="panel customScroll ui-accordion-content ui-corner-bottom ui-helper-reset ui-widget-content" id="ui-id-14" aria-labelledby="ui-id-13" role="tabpanel" aria-hidden="true" style="display: none;">
+                    <div class="icon logixModules" id="TwoComplement" title="TwoComplement">
+                        <img src="/img/TwoComplement.svg">
+                    </div>
+                    <div class="icon logixModules" id="Flag" title="Flag">
+                        <img src="/img/Flag.svg">
+                    </div>
+                    <div class="icon logixModules" id="Splitter" title="Splitter">
+                        <img src="/img/Splitter.svg">
+                    </div>
+                    <div class="icon logixModules" id="Adder" title="Adder">
+                        <img src="/img/Adder.svg">
+                    </div>
+                    <div class="icon logixModules" id="ALU" title="ALU">
+                        <img src="/img/ALU.svg">
+                    </div>
+                    <div class="icon logixModules" id="TriState" title="TriState">
+                        <img src="/img/TriState.svg">
+                    </div>
+                    <div class="icon logixModules" id="Tunnel" title="Tunnel">
+                        <img src="/img/Tunnel.svg">
+                    </div>
+                    <div class="icon logixModules" id="Buffer" title="Buffer">
+                        <img src="/img/Buffer.svg">
+                    </div>
+                    <div class="icon logixModules" id="ControlledInverter" title="ControlledInverter">
+                        <img src="/img/ControlledInverter.svg">
+                    </div>
+                    <div class="icon logixModules" id="TB_Input" title="TB_Input">
+                        <img src="https://circuitverse.org/img/TB_Input.svg">
+                    </div>
+                    <div class="icon logixModules" id="TB_Output" title="TB_Output">
+                        <img src="/img/TB_Output.svg">
+                    </div>
+                    <div class="icon logixModules" id="ForceGate" title="ForceGate">
+                        <img src="/img/ForceGate.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="noSelect defaultCursor layoutElementPanel draggable-panel draggable-panel-css " style="z-index: 99;">
+        <div class="panel-header">Layout Elements
+            <span class="fas fa-minus-square minimize"></span>
+            <span class="fas fa-external-link-square-alt maximize"></span>
+        </div>
+        <div class="panel-body">
+            <div class="search-results"></div>
+            <div class="accordion ui-accordion ui-widget ui-helper-reset" id="subcircuitMenu" role="tablist"></div>
+        </div>
+    </div>
+    <div class="timing-diagram-panel draggable-panel" style="z-index: 99;">
+        <div id="mypanel" class="panel-header">Timing Diagram
+            <span class="fas fa-minus-square minimize panel-button" style="display: none;"></span>
+            <span class="fas fa-external-link-square-alt maximize panel-button-icon" style="display: inline;"></span>
+        </div>
+        <div class="panel-body" style="display: none;">
+            <div class="timing-diagram-toolbar noSelect">
+                <button class="custom-btn--primary panel-button" title="Decrease Size"><span class="fas fa-chevron-left timing-diagram-smaller panel-button-icon"></span></button>
+                <button class="custom-btn--primary panel-button" title="Increase Size"><span class="fas fa-chevron-right timing-diagram-larger panel-button-icon"></span></button>
+                <button class="custom-btn--primary panel-button" title="Decrease Height"><span class="fas fa-chevron-up timing-diagram-small-height panel-button-icon"></span></button>
+                <button class="custom-btn--primary panel-button" title="Increase Height"><span class="fas fa-chevron-down timing-diagram-large-height panel-button-icon"></span></button>
+                <button class="custom-btn--primary panel-button" title="Download As Image"><span class="fas fa-download timing-diagram-download"></span></button>
+                <button class="custom-btn--tertiary panel-button" title="Reset Timing Diagram"><span class="fas fa-undo timing-diagram-reset"></span></button>
+                <button class="custom-btn--tertiary panel-button" title="Autocalibrate Cycle Units"><span class="fas fa-magic timing-diagram-calibrate"></span></button>
+                <button class="custom-btn--primary panel-button" title="Zoom In"><span class="fas fa-search-plus timing-diagram-zoom-in"></span></button>
+                <button class="custom-btn--primary panel-button" title="Zoom Out"><span class="fas fa-search-minus timing-diagram-zoom-out"></span></button>
+                <button class="custom-btn--primary panel-button" title="Resume Timing Diagram"><span class="fas fa-play timing-diagram-resume"></span></button>
+                <button class="custom-btn--primary panel-button" title="Pause Timing Diagram"><span class="fas fa-pause timing-diagram-pause"></span></button> 1 cycle =
+                <input id="timing-diagram-units" type="number" min="1" autocomplete="off" value="1000"> Units
+                <span id="timing-diagram-log"></span>
+            </div>
+            <div id="plot">
+                <canvas id="plotArea" width="0" height="0" style="height: 20px; width: 0px;"></canvas>
+            </div>
+        </div>
+    </div>
+    <div id="MessageDiv">
+        <div class="alert alert-success" role="alert" id="6864" style="display: none;"> We</div>
+        <div class="alert alert-danger" role="alert" id="1091" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+        <div class="alert alert-danger" role="alert" id="2634" style="display: none;"> Contention Error: 0 and 1 at NotGate in Main</div>
+        <div class="alert alert-danger" role="alert" id="9722" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+        <div class="alert alert-danger" role="alert" id="7357" style="display: none;"> Contention Error: 0 and 1 at NotGate in Main</div>
+        <div class="alert alert-danger" role="alert" id="1498" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+        <div class="alert alert-danger" role="alert" id="3075" style="display: none;"> Contention Error: 0 and 1 at NotGate in Main</div>
+        <div class="alert alert-danger" role="alert" id="3151" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+        <div class="alert alert-danger" role="alert" id="2923" style="display: none;"> Contention Error: 0 and 1 at NotGate in Main</div>
+        <div class="alert alert-danger" role="alert" id="7483" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+        <div class="alert alert-danger" role="alert" id="734" style="display: none;"> Contention Error: 1 and 0 at Input in Main</div>
+    </div>
+    <div class="noSelect defaultCursor draggable-panel draggable-panel-css" id="verilogEditorPanel" style="z-index: 99;">
+        <div class="panel-header">Verilog Module
+            <span class="fas fa-minus-square minimize"></span>
+            <span class="fas fa-external-link-square-alt maximize"></span>
+        </div>
+        <div class="panel-body">
+            <div class="layout-body">
+                <button class="largeButton btn logixButton btn-xs custom-btn--tertiary" id="resetVerilogCode">Reset Code</button>
+                <button class="largeButton btn logixButton btn-xs custom-btn--primary" id="saveVerilogCode">Save Code</button>
+                <div id="verilogOutput">
+                    This is an experimental module. The code is not saved unless the "Save Code" button is clicked.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="moduleProperty noSelect effect1 properties-panel draggable-panel draggable-panel-css guide_2 ui-draggable ui-draggable-handle ui-draggable-disabled" id="moduleProperty" style="z-index: 100"> -->
+    <div id="moduleProperty-title" class="noSelect panel-header" style="display: none;">Properties
+        <span class="fas fa-minus-square minimize" style="display: none;"></span>
+        <span class="fas fa-external-link-square-alt maximize" style="display: inline;"></span>
+    </div>
+    <div class="panel-body" style="display: none;">
+        <div id="moduleProperty-inner">
+            <div id="moduleProperty-header">Input</div>
+            <p><span>BitWidth:</span> <input class="objectPropertyAttribute" type="number" name="newBitWidth" min="1" max="32" value="1" style="display: none;">
+                <div class="input-group  ">
+                    <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
+                        placeholder="">
+                    <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
+                </div>
+            </p>
+            <p><span>Delay:</span> <input class="objectPropertyAttribute" type="number" name="changePropagationDelay" min="0" max="100000" value="0" style="display: none;">
+                <div class="input-group  ">
+                    <div class="input-group-prepend"><button style=" border:none; min-width: 2.5rem" class="btn btn-decrement btn-outline-secondary" type="button"><strong>-</strong></button></div><input type="text" inputmode="decimal" style="text-align: center" class="form-control objectPropertyAttribute"
+                        placeholder="">
+                    <div class="input-group-append"><button style=" border:none; min-width: 2.5rem" class="btn btn-increment btn-outline-secondary" type="button"><strong>+</strong></button></div>
+                </div>
+            </p>
+            <p><span>Label:</span> <input class="objectPropertyAttribute" type="text" name="setLabel" autocomplete="off" value=""></p>
+            <p><span>Label Direction:</span> <select class="objectPropertyAttribute" name="newLabelDirection"><option value="RIGHT">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="" selected="">LEFT</option><option value="UP" <option="">UP</option></select></p>
+            <p><span>Orientation:</span> <select class="objectPropertyAttribute" name="newDirection"><option value="RIGHT" selected="">RIGHT</option><option value="DOWN">DOWN</option><option value="LEFT" <option="">LEFT</option><option value="UP" <option="">UP</option></select></p>
+            <p class="btn-parent"><button id="HelpButton" class="btn btn-primary btn-xs" type="button">ⓘ Help</button></p>
+        </div>
+    </div>
+    </div>
+    <div id="customShortcutDialog" title="Keybinding Preference">
+        <div id="edit" tabindex="0">
+            <span style="font-size: 14px;">Press Desire Key Combination &amp; press Enter or press ESC to cancel.</span>
+            <div id="pressedKeys"></div>
+            <div id="warning"></div>
+        </div>
+        <div id="heading">
+            <span>Command</span>
+            <span>Keymapping</span>
+        </div>
+        <div id="preference" class="customScroll">
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">New Circuit</span>
+                    <span id="keyword">Shift + N</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Save Online</span>
+                    <span id="keyword">Ctrl + S</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Save Offline</span>
+                    <span id="keyword">Ctrl + Alt + S</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Download as Image</span>
+                    <span id="keyword">Ctrl + D</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Open Offline</span>
+                    <span id="keyword">Ctrl + O</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Insert Sub-circuit</span>
+                    <span id="keyword">Shift + C</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Combinational Analysis</span>
+                    <span id="keyword">Shift + A</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Direction Up</span>
+                    <span id="keyword">Up</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Direction Down</span>
+                    <span id="keyword">Down</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Direction Left</span>
+                    <span id="keyword">Left</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Direction Right</span>
+                    <span id="keyword">Right</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Insert Label</span>
+                    <span id="keyword">Ctrl + L</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Label Direction Up</span>
+                    <span id="keyword">Alt + Up</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Label Direction Down</span>
+                    <span id="keyword">Alt + Down</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Label Direction Left</span>
+                    <span id="keyword">Alt + Left</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Label Direction Right</span>
+                    <span id="keyword">Alt + Right</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Move Element Up</span>
+                    <span id="keyword">Shift + Up</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Move Element Down</span>
+                    <span id="keyword">Shift + Down</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Move Element Left</span>
+                    <span id="keyword">Shift + Left</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Move Element Right</span>
+                    <span id="keyword">Shift + Right</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Hotkey Preference</span>
+                    <span id="keyword">F8</span>
+                </div>
+            </div>
+
+            <div>
+                <span id="edit-icon"></span>
+                <div><span id="command">Open Documentation</span>
+                    <span id="keyword">F1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="layoutDialog" class="draggable-panel draggable-panel-css " style="z-index: 99;">
+        <div class="panel-header">Layout
+            <span class="fas fa-minus-square minimize"></span>
+            <span class="fas fa-external-link-square-alt maximize"></span>
+        </div>
+        <div class="layout-body panel-body" id="layout-body">
+            <div class="">
+                <button class="zoomButton btn-lg" id="decreaseLayoutWidth" title="Decrease Width">
+    <span class="fa fa-minus" aria-hidden="true"></span>
+    </button>
+                <span>Width</span>
+                <button class="zoomButton btn-lg" id="increaseLayoutWidth" title="Increase Width">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+    </button>
+            </div>
+            <div class="">
+                <button class="zoomButton btn-lg" id="decreaseLayoutHeight" title="Decrease Height">
+    <span class="fa fa-minus" aria-hidden="true"></span>
+    </button>
+                <span>Height</span>
+                <button class="zoomButton btn-lg" id="increaseLayoutHeight" title="Increase Height">
+    <span class="fa fa-plus" aria-hidden="true"></span>
+    </button>
+            </div>
+            <div class="">
+                <span>Reset all nodes:</span>
+                <button class="zoomButton btn-lg" id="layoutResetNodes">
+    <span class="fa fa-sync" aria-hidden="true" title="Reset"></span>
+    </button>
+            </div>
+            <div class="layout-title">
+                <span>Title</span>
+                <div class="layout--btn-group">
+                    <button class="zoomButton-up btn-lg no-select" id="layoutTitleUp">
+    <svg id="Group_304" data-name="Group 304" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="Rectangle_1072" data-name="Rectangle 1072" fill="none" stroke="#f1f9ff" stroke-width="2">
+    <rect width="30" height="30" rx="10" stroke="none"></rect>
+    <rect x="1" y="1" width="28" height="28" rx="9" fill="none"></rect>
+    </g>
+    <path id="Path_36" data-name="Path 36" d="M4.7,6.1,0,1.4,1.4,0,4.7,3.3,8,0,9.4,1.4Z" transform="translate(19.4 17.755) rotate(180)" fill="#fff"></path>
+    </svg>
+    </button>
+                    <button class="zoomButton-down btn-lg no-select" id="layoutTitleDown">
+    <svg id="Group_305" data-name="Group 305" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="Rectangle_1072" data-name="Rectangle 1072" fill="none" stroke="#f1f9ff" stroke-width="2">
+    <rect width="30" height="30" rx="10" stroke="none"></rect>
+    <rect x="1" y="1" width="28" height="28" rx="9" fill="none"></rect>
+    </g>
+    <path id="Path_36" data-name="Path 36" d="M4.7,6.1,0,1.4,1.4,0,4.7,3.3,8,0,9.4,1.4Z" transform="translate(10 11.655)" fill="#fff"></path>
+    </svg>
+    </button>
+                    <button class="zoomButton-left btn-lg no-select" id="layoutTitleLeft">
+    <svg id="Group_306" data-name="Group 306" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="Rectangle_1072" data-name="Rectangle 1072" fill="none" stroke="#f1f9ff" stroke-width="2">
+    <rect width="30" height="30" rx="10" stroke="none"></rect>
+    <rect x="1" y="1" width="28" height="28" rx="9" fill="none"></rect>
+    </g>
+    <path id="Path_36" data-name="Path 36" d="M4.7,6.1,0,1.4,1.4,0,4.7,3.3,8,0,9.4,1.4Z" transform="translate(18.1 9.655) rotate(90)" fill="#fff"></path>
+    </svg>
+    </button>
+                    <button class="zoomButton-right btn-lg no-select" id="layoutTitleRight">
+    <svg id="Group_307" data-name="Group 307" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g id="Rectangle_1072" data-name="Rectangle 1072" fill="none" stroke="#f1f9ff" stroke-width="2">
+    <rect width="30" height="30" rx="10" stroke="none"></rect>
+    <rect x="1" y="1" width="28" height="28" rx="9" fill="none"></rect>
+    </g>
+    <path id="Path_36" data-name="Path 36" d="M4.7,6.1,0,1.4,1.4,0,4.7,3.3,8,0,9.4,1.4Z" transform="translate(12 19.055) rotate(-90)" fill="#fff"></path>
+    </svg>
+    </button>
+                </div>
+            </div>
+            <div class="layout-title--enable">
+                <span>Title Enabled:</span>
+                <label class="switch">
+    <input type="checkbox" checked="" id="toggleLayoutTitle">
+    <span class="slider"></span>
+    </label>
+            </div>
+            <div class="">
+                <button class="Layout-btn custom-btn--primary" id="saveLayout">
+    Save
+    </button>
+                <button class="Layout-btn custom-btn--tertiary" id="cancelLayout">
+    Cancel
+    </button>
+            </div>
+        </div>
+    </div>
+    <div id="saveImageDialog" class="noSelect" style="display: none;" title="Render Image">
+        <div class="download-dialog-section-1">
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="png" checked="checked">PNG<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="jpeg">JPEG<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="svg">SVG<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="bmp">BMP<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="gif">GIF<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="imgType" value="tiff">TIFF<span></span></label>
+        </div>
+        <div class="download-dialog-section-2">
+            <div class="option inline btn-group btn-group-toggle" style="border: none;" data-toggle="buttons">
+                <div class="btn inactive-btn" id="radio-full" role="button" aria-pressed="false">
+                    <input type="radio" name="view" value="full"> Full Circuit View
+                </div>
+                <div class="btn active active-btn" id="radio-current" role="button" aria-pressed="true">
+                    <input type="radio" name="view" value="current" checked="checked">Current View
+                </div>
+            </div>
+            <div class="download-dialog-section-2_2">
+                <label class="cb-checkbox"><span class="cb-inner"><i><input type="checkbox" name="transparent" value="transparent"></i></span>Transparent Background</label>
+            </div>
+        </div>
+        <div class="download-dialog-section-3">
+            <span>Resolution:</span>
+            <label class="option custom-radio inline"><input type="radio" name="resolution" value="1" checked="checked">1x<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="resolution" value="2">2x<span></span></label>
+            <label class="option custom-radio inline"><input type="radio" name="resolution" value="4">4x<span></span></label>
+        </div>
+    </div>
+    <div id="colorThemesDialog" class="customScroll colorThemesDialog" tabindex="0" style="display: none;" title="Select Theme"></div>
+    <div class="simulation" id="simulation">
+        <div id="restrictedDiv" class="alert alert-danger display--none"></div>
+        <div class="canvasArea" id="canvasArea" style="height: 247px;">
+            <canvas id="backgroundArea" style="position: absolute; left: -15.2px; top: -21.6px; z-index: 0; width: 1636px; height: 347px;" width="2045" height="433"></canvas>
+            <canvas id="simulationArea" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; cursor: default;" width="1920" height="308"></canvas>
+            <div id="miniMap" style="height: 110px; width: 255px; display: none;">
+                <canvas id="miniMapArea" style="position: absolute; left: 0; top: 0; z-index: 3;" width="255" height="110"></canvas>
+            </div>
+            <div id="contextMenu" oncontextmenu="return false;">
+                <ul>
+                    <li onclick="menuItemClicked(2)">Paste</li>
+                    <li onclick="menuItemClicked(0)">Copy</li>
+                    <li onclick="menuItemClicked(1)">Cut</li>
+                    <li onclick="menuItemClicked(3)">Delete</li>
+                    <li onclick="menuItemClicked(4)">Undo</li>
+                    <li onclick="menuItemClicked(5)">New Circuit</li>
+                    <li onclick="menuItemClicked(6)">Insert SubCircuit</li>
+                    <li onclick="menuItemClicked(7)">Center Focus</li>
+                </ul>
+            </div>
+            <div id="Help" class="">Not Gate Tooltip : Inverts the input digital signal.</div>
+            <div class="sk-folding-cube loadingIcon" style="
+            display: none;
+            position: absolute;
+            right: 50%;
+            bottom: 50%;
+            z-index: 100;
+          ">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
+    <div id="combinationalAnalysis" style="display: none;" title="BooleanLogicTable"></div>
+    <div id="insertSubcircuitDialog" class="subcircuitdialog" title="Insert SubCircuit"></div>
+    <div id="openProjectDialog" style="display: none;" title="Open Project"></div>
+    <div id="bitconverterprompt" title="Dec-Bin-Hex-Converter" style="display: none;">
+        <label>Decimal value</label><br><input type="text" id="decimalInput" value="16" label="Decimal" name="text1"><br><br>
+        <label>Binary value</label><br><input type="text" id="binaryInput" value="0b10000" label="Binary" name="text1"><br><br>
+        <label>Octal value</label><br><input type="text" id="octalInput" value="020" label="Octal" name="text1"><br><br>
+        <label>Hexadecimal value</label><br><input type="text" id="hexInput" value="0x10" label="Hex" name="text1"><br><br>
+    </div>
+
+    <div class="report-sidebar">
+        <a type="button" class="btn btn-primary text-light" data-toggle="modal" data-target=".issue">
+            <span class="fa fa-bug"></span>&nbsp;&nbsp;Report an issue</a>
+    </div>
+
+    <div class="modal fade issue" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="container my-2">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">×</span>
+    </button>
+                    <div class="container text-center">
+                        <h4>Report an issue</h4>
+                    </div>
+                    <hr>
+                    <div class="container my-2 text-center" id="result"></div>
+                    <label id="report-label" style="font-weight: lighter;"><b>Describe your issue:</b></label>
+                    <div class="form-group">
+                        <textarea class="form-control border-primary" id="issuetext" rows="3"></textarea>
+                    </div>
+                    <label for="emailtext" id="email-label" style="font-weight: lighter"><b>Email</b><span> [Optional]</span>:</label>
+                    <div class="form-group">
+                        <input class="form-control border-primary" type="email" id="emailtext" rows="3">
+                    </div>
+                    <div class="container">
+                        <center>
+                            <button type="submit" id="report" class="btn btn-primary">
+    Report
+    </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        const embed = false;
+        user_id = "Guest user";
+        var listenToSimulator = true
+        restrictedElements = [];
+    </script>
+
+    <script>
+        $('.dropdown-toggle').hover(function() {
+            $('.dropdown.open').removeClass('open');
+            $(this).parent('.dropdown').addClass('open');
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="./css/restrictedElements.css">
+    <script type="text/javascript" src="https://circuitverse.org/js/metadata.json"></script>
+    <script>
+        $(document).tooltip({
+            show: null,
+            track: true,
+            hide: false,
+            tooltipClass: "custom-tooltip-styling",
+        });
+
+        $(function() {
+            $(".btn-group-toggle").twbsToggleButtons();
+        });
+
+        $(function() {
+            $("#openProjectDialog").checkBo();
+            $(".download-dialog-section-2_2").checkBo();
+        });
+
+
+        function old_ui_redirect() {
+            window.location.href = window.location.href.replace("/simulator", "/simulator_old")
+        }
+    </script>
+    <div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible">
+        <div style="display: none;">AndGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">NandGate</div>
+        <div style="display: none;">NorGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NandGate</div>
+        <div style="display: none;">NorGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">AndGate</div>
+        <div style="display: none;">XorGate</div>
+        <div style="display: none;">XnorGate</div>
+        <div style="display: none;">XorGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">Output</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">Output</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">HexDisplay</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">SquareRGBLed</div>
+        <div style="display: none;">SixteenSegDisplay</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">Output</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">SixteenSegDisplay</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">Output</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Ground</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Random</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">AndGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">Fit to Screen</div>
+        <div style="display: none;">Download as Image</div>
+        <div style="display: none;">Delete Selected</div>
+        <div style="display: none;">Undo</div>
+        <div style="display: none;">Preview Circuit</div>
+        <div style="display: none;">Preview Circuit</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Stepper</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Input</div>
+        <div style="display: none;">Button</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">Power</div>
+        <div style="display: none;">ConstantVal</div>
+        <div style="display: none;">Counter</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">HexDisplay</div>
+        <div style="display: none;">SquareRGBLed</div>
+        <div style="display: none;">VariableLed</div>
+        <div style="display: none;">Output</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">DigitalLed</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">HexDisplay</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">SquareRGBLed</div>
+        <div style="display: none;">HexDisplay</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">SevenSegDisplay</div>
+        <div style="display: none;">HexDisplay</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">RGBLed</div>
+        <div style="display: none;">RGBLedMatrix</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NorGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">AndGate</div>
+        <div style="display: none;">XorGate</div>
+        <div style="display: none;">AndGate</div>
+        <div style="display: none;">OrGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NotGate</div>
+        <div style="display: none;">NotGate</div>
+        <div>Download as Image</div>
+    </div>
+
+    <script>
+        // window.onload = function() {
+        //     alert('Page is loaded');
+        //     // document.getElementById("myimage1").src = "https://circuitverse.org/img/Input.svg";
+        //     document.getElementById("mynavbar").style.display = "none";
+        //     document.getElementById("moduleProperty").style.display = "none";
+        // };
+        window.addEventListener("load", function() {
+            // document.getElementById("myimage1").src = "https://circuitverse.org/img/Input.svg";
+            // document.getElementById("delete1").style.display = "none";
+            // document.getElementById("sidebar").style.display = "none";
+
+            // alert('Page is loaded');
+            document.getElementById("mynavbar").style.display = "none";
+            document.getElementById("moduleProperty").style.display = "none";
+            document.getElementById("mypanel").style.display = "none";
+
+
+
+        });
+    </script>
+    <style>
+        /* .ui-accordion {
+            display: none;
+        } */
+        
+        .mydelete {
+            display: none;
+        }
+    </style>
+</body>
+<loom-container id="lo-engage-ext-container">
+    <div></div>
+    <loom-shadow classname="resolved"></loom-shadow>
+</loom-container>
+
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn  arithmatic. Includes interactive examples.">
+    <meta name="keywords" content="binary addition, binary multiplication, binary subtraction, binary division, binary arithmetic, binary">
+    <meta name="author" content="kartikeya">
+    <title>Binary Multiplication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link href="intrduction1.css" rel="stylesheet">
+    <link href="introduction2.css" rel="stylesheet">
+    <link href="introduction3.css" rel="stylesheet">
+    <link href="introduction4.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicons/favicon_binary.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script charset="utf-8" src="introduction.js"></script>
+
+</head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style="">
+
+    <div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+        <div class="container">
+
+            <ul class="nav nav-list">
+                <li class="my_bar"><a class="my_bar" href="./index.html">Home</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_introduction.html">Introduction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_addition.html">Binary Addition</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_multiplication.html">Binary Multiplication</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_subtraction.html">Binary Subtraction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_division.html">Binary Division</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_practice.html">Practice</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+
+            <h2 id="multiplication">Binary Multiplication</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="multiplicationcontrols">
+                        <input type="button" value="Generate new example" id="multiplicationgenerate">
+                        <input type="button" value="Next Step" id="multiplicationnextstep">
+                        <input type="button" value="Start Over" id="multiplicationstartover">
+                    </div>
+
+
+                    <div id="multiplicationwrapper">
+                        <div id="multiplicationworking" class="workingarea">
+                            <div id="multiplicationtoprow" class="workingrow">
+                                <div id="multiplicationtoprow5" class="colour5">1</div>
+                                <div id="multiplicationtoprow4" class="colour4">1</div>
+                                <div id="multiplicationtoprow3" class="colour3">0</div>
+                                <div id="multiplicationtoprow2" class="colour2">0</div>
+                                <div id="multiplicationtoprow1" class="colour1">1</div>
+                                <div class="decimal">25</div>
+                            </div>
+                            <div id="multiplicationsecondrow" class="workingrow">
+                                <div id="multiplicationsecondrow3">1</div>
+                                <div id="multiplicationsecondrow2">0</div>
+                                <div id="multiplicationsecondrow1">1</div>
+                                <div class="decimal">5</div>
+                            </div>
+                            <div id="multiplicationanswerrow1" class="workingrow">
+                                <div id="multiplication1answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication1answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication1answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication1answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication1answerrow1" class="colour1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationanswerrow2" class="workingrow">
+                                <div id="multiplication2answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication2answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication2answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication2answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication2answerrow1" class="colour1">&nbsp;</div>
+                                <div id="multiplication2answerrow0">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationanswerrow3" class="workingrow">
+                                <div id="multiplication3answerrow5" class="colour5">&nbsp;</div>
+                                <div id="multiplication3answerrow4" class="colour4">&nbsp;</div>
+                                <div id="multiplication3answerrow3" class="colour3">&nbsp;</div>
+                                <div id="multiplication3answerrow2" class="colour2">&nbsp;</div>
+                                <div id="multiplication3answerrow1" class="colour1">&nbsp;</div>
+                                <div id="multiplication3answerrow01">&nbsp;</div>
+                                <div id="multiplication3answerrow02">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                            <div id="multiplicationtotalrow" class="workingrow">
+                                <div id="multiplicationtotalrow8">&nbsp;</div>
+                                <div id="multiplicationtotalrow7">&nbsp;</div>
+                                <div id="multiplicationtotalrow6">&nbsp;</div>
+                                <div id="multiplicationtotalrow5">&nbsp;</div>
+                                <div id="multiplicationtotalrow4">&nbsp;</div>
+                                <div id="multiplicationtotalrow3">&nbsp;</div>
+                                <div id="multiplicationtotalrow2">&nbsp;</div>
+                                <div id="multiplicationtotalrow1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgc-white p30 mb20 pm15">
+
+
+                    <div class="h1-banner-title">
+                        <h1>Binary Multiplication</h1>
+                    </div>
+
+
+
+                    <!-- article -->
+                    <article id="post-1065208" class="post-1065208 page type-page status-publish hentry">
+
+                        <p>Binary multiplication is one of the four binary arithmetic. The other three fundamental operations are addition, subtraction and division. In the case of a binary operation , we deal with only two digits, i.e. 0 and 1. The operation
+                            performed while finding the binary product is similar to the conventional multiplication method. The four major steps in binary digit multiplication are:
+                        </p>
+                        <div class="table-responsive">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <ul>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">0 × 0 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">0 × 1 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">1 × 0 = 0</span></li>
+                                                <li style="font-weight: 400;"><span style="font-weight: 400;">1 × 1 = 1&nbsp;&nbsp;</span></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><span style="font-weight: 400;">Note: The binary product of the two binary numbers 1 and 1 is equal to 1 only. And no additional number is borrowed or carried forward in this operation.</span></p>
+                        <p><span style="font-weight: 400;">Based on the above specification, we will solve here the problems online based on the multiplication of binary numbers.&nbsp;&nbsp;</span></p>
+                        <p align="justify">In this section, you will get answers for the questions about binary multiplication, including:</p>
+                        <ul>
+                            <li>What is Binary multiplication?</li>
+                            <li>Procedure to multiply two binary numbers</li>
+                            <li>Steps to Solve Binary multiplication using examples</li>
+                        </ul>
+                        <h2>What is Binary Multiplication?</h2>
+                        <p align="justify">The binary multiplication operation is actually a process of addition and shifting operation. This process has to be continued until all the multiplier is done, and finally, the addition operation is made.</p>
+                        <p align="justify">Similar to the decimal system, the multiplication of the binary numbers is done by multiplying the multiplicand with the multiplier. It is noted that the multiplication by zero makes all the bits zero, and this step may be ignored
+                            in the intermediate steps. The multiplication by 1 makes all the multiplicand value unchanged.</p>
+                        <h3><span style="font-weight: 400;">Binary Multiplication Table</span></h3>
+                        <p><span style="font-weight: 400;">The multiplication table for binary numbers is given below.</span></p>
+                        <div class="table-responsive">
+                            <table class="table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><b>Binary Number</b></td>
+                                        <td><b>Multiplication Value</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0 x 0</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1 x 0</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0 x 1</span></td>
+                                        <td><span style="font-weight: 400;">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1 x 1</span></td>
+                                        <td><span style="font-weight: 400;">1</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <h2>Binary Multiplication Rules</h2>
+                        <p>Binary multiplication, like other binary operations, is much easier, unlike the decimal multiplication when you remember the following multiplication rules. The rules of binary multiplication are:</p>
+                        <ul>
+                            <li>0 × 0 = 0</li>
+                            <li>0 × 1 = 0</li>
+                            <li>1 × 0 = 0</li>
+                            <li>1 × 1 = 1&nbsp;<span style="font-weight: 400;">[No borrow or carry method is applicable here]</span></li>
+                        </ul>
+                        <p><span style="font-weight: 400;">As per these rules, it very clear, that if the binary multiplication includes 0, then it will result in zero itself. Hence,</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 0 and 0 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 0 and 1 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 1 and 0 is equal to 0</span></p>
+                        <p><span style="font-weight: 400;">But,</span></p>
+                        <p><span style="font-weight: 400;">Binary product of 1 and 1 is equal to 1.</span></p>
+                        <p><span style="font-weight: 400;">To differentiate the rules for multiplication of binary numbers from other binary operations such as addition, subtraction and division, please refer to below given table:</span></p>
+                        <div class="table-responsive">
+                            <table class="table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">Addition</span></td>
+                                        <td><span style="font-weight: 400;">Subtraction</span></td>
+                                        <td><span style="font-weight: 400;">Division</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0+0 = 0</span></td>
+                                        <td><span style="font-weight: 400;">0-0 = 0</span></td>
+                                        <td><span style="font-weight: 400;">0÷0 = 0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">0+1 = 1</span></td>
+                                        <td><span style="font-weight: 400;">0-1 = 1 (1 is borrowed)</span></td>
+                                        <td><span style="font-weight: 400;">0÷1 = 0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1+0 = 1</span></td>
+                                        <td><span style="font-weight: 400;">1-0 = 1</span></td>
+                                        <td><span style="font-weight: 400;">1÷1 = 1</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span style="font-weight: 400;">1+1 = 0 (1 is carry forwarded)</span></td>
+                                        <td><span style="font-weight: 400;">1-1 = 0</span></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2>Examples of Binary Multiplication</h2>
+                        <p>Some binary multiplication examples are given below for a better understanding of this concept.</p>
+                        <p><strong>Example 1</strong>: Solve 1010 × 101</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>1010 × 101</p>
+                        <p>1010</p>
+                        <p>(×) 101</p>
+                        <p>—————–</p>
+                        <p>1010</p>
+                        <p>0000</p>
+                        <p>——————</p>
+                        <p>01010 ……. First Intermediate Sum</p>
+                        <p>1010</p>
+                        <p>——————–</p>
+                        <p>110010</p>
+                        <p>Comparison with Decimal values:</p>
+                        <p>1010<sub>2 </sub>= 10<sub>10</sub></p>
+                        <p>1010<sub>2</sub> = 5<sub>10</sub></p>
+                        <p>10 x 5 = 50<sub>10</sub></p>
+                        <p>(110010)<sub>2</sub> = 50<sub>10</sub></p>
+                        <p>Another example of binary multiplication with a decimal point is as follows:</p>
+                        <p><strong>Question:</strong> 1011.01 × 110.1</p>
+                        <p><strong>Solution:</strong></p>
+                        <p><img class="wp-image-1065211" src="https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps.png" alt="Binary Multiplication-steps" srcset="https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps.png 379w, https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps-250x183.png 250w, https://cdn1.byjus.com/wp-content/uploads/2019/04/binary-multiplication-steps-120x88.png 120w"
+                                sizes="(max-width: 379px) 100vw, 379px"></p>
+                        <p>Here, the decimal point is placed three places from the least significant bit. Because, the binary number 1011.01, the decimal point is 2 places from the LSB and 110.1 the decimal point is placed 1 place from the LSB.</p>
+                    </article>
+                    <!-- /article -->
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="container-fluid footer-background margin-top">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h4>THANK YOU FOR VISITING THIS WEBSITE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20188827-12', 'ryanstutorials.net');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="introduction5.js"></script>
+    <script src="introduction6.js"></script>
+    <script src="introduction.js"></script>
+
+
+
+
+
+
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe>
+    <iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+    <link rel="stylesheet" href="mycssfor_introduction.css">
+    <style>
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_1280.jpg");
+            background-repeat: repeat-y;
+        }
+        
+        h2 {
+            margin-top: 105px;
+        }
+        
+        td {
+            padding: 10px;
+        }
+    </style>
+</body>
+
+</html>

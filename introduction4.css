@@ -1,0 +1,457 @@
+/* .jumbotron {
+    background-color: #4d8353;
+    background: url('../../img/round/abacus_whole_128.png') no-repeat #4d8353;
+    background-position: 101% 130%;
+} */
+
+#sidebox.affix {
+    top: 70px;
+}
+
+.activities li:last-child {
+    list-style-type: none;
+}
+
+
+/* Conversions colours */
+
+.colour1 {
+    color: #29C183;
+}
+
+.colour2 {
+    color: #EA4949;
+}
+
+.colour3 {
+    color: #A076AB;
+}
+
+.colour4 {
+    color: #48A1AF;
+}
+
+.colour5 {
+    color: #EDC92F;
+}
+
+.colour6 {
+    color: #334D5C;
+}
+
+.colour7 {
+    color: #334D5C;
+}
+
+.colour8 {
+    color: #334D5C;
+}
+
+.b2dstartdigit {
+    font-weight: bold;
+    font-size: 30px;
+    padding: 3px;
+}
+
+.conversionContainer {
+    display: inline-block;
+    width: 300px;
+    text-align: right;
+}
+
+#digitscontainer,
+#numbercontainer {
+    display: inline-block;
+    text-align: right;
+    width: 300px;
+}
+
+#b2dworkingarea,
+#c2dworkingarea {
+    width: 300px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.runningtotal {
+    text-align: right;
+    display: block;
+    width: 300px;
+    padding-top: 10px;
+}
+
+#b2dtotal,
+#c2dtotal {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.highlight {
+    background-color: #eee;
+}
+
+
+/* Decimal to Binary */
+
+#d2bdigitcontainer,
+#d2fdigitcontainer {
+    width: 300px;
+    font-size: 30px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: right;
+}
+
+#d2bworkingarea,
+#d2fworkingarea {
+    width: 300px;
+    border-right: 1px solid #999;
+    font-size: 18px;
+}
+
+#d2bworkingarea .step,
+#d2fworkingarea .step {
+    text-align: right;
+    position: relative;
+    padding-right: 10px;
+}
+
+#d2fworkingarea .step {
+    margin-top: 10px;
+}
+
+.remainder {
+    position: absolute;
+    right: -30px;
+    top: 0px;
+}
+
+#d2fworkingarea .comment {
+    text-align: left;
+    position: absolute;
+    left: 310px;
+    top: 0px;
+    width: 400px;
+}
+
+#d2ftotal {
+    display: inline-block;
+}
+
+.totalFloating {
+    font-weight: bold;
+    font-size: 20px;
+    padding-right: 15px;
+}
+
+#floatingTotal {
+    width: auto;
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 25px;
+}
+
+.showAnswerSpacer {
+    padding-left: 170px;
+}
+
+
+/* Conversion Tables */
+
+.conversionTable {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.conversionTable div {
+    border-right: 1px solid #999;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    text-align: center;
+}
+
+.conversionTable div:last-child {
+    border-right: 0px;
+}
+
+
+/* Binary Addition */
+
+.workingarea {
+    width: 240px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.workingareawide {
+    width: 350px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.workingrow {
+    text-align: right;
+    position: relative;
+}
+
+.workingrow div,
+#divisionworkingarea>div>div {
+    display: inline-block;
+    width: 35px;
+    height: 65px;
+    font-size: 60px;
+    line-height: 62px;
+    cursor: help;
+}
+
+#finalcommentrow {
+    color: #eee;
+    font-size: 50px;
+    line-height: 62px;
+    cursor: help;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.1;
+    transition: opacity 4s;
+}
+
+.decimal {
+    position: absolute;
+    top: 0px;
+    left: -150px;
+    color: #eee;
+}
+
+#additionsecondrow:after {
+    content: '+';
+    font-weight: normal;
+    font-size: 60px;
+    color: #999;
+    right: -40px;
+    bottom: 20px;
+    position: absolute;
+}
+
+#additionanswerrow,
+#multiplicationanswerrow1,
+#multiplicationtotalrow,
+#subtractionanswerrow {
+    border-top: 1px solid #666;
+    color: #999;
+}
+
+#additioncarryrow {
+    text-align: right;
+    position: relative;
+    color: #999;
+    margin-top: -10px;
+}
+
+#additioncarryrow div {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    width: 35px;
+    height: 18px;
+    display: inline-block;
+    margin-top: -13px;
+}
+
+#additioncontrols input,
+#multiplicationcontrols input,
+#divisioncontrols input,
+#subtractioncontrols input {
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(86 32 13);
+    box-shadow: none;
+    color: white;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: large;
+}
+
+
+/* Multiplication */
+
+#multiplicationworking {
+    width: 310px;
+}
+
+#multiplicationsecondrow:after {
+    content: 'x';
+    font-weight: normal;
+    font-size: 60px;
+    color: #999;
+    right: -40px;
+    bottom: 30px;
+    position: absolute;
+}
+
+.paddinghint:after {
+    content: 'pad out';
+    font-weight: normal;
+    font-size: 24px;
+    color: #999;
+    right: -99px;
+    bottom: 24px;
+    position: absolute;
+}
+
+.totalhint:after {
+    content: 'add together';
+    font-weight: normal;
+    font-size: 24px;
+    color: #999;
+    right: -160px;
+    bottom: 24px;
+    position: absolute;
+}
+
+#multiplication2answerrow0,
+#multiplication3answerrow01,
+#multiplication3answerrow02 {
+    color: #999;
+}
+
+
+/* Subtraction */
+
+#subtractionsecondrow:after {
+    content: '-';
+    font-weight: normal;
+    font-size: 60px;
+    color: #999;
+    right: -40px;
+    bottom: 30px;
+    position: absolute;
+}
+
+#subtractioncarry1row div,
+#subtractioncarry2row div {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+    width: 35px;
+    height: 18px;
+    display: inline-block;
+    margin-top: -13px;
+    text-align: center;
+}
+
+.strikeout {
+    text-decoration: line-through;
+}
+
+
+/* Division */
+
+#divisionworking {
+    width: 330px;
+    text-align: right;
+}
+
+#divisionanswerrow {}
+
+#divisiondivisor {
+    display: inline-block;
+    color: #999;
+}
+
+#divisiondividend {
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+#divisionworkingarea {
+    width: 200px;
+    display: inline-block;
+    text-align: right;
+    color: #999;
+}
+
+#divisionworkingarea>div {
+    display: inline-block;
+    position: relative;
+}
+
+.divisionsubtractor {
+    border-bottom: 1px solid #666;
+}
+
+.rightdecimal {
+    position: absolute;
+    top: 0px;
+    right: -150px;
+    color: #eee;
+}
+
+.remainderdecimal {
+    position: absolute;
+    top: 0px;
+    left: -60px;
+    color: #eee;
+}
+
+.remainderdecimal:before {
+    content: 'Remainder: ';
+    font-size: 30px;
+    position: absolute;
+    left: -167px;
+}
+
+
+/* Decimal to 2's Complement */
+
+.d2cmessage {
+    color: #999;
+    text-align: right;
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.d2cstepcontent {
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+    width: 300px;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+
+/* Activities */
+
+.questiontitle {
+    display: inline-block;
+    width: 170px;
+}
+
+.activityquestion {
+    display: inline-block;
+    width: 150px;
+    font-weight: bold;
+    color: #48A1AF;
+    text-align: center;
+}
+
+.activityanswer {
+    font-weight: bold;
+    color: #29C183;
+    padding-left: 20px;
+}

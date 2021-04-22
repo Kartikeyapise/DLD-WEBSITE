@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y;
+            background-size: cover; */
+            background-size: contain;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        img {
+            margin: auto;
+        }
+        
+        .text-gray-700 {
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            color: rgb(31, 4, 4);
+        }
+        /* table {
+            height: 94px;
+            width: 61%;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+         */
+        
+        table {
+            margin: auto;
+            display: table;
+            border-collapse: separate;
+            /* border: black; */
+            /* border-width: 2px; */
+            box-sizing: border-box;
+            text-indent: initial;
+            white-space: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            /* border-color: rgb(187, 7, 7); */
+            font-variant: normal;
+        }
+        
+        .border {
+            border-width: 2px;
+            border-color: black;
+            /* background-color: chartreuse; */
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        /*         
+        tr {
+          
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./boolean_algebra.html" class="mr-5 hover:text-gray-900">BOOLEAN-ALGEBRA</a>
+                <a href="./bol_A_examples.html" class="mr-5 hover:text-gray-900">EXAMPLES</a>
+                <a href="./logic_editor.html" class="mr-5 hover:text-gray-900">TRUTH-TABLE-GENERATOR</a>
+                <a href="./circuits/gates.html" class="mr-5 hover:text-gray-900">GATE-SIMULATION</a>
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">EXAMPLES</div>
+    <div class="content">
+
+        <p>Boolean Algebra and the Laws of Boolean Algebra can be used to identify unnecessary logic gates within a digital logic design reducing the number of gates required saving on power consumption and cost.</p>
+        <p>We have seen throughout this section that digital logic functions can be defined and displayed as either a Boolean Algebra expression or as a logic gate truth table. So here are a few examples of how we can use Boolean Algebra to simplify larger
+            digital logic circuits.</p>
+        <h2>Example No1</h2>
+        <p>Construct a Truth Table for the logical functions at points <span class="ntxt">C</span>, <span class="ntxt">D</span> and <span class="ntxt">Q</span> in the following circuit and identify a single logic gate that can be used to replace the whole
+            circuit.
+        </p>
+        <p class="text-center"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo36.gif" alt="boolean logic example circuit" width="445" height="19" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo36.gif" alt="boolean logic example circuit" width="445" height="19" /></noscript></p>
+        <div class="bottomspace">&nbsp;</div>
+        <p>First observations tell us that the circuit consists of a 2-input <span class="ntxt">NAND</span> gate, a 2-input <span class="ntxt">EX-OR</span> gate and finally a 2-input <span class="ntxt">EX-NOR</span> gate at the output. As there are only
+            2 inputs to the circuit labelled <span class="ntxt">A</span> and <span class="ntxt">B</span>, there can only be 4 possible combinations of the input ( 2<sup>2</sup> ) and these are: <span class="ntxt">0-0</span>, <span class="ntxt">0-1</span>,
+            <span class="ntxt">1-0</span> and finally <span class="ntxt">1-1</span>. Plotting the logical functions from each gate in tabular form will give us the following truth table for the whole of the logic circuit below.</p>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td colspan="2">Inputs</td>
+                    <td colspan="3">Output at</td>
+                </tr>
+                <tr>
+                    <td style="width:80px;">A</td>
+                    <td style="width:80px;">B</td>
+                    <td style="width:80px;">C</td>
+                    <td style="width:80px;">D</td>
+                    <td style="width:80px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>From the truth table above, column <span class="ntxt">C</span> represents the output function generated by the <span class="ntxt">NAND</span> gate, while column <span class="ntxt">D</span> represents the output function from the <span class="ntxt">Ex-OR</span>            gate. Both of these two output expressions then become the input condition for the <span class="ntxt">Ex-NOR</span> gate at the output.</p>
+        <p>It can be seen from the truth table that an output at <span class="ntxt">Q</span> is present when any of the two inputs <span class="ntxt">A</span> or <span class="ntxt">B</span> are at logic <span class="ntxt">1</span>. The only truth table that
+            satisfies this condition is that of an <span class="ntxt">OR</span> Gate. Therefore, the whole of the above circuit can be replaced by just one single <b>2-input</b> <span class="ntxt">OR</span> Gate.</p>
+        <h2>Example No2</h2>
+        <p>Find the Boolean algebra expression for the following system.</p>
+        <p class="text-center"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo5.gif" alt="boolean algebra example circuit" width="362" height="121" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo5.gif" alt="boolean algebra example circuit" width="362" height="121" /></noscript></p>
+        <div class="bottomspace">&nbsp;</div>
+        <p>The system consists of an <span class="ntxt">AND</span> Gate, a <span class="ntxt">NOR</span> Gate and finally an <span class="ntxt">OR</span> Gate. The expression for the <span class="ntxt">AND</span> gate is <span class="ntxt">A.B</span>, and
+            the expression for the <span class="ntxt">NOR</span> gate is <span class="otxt">A+B</span>. Both these expressions are also separate inputs to the <span class="ntxt">OR</span> gate which is defined as <span class="otxt">A+B</span>. Thus the
+            final output expression is given as:</p>
+        <p class="text-center"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo6.gif" alt="boolean algebra equation" width="473" height="139" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo6.gif" alt="boolean algebra equation" width="473" height="139" /></noscript></p>
+        <div class="bottomspace">&nbsp;</div>
+        <p>The output of the system is given as <span class="ntxt">Q = (A.B)</span> + (<span class="otxt">A+B</span>), but the notation <span class="otxt">A+B</span> is the same as the De Morgan´s notation <span class="otxt">A</span>.<span class="otxt">B</span>,
+            Then substituting <span class="otxt">A</span>.<span class="otxt">B</span> into the output expression gives us a final output notation of <span class="ntxt">Q = (A.B)+(</span><span class="otxt">A</span>.<span class="otxt">B</span>), which is
+            the Boolean notation for an <span class="ntxt">Exclusive-NOR</span> Gate as seen in the previous section.</p>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td colspan="2">Inputs</td>
+                    <td colspan="2">Intermediates</td>
+                    <td>Output</td>
+                </tr>
+                <tr>
+                    <td style="width:50px;">B</td>
+                    <td style="width:50px;">A</td>
+                    <td style="width:100px;">A.B</td>
+                    <td style="width:100px;"><span class="otxt">A + B</span></td>
+                    <td style="width:100px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Then, the whole circuit above can be replaced by just one single <span class="ntxt">Exclusive-NOR</span> Gate and indeed an <span class="ntxt">Exclusive-NOR</span> Gate is made up of these individual gate functions.</p>
+        <h2>Example No3</h2>
+        <p>Find the Boolean algebra expression for the following system.</p>
+        <p class="text-center"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo7.gif" alt="Boolean Circuit" width="472" height="187" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo7.gif" alt="Boolean Circuit" width="472" height="187" /></noscript></p>
+        <div class="bottomspace">&nbsp;</div>
+        <p>This system may look more complicated than the other two to analyse but again, the logic circuit just consists of simple <span class="ntxt">AND</span>, <span class="ntxt">OR</span> and <span class="ntxt">NOT</span> gates connected together.</p>
+        <p></p>
+        <p>As with the previous Boolean examples, we can simplify the circuit by writing down the Boolean notation for each logic gate function in turn in order to give us a final expression for the output at <span class="ntxt">Q</span>.</p>
+        <p class="text-center"><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo8.gif" alt="Boolean Example No3 Answer" width="541" height="190" class="jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"><noscript><img loading="lazy" src="https://www.electronics-tutorials.ws/wp-content/uploads/2018/05/boolean-boo8.gif" alt="Boolean Example No3 Answer" width="541" height="190" /></noscript></p>
+        <div class="bottomspace">&nbsp;</div>
+        <p>The output from the 3-input <span class="ntxt">AND</span> gate is only at logic “1” when ALL the gates inputs are HIGH at logic level “1” (<span class="ntxt">A.B.C</span>). The output from the lower <span class="ntxt">OR</span> gate is only a
+            “1” when one or both inputs <span class="ntxt">B</span> or <span class="ntxt">C</span> are at logic level “0”. The output from the 2-input <span class="ntxt">AND</span> gate is a “1” when input <span class="ntxt">A</span> is a “1” and inputs
+            <span class="ntxt">B</span> or <span class="ntxt">C</span> are at “0”. Then the output at <span class="ntxt">Q</span> is only a “1” when inputs <span class="ntxt">A.B.C</span> equal “1” or <span class="ntxt">A</span> is equal to “1” and both
+            inputs <span class="ntxt">B</span> or <span class="ntxt">C</span> equal “0”, <span class="ntxt">A.(</span><span class="otxt">B</span><span class="ntxt">+</span><span class="otxt">C</span><span class="ntxt">)</span>.</p>
+        <p>By using “de Morgan’s theorem” inputs <span class="ntxt">B</span> and input <span class="ntxt">C</span> cancel out as to produce an output at <span class="ntxt">Q</span> they can be either at logic “1” or at logic “0”. Then this just leaves input
+            <span class="ntxt">A</span> as the only input needed to give an output at <span class="ntxt">Q</span> as shown in the table below.</p>
+        <table class="table1">
+            <tbody>
+                <tr>
+                    <td colspan="3">Inputs</td>
+                    <td colspan="5">Intermediates</td>
+                    <td>Output</td>
+                </tr>
+                <tr>
+                    <td style="width:40px;">C</td>
+                    <td style="width:40px;">B</td>
+                    <td style="width:40px;">A</td>
+                    <td style="width:80px;">A.B.C</td>
+                    <td style="width:40px;"><span class="otxt">B</span></td>
+                    <td style="width:40px;"><span class="otxt">C</span></td>
+                    <td style="width:80px;"><span class="otxt">B</span><span class="ntxt">+</span><span class="otxt">C</span></td>
+                    <td style="width:80px;">A.(<span class="otxt">B</span><span class="ntxt">+</span><span class="otxt">C</span>)</td>
+                    <td style="width:60px;">Q</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>1</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Then we can see that the entire logic circuit above can be replaced by just one single input labelled “<span class="ntxt">A</span>” thereby reducing a circuit of six individual logic gates to just one single piece of wire, (or Buffer). This type
+            of circuit analysis using <em>Boolean Algebra</em> can be very powerful and quickly identify any unnecessary logic gates within a digital logic design thereby reducing the number of gates required, the power consumption of the circuit and
+            of course the cost.</p>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>

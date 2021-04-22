@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+    * {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y;
+            background-size: cover; */
+            background-size: contain;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        img {
+            margin: auto;
+        }
+        
+        .text-gray-700 {
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+        /* table {
+            height: 94px;
+            width: 61%;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+         */
+        
+        table {
+            margin: auto;
+            display: table;
+            border-collapse: separate;
+            /* border: black; */
+            /* border-width: 2px; */
+            box-sizing: border-box;
+            text-indent: initial;
+            white-space: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            /* border-color: rgb(187, 7, 7); */
+            font-variant: normal;
+        }
+        
+        .border {
+            border-width: 3px;
+            border-color: black;
+            background-color: #c7b9b9;
+            display: table-cell;
+            vertical-align: inherit;
+        }
+    }
+    /*         
+        tr {
+          
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        } */
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./state_machines.html" class="mr-5 hover:text-gray-900">STATE-MACHINES</a>
+                <a href="./s_r_theory.html" class="mr-5 hover:text-gray-900">STATE-REDUCTION</a>
+                <a href="./s_r_example.html" class="mr-5 hover:text-gray-900">EXAMPLE</a>
+                <a href="./statemachine_simulation.html" class="mr-5 hover:text-gray-900">SIMULATION</a>
+            </nav>
+            <!-- <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">Button
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"> -->
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">EXAMPLE</div>
+    <div class="content">
+
+        Any design process must consider the problem of minimizing the cost of the final circuit. The two most obvious cost reductions are reductions in the number of flip-flops and the number of gates. <br><br> The number of states in a sequential circuit
+        is closely related to the complexity of the resulting circuit. It is therefore desirable to know when two or more states are equivalent in all aspects. The process of eliminating the equivalent or redundant states from a state table/diagram is
+        known as state reduction. <br><br> Example: Let us consider the state table of a sequential circuit shown in Table. <br>
+        <table height="94" width="61%" border="1">
+            <tbody>
+                <tr>
+                    <td class="border" align="middle" width="32%" bgcolor="#ff8040" height="22">Present State</td>
+                    <td class="border" align="middle" width="37%" bgcolor="#ff8040" height="22">
+                        <p align="center">Next State
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                    <td class="border" align="middle" width="31%" bgcolor="#ff8040" height="22">
+                        <p align="center">Output
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border" align="middle" width="35%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="100%">A</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">B</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">E</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">F</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="43%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">B</td>
+                                    <td align="middle" width="50%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">F</td>
+                                    <td align="middle" width="50%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">D</td>
+                                    <td align="middle" width="50%">E</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">F</td>
+                                    <td align="middle" width="50%">E</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">B</td>
+                                    <td align="middle" width="50%">C</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="22%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br> It can be seen from the table that the present state A and F both have the same next states, B (when x=0) and C (when x=1). They also produce the same output 1 (when x=0) and 0 (when x=1). Therefore states A and F are equivalent. Thus one
+        of the states, A or F can be removed from the state table. For example, if we remove row F from the table and replace all F's by A's in the columns, the state table is modified as shown in Table.
+        <br>
+        <table height="94" width="61%" border="1">
+            <tbody>
+                <tr>
+                    <td class="border" align="middle" width="32%" bgcolor="#ff8040" height="22">
+                        <p align="center">Present State</p>
+                    </td>
+                    <td class="border" align="middle" width="37%" bgcolor="#ff8040" height="22">
+                        <p align="center">Next State
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                    <td class="border" align="middle" width="31%" bgcolor="#ff8040" height="22">
+                        <p align="center">Output
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border" align="middle" width="35%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="100%">A</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">B</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">E</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="43%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">B</td>
+                                    <td align="middle" width="50%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">D</td>
+                                    <td align="middle" width="50%">E</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">E</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">D</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="22%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br> It is apparent that states B and E are equivalent. Removing E and replacing E's by B's results in the reduce table shown in Table.
+        <br>
+        <table height="94" width="61%" border="1">
+            <tbody>
+                <tr>
+                    <td class="border" align="middle" width="33%" bgcolor="#ff8040" height="22">
+                        <p align="center">Present State</p>
+                    </td>
+                    <td class="border" align="middle" width="36%" bgcolor="#ff8040" height="22">
+                        <p align="center">Next State
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                    <td class="border" align="middle" width="31%" bgcolor="#ff8040" height="22">
+                        <p align="center">Output
+                            <table width="100%" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td align="middle" width="50%">x = 0</td>
+                                        <td align="middle" width="50%">x = 1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="border" align="middle" width="36%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="100%">A</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">B</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="100%">D</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="42%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">B</td>
+                                    <td align="middle" width="50%">C</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">D</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">D</td>
+                                    <td align="middle" width="50%">B</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">A</td>
+                                    <td align="middle" width="50%">B</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td class="border" align="middle" width="22%" height="30">
+                        <table width="100%" border="0">
+                            <tbody>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">0</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">1</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                                <tr>
+                                    <td align="middle" width="50%">0</td>
+                                    <td align="middle" width="50%">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br> The removal of equivalent states has reduced the number of states in the circuit from six to four. Two states are considered to be equivalent if and only if for every input sequence the circuit produces the same output sequence irrespective
+        of which one of the two states is the starting state.
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+    </script>
+</body>
+
+</html>

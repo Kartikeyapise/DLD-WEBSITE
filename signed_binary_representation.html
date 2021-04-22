@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0 !important;
+            font-family: 'Lato', sans-serif;
+            color: #414042;
+            font-size: 16px;
+            line-height: 1.62857143;
+            background: #f7f7f7;
+        }
+
+        #main {
+            max-width: 1196px;
+            margin: 46px auto 0 auto;
+            top: inherit !important;
+        }
+
+        .single-page,
+        .single-wrap,
+        .content-cont {
+            width: 80%;
+            margin: auto;
+            position: relative;
+            padding: 25px;
+            background: #FFF;
+            -webkit-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.15);
+            -moz-box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.15);
+            box-shadow: 0 1px 1px 0 rgba(50, 50, 50, 0.15);
+            font-family: 'Lato', sans-serif;
+            color: #414042;
+            font-size: 16px;
+            line-height: 1.62857143;
+        }
+
+        .body-frame {
+            padding: 0 0 56px;
+        }
+
+        .body-cont {
+            position: relative;
+            transition: transform 10s ease;
+            background: #f7f7f7;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="body-frame">
+            <div class="body-cont">
+                <div class="content-cont">
+                    <p>In mathematics, positive numbers (including zero) are represented as unsigned numbers. That is we
+                        do not
+                        put
+                        the +ve sign in front of them to show that they are positive numbers.</p>
+                    <p>However, when dealing with negative numbers we do use a -ve sign in front of the number to show
+                        that the
+                        number is negative in value and different from a positive unsigned value, and the same is true
+                        with
+                        <strong>signed binary numbers</strong>.</p>
+                    <p>However, in digital circuits there is no provision made to put a plus or even a minus sign to a
+                        number,
+                        since
+                        digital systems operate with binary numbers that are represented in terms of “0’s” and “1’s”.
+                        When used
+                        together in microelectronics, these “1’s” and “0’s”, called a <b>bit</b> (being a contraction of
+                        <b>BI</b>nary digi<b>T</b>), fall into several range sizes of numbers which are referred to by
+                        common
+                        names,
+                        such as a <em>byte</em> or a <em>word</em>.</p>
+                    <p>We have also seen previously that an 8-bit binary number (a byte) can have a value ranging from 0
+                        (00000000<sub>2</sub>) to 255 (11111111<sub>2</sub>), that is 2<sup>8</sup>&nbsp;=&nbsp;256
+                        different
+                        combinations of bits forming a single 8-bit byte. So for example an unsigned binary number such
+                        as:
+                        01001101<sub>2</sub>&nbsp;=&nbsp;64&nbsp;+&nbsp;8&nbsp;+&nbsp;4&nbsp;+&nbsp;1&nbsp;=&nbsp;77<sub>10</sub>
+                        in
+                        decimal. But Digital Systems and computers must also be able to use and to manipulate negative
+                        numbers
+                        as
+                        well as positive numbers.</p>
+                    <p>Mathematical numbers are generally made up of a sign and a value (magnitude) in which the sign
+                        indicates
+                        whether the number is positive, (&nbsp;<span class="ntxt">+</span>&nbsp;) or negative,
+                        (&nbsp;<span class="ntxt">–</span>&nbsp;) with the value indicating the size of the number, for
+                        example 23, +156
+                        or
+                        -274. Presenting numbers is this fashion is called “sign-magnitude” representation since the
+                        left most
+                        digit
+                        can be used to indicate the sign and the remaining digits the magnitude or value of the number.
+                    </p>
+                    <p>Sign-magnitude notation is the simplest and one of the most common methods of representing
+                        positive and
+                        negative numbers either side of zero, (<span class="ntxt">0</span>). Thus negative numbers are
+                        obtained
+                        simply by changing the sign of the corresponding positive number as each positive or unsigned
+                        number
+                        will
+                        have a signed opposite, for example, +2 and -2, +10 and -10, etc.</p>
+                    <p>But how do we represent signed binary numbers if all we have is a bunch of one’s and zero’s. We
+                        know that
+                        binary digits, or bits only have two values, either a “1” or a “0” and conveniently for us, a
+                        sign also
+                        has
+                        only two values, being a “<b>+</b>” or a “<b>–</b>“.</p>
+                    <p>Then we can use a single bit to identify the sign of a <em>signed binary number</em> as being
+                        positive or
+                        negative in value. So to represent a positive binary number (<span class="ntxt">+n</span>) and a
+                        negative
+                        (<span class="ntxt">-n</span>) binary number, we can use them with the addition of a sign.</p>
+                    <p>For signed binary numbers the most significant bit (MSB) is used as the sign bit. If the sign bit
+                        is “0”,
+                        this means the number is positive in value. If the sign bit is “1”, then the number is negative
+                        in
+                        value.
+                        The remaining bits in the number are used to represent the magnitude of the binary number in the
+                        usual
+                        unsigned binary number format way.</p>
+                    <p>Then we can see that the Sign-and-Magnitude (SM) notation stores positive and negative values by
+                        dividing
+                        the
+                        “n” total bits into two parts: 1 bit for the sign and n–1 bits for the value which is a pure
+                        binary
+                        number.
+                        For example, the decimal number 53 can be expressed as an 8-bit signed binary number as follows.
+                    </p>
+                    <h3>Positive Signed Binary Numbers</h3>
+                    <p class="text-center"><img loading="lazy" title="Positive Signed Binary Numbers"
+                            src="/wp-content/uploads/2018/05/binary-bin7.gif" alt="positive signed binary numbers"
+                            width="192" height="105" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" title="Positive Signed Binary Numbers"
+                                src="/wp-content/uploads/2018/05/binary-bin7.gif" alt="positive signed binary numbers"
+                                width="192" height="105" /></noscript></p>
+                    <h3>Negative Signed Binary Numbers</h3>
+                    <p class="text-center"><img loading="lazy" title="Negative Signed Binary Numbers"
+                            src="/wp-content/uploads/2018/05/binary-bin8.gif" alt="negative signed binary numbers"
+                            width="192" height="105" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" title="Negative Signed Binary Numbers"
+                                src="/wp-content/uploads/2018/05/binary-bin8.gif" alt="negative signed binary numbers"
+                                width="192" height="105" /></noscript></p>
+                    <div class="bottomspace"></div>
+                    <p>The disadvantage here is that whereas before we had a full range <span class="ntxt">n-bit</span>
+                        unsigned
+                        binary number, we now have an <span class="ntxt">n-1 bit</span> signed binary number giving a
+                        reduced
+                        range
+                        of digits from:</p>
+                    <p class="text-center"><span
+                            class="mtxt">-2<sup>(n-1)</sup>&nbsp;&nbsp;to&nbsp;&nbsp;+2<sup>(n-1)</sup></span>
+                    </p>
+                    <p>So for example: if we have 4 bits to represent a signed binary number, (1-bit for the <b>Sign
+                            bit</b> and
+                        3-bits for the <b>Magnitude bits</b>), then the actual range of numbers we can represent in
+                        sign-magnitude
+                        notation would be:</p>
+                    <p class="text-center"><span
+                            class="mtxt">-2<sup>(4-1)</sup>&nbsp;–&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;+2<sup>(4-1)</sup>&nbsp;–&nbsp;1</span>
+                    </p>
+                    <p class="text-center"><span
+                            class="mtxt">-2<sup>(3)</sup>&nbsp;–&nbsp;1&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;+2<sup>(3)</sup>&nbsp;–&nbsp;1</span>
+                    </p>
+                    <p class="text-center"><span
+                            class="mtxt">-7&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;&nbsp;&nbsp;&nbsp;+7</span></p>
+                    <p>Whereas before, the range of an unsigned 4-bit binary number would have been from <span
+                            class="ntxt">0</span>
+                        to <span class="ntxt">15</span>, or <span class="ntxt">0</span> to <span class="ntxt">F</span>
+                        in
+                        hexadecimal, we now have a reduced range of -7 to +7. Thus an unsigned binary number does not
+                        have a
+                        single
+                        sign-bit, and therefore can have a larger binary range as the most significant bit (MSB) is just
+                        an
+                        extra
+                        bit or digit rather than a used sign bit.</p>
+                    <p>Another disadvantage here of the sign-magnitude form is that we can have a positive result for
+                        zero, +0
+                        or
+                        0000<sub>2</sub>, and a negative result for zero, -0 or 1000<sub>2</sub>. Both are valid but
+                        which one
+                        is
+                        correct.</p>
+                    <h2>Signed Binary Numbers Example No1</h2>
+                    <p>Convert the following decimal values into signed binary numbers using the sign-magnitude format:
+                    </p>
+                    <table class="table2">
+                        <tbody>
+                            <tr>
+                                <td style="width:200px; border:none; color:#414143; text-align:left;">
+                                    -15<sub>10</sub>&nbsp;&nbsp;as
+                                    a 6-bit number</td>
+                                <td style="width:50px; border:none;"><span style="font-size:1.0em;">⇒</span></td>
+                                <td style=" border:none;letter-spacing:0.2em; text-align:left;"><span
+                                        class="ntxt">1</span><span class="mtxt">01111<sub>2</sub></span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:200px; border:none; text-align: left;">+23<sub>10</sub>&nbsp;&nbsp;as a
+                                    6-bit
+                                    number</td>
+                                <td style="width:50px; border:none;"><span style="font-size:1.0em;">⇒</span></td>
+                                <td style=" border:none;letter-spacing:0.2em; text-align:left;"><span
+                                        class="ntxt">0</span><span class="mtxt">10111<sub>2</sub></span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:200px; border:none; text-align: left;">-56<sub>10</sub>&nbsp;&nbsp;as a
+                                    8-bit
+                                    number</td>
+                                <td style="width:50px; border:none;"><span style="font-size:1.0em;">⇒</span></td>
+                                <td style=" border:none;letter-spacing:0.2em; text-align:left;"><span
+                                        class="ntxt">1</span><span class="mtxt">0111000<sub>2</sub></span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:200px; border:none; text-align: left;">+85<sub>10</sub>&nbsp;&nbsp;as a
+                                    8-bit
+                                    number</td>
+                                <td style="width:50px; border:none;"><span style="font-size:1.0em;">⇒</span></td>
+                                <td style=" border:none;letter-spacing:0.2em; text-align:left;"><span
+                                        class="ntxt">0</span><span class="mtxt">1010101<sub>2</sub></span></td>
+                            </tr>
+                            <tr>
+                                <td style="width:200px; border:none; text-align: left;">-127<sub>10</sub>&nbsp;&nbsp;as
+                                    a 8-bit
+                                    number</td>
+                                <td style="width:50px; border:none;"><span style="font-size:1.0em;">⇒</span></td>
+                                <td style=" border:none;letter-spacing:0.2em; text-align:left;"><span
+                                        class="ntxt">1</span><span class="mtxt">1111111<sub>2</sub></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottomspace"></div>
+                    <p>Note that for a 4-bit, 6-bit, 8-bit, 16-bit or 32-bit signed binary number all the bits MUST have
+                        a
+                        value,
+                        therefore “0’s” are used to fill the spaces between the leftmost sign bit and the first or
+                        highest value
+                        “1”.</p>
+                    <p>The sign-magnitude representation of a binary number is a simple method to use and understand for
+                        representing signed binary numbers, as we use this system all the time with normal decimal (base
+                        10)
+                        numbers
+                        in mathematics. Adding a “1” to the front of it if the binary number is negative and a “0” if it
+                        is
+                        positive.</p>
+                    <p>However, using this sign-magnitude method can result in the possibility of two different bit
+                        patterns
+                        having
+                        the same binary value. For example, <span class="ntxt">+0</span> and <span
+                            class="ntxt">-0</span> would
+                        be
+                        <span class="ntxt">0000</span> and <span class="ntxt">1000</span> respectively as a signed 4-bit
+                        binary
+                        number. So we can see that using this method there can be two representations for zero, a
+                        positive zero
+                        (&nbsp;<span class="ntxt">0</span><span class="mtxt">000<sub>2</sub></span>&nbsp;) and also a
+                        negative
+                        zero
+                        (&nbsp;<span class="ntxt">1</span><span class="mtxt">000<sub>2</sub></span>&nbsp;) which can
+                        cause big
+                        complications for computers and digital systems.</p>
+                    <h2>One’s Complement of a Signed Binary Number</h2>
+                    <p><strong>One’s Complement</strong> or <strong>1’s Complement</strong> as it is also termed, is
+                        another
+                        method
+                        which we can use to represent negative binary numbers in a signed binary number system. In one’s
+                        complement,
+                        positive numbers (also known as non-complements) remain unchanged as before with the
+                        sign-magnitude
+                        numbers.
+                    </p>
+                    <p>Negative numbers however, are represented by taking the one’s complement (inversion, negation) of
+                        the
+                        unsigned positive number. Since positive numbers always start with a “0”, the complement will
+                        always
+                        start
+                        with a “1” to indicate a negative number.</p>
+                    <p>The one’s complement of a negative binary number is the complement of its positive counterpart,
+                        so to
+                        take
+                        the one’s complement of a binary number, all we need to do is change each bit in turn. Thus the
+                        one’s
+                        complement of “1” is “0” and vice versa, then the one’s complement of <span
+                            class="ntxt">10010100<sub>2</sub></span> is simply <span
+                            class="ntxt">01101011<sub>2</sub></span> as
+                        all
+                        the 1’s are changed to 0’s and the 0’s to 1’s.</p>
+                    <p>The easiest way to find the one’s complement of a signed binary number when building digital
+                        arithmetic
+                        or
+                        logic decoder circuits is to use <a class="inlink" href="/logic/logic_4.html">Inverters</a>. The
+                        inverter is
+                        naturally a complement generator and can be used in parallel to find the 1’s complement of any
+                        binary
+                        number
+                        as shown.</p>
+                    <h3>1’s Complement Using Inverters</h3>
+                    <p class="text-center"><img loading="lazy" title="1's Complement Using Inverters"
+                            src="/wp-content/uploads/2018/05/binary-bin9.gif" alt="1's complement using inverters"
+                            width="414" height="188" class="jetpack-lazy-image jetpack-lazy-image--handled"
+                            data-lazy-loaded="1"><noscript><img loading="lazy" title="1's Complement Using Inverters"
+                                src="/wp-content/uploads/2018/05/binary-bin9.gif" alt="1's complement using inverters"
+                                width="414" height="188" /></noscript></p>
+                    <div class="bottomspace"></div>
+                    <p>Then we can see that it is very easy to find the one’s complement of a binary number <span
+                            class="ntxt">N</span> as all we need do is simply change the 1’s to 0’s and the 0’s to 1’s
+                        to give
+                        us a
+                        <span class="ntxt">-N</span> equivalent. Also just like the previous sign-magnitude
+                        representation,
+                        one’s
+                        complement can also have n-bit notation to represent numbers in the range from: <span
+                            class="ntxt">-2<sup>(n-1)</sup>&nbsp;&nbsp;</span>and<span
+                            class="ntxt">&nbsp;&nbsp;+2<sup>(n-1)</sup> –
+                            1</span>. For example, a 4-bit representation in the one’s complement format can be used to
+                        represent
+                        decimal numbers in the range from -7 to +7 with two representations of zero: <span
+                            class="ntxt">0000</span>
+                        (+0) and <span class="ntxt">1111</span> (-0) the same as before.</p>
+                    <h2>Addition and Subtraction Using One’s Complement</h2>
+                    <p>One of the main advantages of <strong>One’s Complement</strong> is in the addition and
+                        subtraction of two
+                        binary numbers. In mathematics, subtraction can be implemented in a variety of different ways as
+                        <span class="ntxt">A&nbsp;–&nbsp;B</span>, is the same as saying <span
+                            class="ntxt">A&nbsp;+&nbsp;(-B)</span>
+                        or <span class="ntxt">-B&nbsp;+&nbsp;A</span> etc. Therefore, the complication of subtracting
+                        two binary
+                        numbers can be performed by simply using addition.</p>
+                    <p>We saw in the <a class="inlink" href="/combination/comb_7.html">Binary Adder</a> tutorial that
+                        binary
+                        addition follows the same rules as for the normal addition except that in binary there are only
+                        two bits
+                        (digits) and the largest digit is a “1”, (just as “9” is the largest decimal digit) thus the
+                        possible
+                        combinations for binary addition are as follows:</p>
+                    <table class="table2">
+                        <tbody>
+                            <tr>
+                                <td style="width:50px; border:none; color:#414143; text-align:right;"><span
+                                        class="mtxt">0</span>
+                                </td>
+                                <td style="width:50px; border:none; text-align:right;"><span class="mtxt">0</span></td>
+                                <td style="width:50px; border:none; text-align:right;"><span class="mtxt">1</span></td>
+                                <td style="width:60px; border:none; text-align:right;"><span class="mtxt">1</span></td>
+                                <td style="border:none;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="border:none; text-align:right;"><span class="mtxt"><u>+ 0</u></span></td>
+                                <td style="border:none; text-align:right;"><span class="mtxt"><u>+ 1</u></span></td>
+                                <td style="border:none;text-align:right;"><span class="mtxt"><u>+ 0</u></span></td>
+                                <td style="border:none;text-align:right;"><span class="mtxt"><u>+ 1</u></span></td>
+                                <td style="border:none;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="border:none; text-align:right;"><span class="mtxt">0</span></td>
+                                <td style="border:none;text-align:right;"><span class="mtxt">1</span></td>
+                                <td style="border:none; text-align:right;"><span class="mtxt">1</span></td>
+                                <td style="border:none; text-align:right;"><span class="mtxt">1←&nbsp;0</span></td>
+                                <td style="border:none;">&nbsp;( 0 plus a carry 1 )</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottomspace"></div>
+                    <p>When the two numbers to be added are both positive, the sum <span
+                            class="ntxt">A&nbsp;+&nbsp;B</span>,
+                        they
+                        can be added together by means of the direct sum (including the number and bit sign), because
+                        when
+                        single
+                        bits are added together, “0 + 0”, “0 + 1”, or “1 + 0” results in a sum of “0” or “1”. This is
+                        because
+                        when
+                        the two bits we want to be added together are odd (“0” + “1” or “1 + 0”), the result is “1”.
+                        Likewise
+                        when
+                        the two bits to be added together are even (“0 + 0” or “1 + 1”) the result is “0” until you get
+                        to “1 +
+                        1”
+                        then the sum is equal to “0” plus a carry “1”. Let’s look at a simple example.</p>
+                    <h2>Subtraction of Two Binary Numbers</h2>
+                    <p>An 8-bit digital system is required to subtract the following two numbers 115 and 27 from each
+                        other
+                        using
+                        one’s complement. So in decimal this would be: <span
+                            class="ntxt">115&nbsp;–&nbsp;27&nbsp;=&nbsp;88</span>.
+                    </p>
+                    <p>First we need to convert the two decimal numbers into binary and make sure that each number has
+                        the same
+                        number of bits by adding leading zero’s to produce an 8-bit number (byte). Therefore:</p>
+                    <p class="text-center"><span class="mtxt">115<sub>10</sub></span>&nbsp;&nbsp;in binary
+                        is:&nbsp;&nbsp;<span class="mtxt" style="letter-spacing: 0.2em;">01110011<sub>2</sub></span></p>
+                    <p class="text-center"><span class="mtxt">27<sub>10</sub></span>&nbsp;&nbsp;&nbsp;in binary
+                        is:&nbsp;&nbsp;<span class="mtxt" style="letter-spacing: 0.2em;">00011011<sub>2</sub></span></p>
+                    <p>Now we need to find the complement of the second binary number, (<span
+                            class="ntxt">00011011</span>)
+                        while
+                        leaving the first number (<span class="ntxt">01110011</span>) unchanged. So by changing all the
+                        1’s to
+                        0’s
+                        and 0’s to 1’s, the one’s complement of <span class="ntxt">00011011</span> is therefore equal to
+                        <span class="ntxt">11100100</span>.</p>
+                    <p>Adding the first number and the complement of the second number gives:</p>
+                    <table class="table2">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="border:none; text-align:right; color:#414143; line-height:1.6em; letter-spacing:0.2em;">
+                                    <span class="mtxt">01110011</span></td>
+                            </tr>
+                            <tr>
+                                <td style="border:none; text-align:right; line-height:1.6em; letter-spacing:0.2em;">
+                                    +&nbsp;<span class="mtxt">11100100</span></td>
+                            </tr>
+                            <tr>
+                                <td style="border:none; text-align:right; line-height:1.6em; letter-spacing: 0.2em;">
+                                    Overflow&nbsp;→&nbsp;<span class="mtxt"><b>1</b></span>&nbsp;<span class="mtxt"
+                                        style="border-top:1px solid #000000;">01010111
+                                    </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottomspace"></div>
+                    <p>Since the digital system is to work with 8-bits, only the first eight digits are used to provide
+                        the
+                        answer
+                        to the sum, and we simply ignore the last bit (bit 9). This bit is call an “overflow” bit.
+                        Overflow
+                        occurs
+                        when the sum of the most significant (left-most) column produces a carry forward. This overflow
+                        or carry
+                        bit
+                        can be ignored completely or passed to the next digital section for use in its calculations.
+                        Overflow
+                        indicates that the answer is positive. If there is no overflow then the answer is negative.</p>
+                    <p>The 8-bit result from above is: <span class="mtxt">01010111</span> (the overflow “1” cancels out)
+                        and to
+                        convert it back from a one’s complement answer to the real answer we now have to add “1” to the
+                        one’s
+                        complement result, therefore:</p>
+                    <table class="table2">
+                        <tbody>
+                            <tr>
+                                <td
+                                    style="width:140px; border:none; text-align:right; color:#414143; line-height:1.6em; letter-spacing:0.2em;">
+                                    <span class="mtxt">01010111</span></td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width:140px; border:none; text-align:right; line-height:1.6em; letter-spacing:0.2em;">
+                                    +&nbsp;<span class="mtxt">1</span></td>
+                            </tr>
+                            <tr>
+                                <td
+                                    style="width:140px; border:none; text-align:right; line-height:1.6em; letter-spacing:0.2em;">
+                                    <span class="mtxt" style="border-top: 1px solid #000000;">01011000</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottomspace"></div>
+                    <p>So the result of subtracting 27 ( <span class="mtxt">00011011<sub>2</sub></span> ) from 115 (
+                        <span class="mtxt">01110011<sub>2</sub></span> ) using 1’s complement in binary gives the answer
+                        of: <span class="mtxt">01011000<sub>2</sub></span> or (64 + 16 + 8) = 88<sub>10</sub> in
+                        decimal.</p>
+                    <p>Then we can see that signed or unsigned binary numbers can be subtracted from each other using
+                        <strong>One’s
+                            Complement</strong> and the process of addition. Binary adders such as the TTL 74LS83 or
+                        74LS283 can
+                        be
+                        used to add or subtract two 4-bit signed binary numbers or cascaded together to produce 8-bit
+                        adders
+                        complete with carry-out.</p>
+                    <h2>Two’s Complement of a Signed Binary Number</h2>
+                    <p><strong>Two’s Complement</strong> or <strong>2’s Complement</strong> as it is also termed, is
+                        another
+                        method
+                        like the previous sign-magnitude and one’s complement form, which we can use to represent
+                        negative
+                        binary
+                        numbers in a signed binary number system. In two’s complement, the positive numbers are exactly
+                        the same
+                        as
+                        before for unsigned binary numbers. A negative number, however, is represented by a binary
+                        number, which
+                        when added to its corresponding positive equivalent results in zero.</p>
+                    <p>In two’s complement form, a negative number is the 2’s complement of its positive number with the
+                        subtraction
+                        of two numbers being <span class="ntxt">A&nbsp;–&nbsp;B&nbsp;=&nbsp;A&nbsp;+&nbsp;( 2’s
+                            complement of B
+                            )</span> using much the same process as before as basically, two’s complement is one’s
+                        complement +
+                        1.
+                    </p>
+                    <p>The main advantage of two’s complement over the previous one’s complement is that there is no
+                        double-zero
+                        problem plus it is a lot easier to generate the two’s complement of a signed binary number.
+                        Therefore,
+                        arithmetic operations are relatively easier to perform when the numbers are represented in the
+                        two’s
+                        complement format.</p>
+                    <p>Let’s look at the subtraction of our two 8-bit numbers 115 and 27 from above using two’s
+                        complement, and
+                        we
+                        remember from above that the binary equivalents are:</p>
+                    <p class="text-center"><span class="mtxt">115<sub>10</sub></span>&nbsp;&nbsp;in binary
+                        is:&nbsp;&nbsp;<span class="mtxt" style="letter-spacing: 0.2em;">01110011<sub>2</sub></span></p>
+                    <p class="text-center"><span class="mtxt">27<sub>10</sub></span>&nbsp;&nbsp;&nbsp;in binary
+                        is:&nbsp;&nbsp;<span class="mtxt" style="letter-spacing: 0.2em;">00011011<sub>2</sub></span></p>
+                    <p>Our numbers are 8-bits long, then there are 2<sup>8</sup> digits available to represent our
+                        values and in
+                        binary this equals: <span class="mtxt">100000000<sub>2</sub></span> or <span
+                            class="ntxt">256<sub>10</sub></span>. Then the two’s complement of 27<sub>10</sub> will be:
+                    </p>
+                    <p class="text-center"><span
+                            class="mtxt">(2<sup>8</sup>)<sub>2</sub>&nbsp;–&nbsp;00011011&nbsp;=&nbsp;100000000&nbsp;–&nbsp;00011011&nbsp;=&nbsp;11100101<sub>2</sub></span>
+                    </p>
+                    <p>The complementation of the second negative number means that the subtraction becomes a much
+                        easier
+                        addition
+                        of the two numbers so therefore the sum is: <span class="ntxt">115&nbsp;+&nbsp;( 2’s complement
+                            of 27
+                            )</span> which is:</p>
+                    <p class="text-center"><span class="mtxt">01110011&nbsp;+&nbsp;11100101&nbsp;=&nbsp;</span><span
+                            class="ntxt"><b>1</b></span>&nbsp;<span class="mtxt">01011000<sub>2</sub></span></p>
+                    <p>As previously, the 9th overflow bit is disregarded as we are only interested in the first 8-bits,
+                        so the
+                        result is: <span class="mtxt">01011000<sub>2</sub></span> or (64 + 16 + 8) = 88<sub>10</sub> in
+                        decimal
+                        the
+                        same as before.</p>
+                    <h2>Signed Binary Numbers Summary</h2>
+                    <p>We have seen that negative binary numbers can be represented by using the most significant bit
+                        (MSB) as a
+                        sign bit. If an <span class="ntxt">n bit</span> binary number is signed the leftmost bit is used
+                        to
+                        represent the sign leaving <span class="ntxt">n-1 bits</span> to represent the number.</p>
+                    <p>For example, in a 4-bit binary number, this leaves only 3 bits to hold the actual number. If
+                        however, the
+                        binary number is unsigned then all the bits can be used to represent the number.</p>
+                    <p>The representation of a signed binary number is commonly referred to as the <em>sign-magnitude
+                            notation</em>
+                        and if the sign bit is “0”, the number is positive. If the sign bit is “1”, then the number is
+                        negative.
+                        When dealing with binary arithmetic operations, it is more convenient to use the complement of
+                        the
+                        negative
+                        number.</p>
+                    <p>Complementation is an alternative way of representing negative binary numbers. This alternative
+                        coding
+                        system
+                        allows for the subtraction of negative numbers by using simple addition.</p>
+                    <p>Since positive sign-magnitude numbers always start with a zero (0), its complement will therefore
+                        always
+                        start with a one (1) to indicate a negative number as shown in the following table.</p>
+                    <h3>4-bit Signed Binary Number Comparison</h3>
+                    <table class="table1">
+                        <tbody>
+                            <tr>
+                                <td style="width:80px;">Decimal</td>
+                                <td style="width:120px;">Signed Magnitude</td>
+                                <td style="width:120px;">Signed One’s Complement</td>
+                                <td style="width:120px;">Signed Two’s Complement</td>
+                            </tr>
+                            <tr>
+                                <td>+7</td>
+                                <td>0111</td>
+                                <td>0111</td>
+                                <td>0111</td>
+                            </tr>
+                            <tr>
+                                <td>+6</td>
+                                <td>0110</td>
+                                <td>0110</td>
+                                <td>0110</td>
+                            </tr>
+                            <tr>
+                                <td>+5</td>
+                                <td>0101</td>
+                                <td>0101</td>
+                                <td>0101</td>
+                            </tr>
+                            <tr>
+                                <td>+4</td>
+                                <td>0100</td>
+                                <td>0100</td>
+                                <td>0100</td>
+                            </tr>
+                            <tr>
+                                <td>+3</td>
+                                <td>0011</td>
+                                <td>0011</td>
+                                <td>0011</td>
+                            </tr>
+                            <tr>
+                                <td>+2</td>
+                                <td>0010</td>
+                                <td>0010</td>
+                                <td>0010</td>
+                            </tr>
+                            <tr>
+                                <td>+1</td>
+                                <td>0001</td>
+                                <td>0001</td>
+                                <td>0001</td>
+                            </tr>
+                            <tr>
+                                <td>+0</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                            </tr>
+                            <tr>
+                                <td>-0</td>
+                                <td>1000</td>
+                                <td>1111</td>
+                                <td>–</td>
+                            </tr>
+                            <tr>
+                                <td>-1</td>
+                                <td>1001</td>
+                                <td>1110</td>
+                                <td>1111</td>
+                            </tr>
+                            <tr>
+                                <td>-2</td>
+                                <td>1010</td>
+                                <td>1101</td>
+                                <td>1110</td>
+                            </tr>
+                            <tr>
+                                <td>-3</td>
+                                <td>1011</td>
+                                <td>1100</td>
+                                <td>1101</td>
+                            </tr>
+                            <tr>
+                                <td>-4</td>
+                                <td>1100</td>
+                                <td>1011</td>
+                                <td>1100</td>
+                            </tr>
+                            <tr>
+                                <td>-5</td>
+                                <td>1101</td>
+                                <td>1010</td>
+                                <td>1011</td>
+                            </tr>
+                            <tr>
+                                <td>-6</td>
+                                <td>1110</td>
+                                <td>1001</td>
+                                <td>1010</td>
+                            </tr>
+                            <tr>
+                                <td>-7</td>
+                                <td>1111</td>
+                                <td>1000</td>
+                                <td>1001</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="bottomspace"></div>
+                    <p>Signed-complement forms of binary numbers can use either 1’s complement or 2’s complement. The
+                        1’s
+                        complement
+                        and the 2’s complement of a binary number are important because they permit the representation
+                        of
+                        negative
+                        numbers.</p>
+                    <p>The method of 2’s complement arithmetic is commonly used in computers to handle negative numbers
+                        the only
+                        disadvantage is that if we want to represent negative binary numbers in the signed binary number
+                        format,
+                        we
+                        must give up some of the range of the positive number we had before.</p>
+                    <!-- Socialbox -->
+                    <div class="social_box_buttons">
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                            <a class="addthis_button_facebook" title="Facebook" href="#">
+                                <img src="https://www.electronics-tutorials.ws/wp-content/themes/electronics-tutorials-v2/img/fb-dark.png"
+                                    width="25px" alt="">
+                            </a>
+                            <a class="addthis_button_twitter" title="Twitter" href="#">
+                                <img src="https://www.electronics-tutorials.ws/wp-content/themes/electronics-tutorials-v2/img/tw-dark.png"
+                                    width="25px" alt="">
+                            </a>
+                            <a class="addthis_button_compact" href="#">
+                                <img src="https://www.electronics-tutorials.ws/wp-content/themes/electronics-tutorials-v2/img/more-dark.png"
+                                    width="25px" alt="">
+                            </a>
+                            <div class="atclear"></div>
+                        </div>
+                        <!-- AddThis Button END -->
+                    </div>
+
+                    <!-- Additional googletag -->
+                    <div id="div-gpt-ad-fluid" style="">
+                        <script type="text/javascript">
+                            googletag.cmd.push(function () { googletag.display('div-gpt-ad-fluid'); });
+                        </script>
+                        <div id="google_ads_iframe_/74317539/ElectronicsTutorials_5__container__"
+                            style="border: 0pt none; width: 100%; height: 0%;"></div>
+                    </div>
+
+                    <!-- End Socialbox -->
+                    <div class="clearfix content-nav">
+                        <div class="prev_next clearfix">
+                            <div class="pn-holder col-md-6 col-sm-6">
+                                <div class="prev"><a href="https://www.electronics-tutorials.ws/binary/bin_5.html"
+                                        rel="prev"><img
+                                            src="https://www.electronics-tutorials.ws/wp-content/themes/electronics-tutorials-v2/img/arrow_alt_left_inv.png"
+                                            alt="previous">
+                                        <div><span>Previous</span><br>Binary Numbers Tutorial</div>
+                                    </a></div>
+                            </div>
+                            <div class="pn-holder col-md-6 col-sm-6">
+                                <div class="next"><a
+                                        href="https://www.electronics-tutorials.ws/binary/binary-coded-decimal.html"
+                                        rel="next">
+                                        <div><span>Next</span><br>Binary Coded Decimal</div><img
+                                            src="https://www.electronics-tutorials.ws/wp-content/themes/electronics-tutorials-v2/img/arrow_alt_right_inv.png"
+                                            alt="next">
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

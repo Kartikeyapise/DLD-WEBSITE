@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn  arithmatic. Includes interactive examples.">
+    <meta name="keywords" content="binary addition, binary multiplication, binary subtraction, binary division, binary arithmetic, binary">
+    <meta name="author" content="kartikeya">
+    <title>Binary division </title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link href="intrduction1.css" rel="stylesheet">
+    <link href="introduction2.css" rel="stylesheet">
+    <link href="introduction3.css" rel="stylesheet">
+    <link href="introduction4.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicons/favicon_binary.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script charset="utf-8" src="introduction.js"></script>
+
+</head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style="">
+    <div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+        <div class="container">
+
+            <ul class="nav nav-list">
+                <li class="my_bar"><a class="my_bar" href="./index.html">Home</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_introduction.html">Introduction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_addition.html">Binary Addition</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_multiplication.html">Binary Multiplication</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_subtraction.html">Binary Subtraction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_division.html">Binary Division</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_practice.html">Practice</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+
+
+
+            <h2 id="division">Binary Division</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="divisioncontrols">
+                        <input type="button" value="Generate new example" id="divisiongenerate">
+                        <input type="button" value="Next Step" id="divisionnextstep">
+                        <input type="button" value="Start Over" id="divisionstartover">
+                    </div>
+
+                    <div id="divisionwrapper">
+                        <div id="divisionworking" class="workingarea">
+                            <div id="divisionanswerrow" class="workingrow">
+                                <div id="divisionanswerrow4" class="colour4">&nbsp;</div>
+                                <div id="divisionanswerrow3" class="colour3">&nbsp;</div>
+                                <div id="divisionanswerrow2" class="colour2">&nbsp;</div>
+                                <div id="divisionanswerrow1" class="colour1">&nbsp;</div>
+                                <div class="rightdecimal">&nbsp;</div>
+                            </div>
+                            <div id="divisiondivisor" class="workingrow">
+                                <div id="divisiondivisor3">1</div>
+                                <div id="divisiondivisor2">0</div>
+                                <div id="divisiondivisor1">0</div>
+                                <div class="decimal">4</div>
+                            </div>
+                            <div id="divisiondividend" class="workingrow">
+                                <div id="divisiondividend5" class="colour5">1</div>
+                                <div id="divisiondividend4" class="colour4">0</div>
+                                <div id="divisiondividend3" class="colour3">1</div>
+                                <div id="divisiondividend2" class="colour2">0</div>
+                                <div id="divisiondividend1" class="colour1">1</div>
+                                <div class="rightdecimal">21</div>
+                            </div>
+                            <div id="divisionworkingarea"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <!-- article -->
+                    <article id="post-1069011" class="post-1069011 page type-page status-publish hentry">
+
+                        <h2>What is Binary Division?</h2>
+                        <p align="justify">The binary division operation is similar to the base 10 decimal system, except the base 2. The division&nbsp;is probably one of the most challenging operations of the basic arithmetic operations. There are different ways to solve
+                            division problems using binary operations. Long division is one of them and the easiest and the most efficient way. This section has been designed to answer questions about binary division, including:</p>
+                        <ul>
+                            <li>What is Binary division?</li>
+                            <li>Procedure to add two binary numbers</li>
+                            <li>Examples to Solve Binary division</li>
+                        </ul>
+                        <h2>Binary Division Rules</h2>
+                        <p>The binary division is much easier than the decimal division when you remember the following division rules. The main rules of the binary division include:</p>
+                        <ul>
+                            <li>1÷1 = 1</li>
+                            <li>1÷0 = 0</li>
+                            <li>0÷1 = Meaningless</li>
+                            <li>0÷0 = Meaningless</li>
+                        </ul>
+                        <p>Similar to the decimal number system, the binary division is similar, which follows the four-step process:</p>
+                        <ul>
+                            <li>Divide</li>
+                            <li>Multiply</li>
+                            <li>Subtract</li>
+                            <li>Bring down</li>
+                        </ul>
+                        <p><strong>Important Note:&nbsp;</strong>Binary division follows the long division method to find the resultant in an easy way.</p>
+                        <h3>Comparison with Decimal Value</h3>
+                        <p>(01111100)<sub>2</sub> = (1111100)<sub>2 </sub>= 124<sub>10</sub></p>
+                        <p>(0010)<sub>2</sub> = (10)<sub>2</sub> = 2<sub>10</sub></p>
+                        <p>You will get the resultant value as 62 when you divide 124 by 2.</p>
+                        <p>So the binary equivalent of 62 is (111110)<sub>2 </sub></p>
+                        <p>(111110)<sub>2 </sub>= 62<sub>10</sub></p>
+                        <p>Both the binary and the decimal system produce the same result.</p>
+                        <h2>Binary Division Examples</h2>
+                        <p><strong>Question:</strong> Solve 01111100 ÷ 0010</p>
+                        <p><strong>Solution:</strong></p>
+                        <p>Given</p>
+                        <p>01111100 ÷ 0010</p>
+                        <p>Here the dividend is 01111100, and the divisor is 0010</p>
+                        <p>Remove the zero’s in the <strong>Most Significant Bit</strong> in both the dividend and divisor, that doesn’t change the value of the number.</p>
+                        <p>So the dividend becomes 1111100, and the divisor becomes 10.</p>
+                        <p>Now, use the long division method.</p>
+                        <p><img class="alignnone" src="https://cdn1.byjus.com/wp-content/uploads/2020/02/binary-division-1.png" alt="Binary Division Example-1" width="315" height="470"></p>
+                        <ul>
+                            <li><strong>Step 1:</strong> First, look at the first two numbers in the dividend and compare with the divisor. Add the number 1 in the quotient place. Then subtract the value, you get 1 as remainder.</li>
+                            <li><strong>Step 2:</strong> Then bring down the next number from the dividend portion and do the step 1 process again</li>
+                            <li><strong>Step 3:</strong> Repeat the process until the remainder becomes zero by comparing the dividend and the divisor value.</li>
+                            <li><strong>Step 4:</strong> Now, in this case, after you get the remainder value as 0, you have zero left in the dividend portion, so bring that zero to the quotient portion.</li>
+                        </ul>
+                        <p>Therefore, the resultant value is quotient value which is equal to 111110</p>
+                        <p>So, 01111100 ÷ 0010 = 111110</p>
+                        <p><strong>Example 2:</strong> Solve using the long division method:&nbsp;101101 ÷ 101</p>
+                        <p><strong>Solution:</strong></p>
+                        <p><img class="alignnone" src="https://cdn1.byjus.com/wp-content/uploads/2020/02/Bianry-division-2.png" alt="Binary Division Example-2" width="286" height="169"></p>
+                        <p>So, when you bring down the fourth bit of the dividend, it does not match with the divisor. In order to bring down the 5<sup>th</sup> and 6<sup>th</sup> bit of the dividend, add two zeros in the quotient value.</p>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="container-fluid footer-background margin-top">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h4>THANK YOU FOR VISITING THIS WEBSITE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20188827-12', 'ryanstutorials.net');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="introduction5.js"></script>
+    <script src="introduction6.js"></script>
+    <script src="introduction.js"></script>
+
+
+
+
+
+
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe>
+    <iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+    <link rel="stylesheet" href="mycssfor_introduction.css">
+    <style>
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_1280.jpg");
+            background-repeat: repeat-y;
+        }
+        
+        h2 {
+            margin-top: 105px;
+        }
+        
+        td {
+            padding: 10px;
+        }
+    </style>
+</body>
+
+</html>

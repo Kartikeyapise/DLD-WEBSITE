@@ -1,0 +1,16 @@
+git init 
+git status
+git add .
+git status
+git commit -m "first commit" .
+git status
+git branch -M master
+git remote add origin https://github.com/Kartikeyapise/DLD-WEBSITE.git
+git push -u origin master
+
+to upload on git:-
+git init && git add . && git commit -m "k1 commit" . && git branch -M master && git push -u origin master
+
+website link:-
+https://kartikeyapise.github.io/Binary_Arithmatic_by_kartikeya/
+

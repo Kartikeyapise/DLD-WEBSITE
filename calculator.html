@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <style>
+    </style>
+    <script src="binary.js"></script>
+</head>
+
+<body>
+<div>
+    <select name="number_representation">
+        <option value="1" selected="">unsigned</option>
+        <option value="2">2's compliment</option>
+    </select>
+    <input type="text" id="number1" maxlength="64" class="numbers">
+    <select name="c2op" id="c2op">
+        <option value="+" selected="">+</option>
+        <option value="-">-</option>
+        <option value="x">×</option>
+        <option value="/">÷</option>
+    </select>
+    <input type="text" id="number2" maxlength="64" class="numbers">
+    <div id="answer">
+        answer
+    </div>
+    <button onclick="addBinary()">calculate</button>
+    <button>simulate</button>
+    <button onclick="clearyo()">clear</button>
+
+    
+</div>
+
+</body>
+
+</html>

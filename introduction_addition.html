@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn  arithmatic. Includes interactive examples.">
+    <meta name="keywords" content="binary addition, binary multiplication, binary subtraction, binary division, binary arithmetic, binary">
+    <meta name="author" content="kartikeya">
+
+    <title>Binary Aaddition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+
+    <link href="intrduction1.css" rel="stylesheet">
+
+    <link href="introduction2.css" rel="stylesheet">
+
+
+    <link href="introduction3.css" rel="stylesheet">
+    <link href="introduction4.css" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="/favicons/favicon_binary.png">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script charset="utf-8" src="introduction.js"></script>
+
+</head>
+
+<body role="document" data-spy="scroll" data-target="#sidebox" data-offset="90" style="">
+
+    <div id="tutorialheader" class="navbar navbar-inverse navbar-static affix-top" role="navigation" data-spy="affix" data-offset-top="40">
+        <div class="container">
+
+            <ul class="nav nav-list">
+                <li class="my_bar"><a class="my_bar" href="./index.html">Home</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_introduction.html">Introduction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_addition.html">Binary Addition</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_multiplication.html">Binary Multiplication</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_subtraction.html">Binary Subtraction</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_division.html">Binary Division</a></li>
+                <li class="my_bar"><a class="my_bar" href="./introduction_practice.html">Practice</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+
+            <h2 id="addition">Binary Addition</h2>
+            <div class="section1">
+                <div class="black_beauty">
+                    <div id="additioncontrols">
+                        <input type="button" value="New Example" id="additiongenerate">
+                        <input type="button" value="Next Step" id="additionnextstep">
+                        <input type="button" value="Start Again" id="additionstartover">
+                    </div>
+                    <div id="additionwrapper">
+
+                        <div id="additionworking" class="workingarea">
+                            <div id="additiontoprow" class="workingrow">
+                                <div id="additiontoprow5" class="colour5" title="2^4 : 16">1</div>
+                                <div id="additiontoprow4" class="colour4" title="2^3 : 8">0</div>
+                                <div id="additiontoprow3" class="colour3" title="2^2 : 4">0</div>
+                                <div id="additiontoprow2" class="colour2" title="2^1 : 2">0</div>
+                                <div id="additiontoprow1" class="colour1" title="2^0 : 1">1</div>
+                                <div class="decimal">17</div>
+                            </div>
+                            <div id="additionsecondrow" class="workingrow">
+                                <div id="additionsecondrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                <div id="additionsecondrow4" class="colour4" title="2^3 : 8">1</div>
+                                <div id="additionsecondrow3" class="colour3" title="2^2 : 4">1</div>
+                                <div id="additionsecondrow2" class="colour2" title="2^1 : 2">0</div>
+                                <div id="additionsecondrow1" class="colour1" title="2^0 : 1">0</div>
+                                <div class="decimal">12</div>
+                            </div>
+                            <div id="additioncarryrow" class="workingrow">
+                                <div id="additioncarryrow6">&nbsp;</div>
+                                <div id="additioncarryrow5">&nbsp;</div>
+                                <div id="additioncarryrow4">&nbsp;</div>
+                                <div id="additioncarryrow3">&nbsp;</div>
+                                <div id="additioncarryrow2">&nbsp;</div>
+                                <div id="additioncarryrow1">&nbsp;</div>
+                            </div>
+                            <div id="additionanswerrow" class="workingrow">
+                                <div id="additionanswerrow6" title="2^5 : 32">&nbsp;</div>
+                                <div id="additionanswerrow5" class="colour5" title="2^4 : 16">&nbsp;</div>
+                                <div id="additionanswerrow4" class="colour4" title="2^3 : 8">&nbsp;</div>
+                                <div id="additionanswerrow3" class="colour3" title="2^2 : 4">&nbsp;</div>
+                                <div id="additionanswerrow2" class="colour2" title="2^1 : 2">&nbsp;</div>
+                                <div id="additionanswerrow1" class="colour1" title="2^0 : 1">&nbsp;</div>
+                                <div class="decimal"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bgc-white p30 mb20 pm15">
+
+                    <h2>What is Binary Addition</h2>
+                    <p align="justify">The binary addition operation works similarly to the base 10 decimal system, except that it is a base 2 system. The binary system consists of only two digits, 1 and 0. Most of the functionalities of the computer system use the binary
+                        number system. The binary code uses the digits 1’s and 0’s to make certain processes turn off or on. The process of the addition operation is very familiar to the decimal system by adjusting to the base 2.</p>
+                    <p align="justify">Before attempting the binary addition process, we should have complete knowledge of how the place works in the binary number system. Because most of the modern digital computers and electronic circuits perform the binary operation
+                        by representing each bit as a voltage signal. The bit 0 represents the “OFF” state, and the bit 1 represents the “ON” state.</p>
+                    <p>
+                        <a id="rules" name="Rules"></a>
+                    </p>
+                    <h3>Rules of Binary Addition</h3>
+                    <p>Binary addition is much easier than the decimal addition when you remember the following tricks or rules. Using these rules, any binary number can be easily added. The four rules of binary addition are:</p>
+                    <ul>
+                        <li>0 + 0 = 0</li>
+                        <li>0 + 1 = 1</li>
+                        <li>1 + 0 = 1</li>
+                        <li>1 + 1 =10</li>
+                    </ul>
+                    <p>
+                        <a name="Method"></a>
+                    </p>
+                    <h3>How To Do Binary Addition?</h3>
+                    <p>Now, look at the example of the binary addition:101 + 101</p>
+                    <p><strong>Procedure for Binary Addition of Numbers:</strong></p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <ul>
+                        <li><strong>Step 1:</strong> First consider the 1’s column, and add the one’s column,( 1+1 ) and it gives the result 10 as per the condition of binary addition.</li>
+                        <li><strong>Step 2:</strong> Now, leave the 0 in the one’s column and carry the value 1 to the 10’s column.</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 0</p>
+                    <ul>
+                        <li><strong>Step 3: Now add 10’s place, 1+( 0 + 0 ) = 1.</strong> So, nothing carries to the 100’s place and leave the value 1 in the 10’s place</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————-</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; 10</p>
+                    <ul>
+                        <li><strong>Step 4:</strong> Now add the 100’s place ( 1 + 1 ) = 10. Leave the value 0 in the 100’s place and carries 1 to the 1000’s place.</li>
+                    </ul>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; &nbsp;101</p>
+                    <p>(+) 101</p>
+                    <p>————-</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; 1010</p>
+                    <p>So, the resultant of the addition operation is 1010.</p>
+                    <p>When you cross-check the binary value with the decimal value, the resultant value should be the same.</p>
+                    <p>The binary value 101 is equal to the decimal value 5</p>
+                    <p>So, 5 + 5 = 10</p>
+                    <p>The decimal number 10 is equal to the binary number 1010.<br>
+                        <a id="table" name="Table"></a>
+                    </p>
+                    <h3>Binary Addition Table</h3>
+                    <p>The table of adding two binary numbers 0 and 1 is given below:</p>
+                    <div class="table-responsive">
+                        <table class="table-bordered">
+                            <tbody>
+                                <tr>
+                                    <td><strong>x</strong></td>
+                                    <td><strong>y</strong></td>
+                                    <td><strong>x+y</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">0</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">1</span></td>
+                                    <td><span style="font-weight: 400;">0&nbsp; &nbsp; &nbsp; (where 1 is carried over)</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p>You can see from the above table, x and y are the two binary numbers. So when we give the input for x = 0 and y = 0, then the output is equal to 0. When x = 0 or 1 and y = 1 or 0, then x+y = 1. But when both x and y are equal to 1,
+                        then their addition equals to 0, but the carryover number will equal to 1, which means basically&nbsp; 1 + 1 = 10 in binary addition, where 1 is carry forwarded to the next digit.<br>
+                        <a id="examples" name="Examples"></a>
+                    </p>
+                    <h3>Examples of Binary Addition</h3>
+                    <p>A few examples of binary additions are as follows:</p>
+                    <p><strong>Example 1:</strong> 10001 + 11101</p>
+                    <p><strong>Solution:</strong></p>
+                    <p><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1</strong></p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp; 1 0 0 0 1</p>
+                    <p style="text-align: left;">(+) 1 1 1 0 1</p>
+                    <p>———————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp; &nbsp;1 0 1 1 1 0</p>
+                    <p><strong>Example 2:</strong> 10111 + 110001</p>
+                    <p><strong>Solution:</strong></p>
+                    <p style="text-align: left;"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 1 1</strong></p>
+                    <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1 0 1 1 1</p>
+                    <p>(+) 1 1 0 0 0 1</p>
+                    <p>———————–</p>
+                    <p style="text-align: left;">&nbsp; &nbsp;1 0 0 1 0 0 0</p>
+
+
+
+                </div>
+            </div>
+            <hr>
+
+
+        </div>
+    </div>
+    <div class="container-fluid footer-background margin-top">
+        <div class="row-fluid">
+            <div class="col-md-12">
+                <h4>THANK YOU FOR VISITING THIS WEBSITE</h4>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-20188827-12', 'ryanstutorials.net');
+        ga('send', 'pageview');
+    </script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="introduction5.js"></script>
+    <script src="introduction6.js"></script>
+    <script src="introduction.js"></script>
+
+
+
+
+
+
+    <iframe scrolling="no" frameborder="0" allowtransparency="true" src="https://platform.twitter.com/widgets/widget_iframe.96fd96193cc66c3e11d4c5e4c7c7ec97.html?origin=https%3A%2F%2Fryanstutorials.net" title="Twitter settings iframe" style="display: none;"></iframe>
+    <iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe"></iframe>
+    <link rel="stylesheet" href="mycssfor_introduction.css">
+    <style>
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2017/06/21/07/33/background-2426328_1280.jpg");
+            background-repeat: repeat-y;
+        }
+        
+        h2 {
+            margin-top: 105px;
+        }
+        
+        td {
+            padding: 10px;
+        }
+    </style>
+</body>
+
+</html>

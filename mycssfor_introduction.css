@@ -1,0 +1,127 @@
+* {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/03/21/07/abacus-3288079_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+.my_bar {
+    display: inline;
+    padding: 10px;
+    font-size: medium;
+}
+
+.my_bar a {
+    color: white;
+}
+
+.my_bar a:active,
+.my_bar a:hover {
+    color: rgb(177 178 187 / 80%);
+}
+
+.nav nav-list {
+    display: inline;
+}
+
+#tutorialheader.affix {
+    padding: 10px 0px;
+}
+
+.jumbotron {
+    text-align: center;
+}
+
+.col-md-9 {
+    box-sizing: border-box;
+    width: 80%;
+    margin-top: 400px;
+    margin-left: 120px;
+}
+
+.my_ktitle {
+    position: relative;
+    top: 30vh;
+    font-size: 100px;
+    text-align: center;
+    color: #401b00;
+    border-radius: 10px;
+    padding: 65px;
+    background: rgb(205, 205, 204, 0.8);
+}
+
+p {
+    font-size: medium;
+    color: black;
+}
+
+#additionwrapper,
+#multiplicationwrapper,
+#subtractionwrapper,
+#divisionwrapper,
+.black_beauty {
+    background-color: black;
+    border-radius: 15px;
+    padding: 30px;
+    margin: 15px 0px;
+}
+
+#additioncontrols,
+#multiplicationcontrols,
+#subtractioncontrols,
+#divisioncontrols {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yooo {
+    background-color: rgb(204, 204, 204);
+    color: black;
+    border-radius: 15px;
+}
+
+h2 {
+    color: #C09853;
+}
+
+.questiontitle {
+    color: black;
+    text-decoration: underline;
+    font-size: x-large;
+    display: block;
+    padding: 10px;
+    margin: auto;
+    font-family: 'Baloo Bhai 2';
+}
+
+.activities {
+    list-style: none;
+}
+
+#generateall {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 210px;
+}
+
+p {
+    font-family: 'Ubuntu', sans-serif;
+    text letter-spacing: 1px;
+}
+
+li {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.section1 {
+    /* margin-top: 93px; */
+    display: block;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 15px;
+    background-color: rgb(228 228 228);
+}

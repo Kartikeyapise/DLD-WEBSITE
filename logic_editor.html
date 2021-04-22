@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,user-scalable=no">
+    <title>Logic editor</title>
+    <link rel="shortcut icon" href=logic.ico>
+    <link href='logicEditor.css' rel=stylesheet>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        
+        body {
+            background-image: url("https://cdn.pixabay.com/photo/2018/04/27/15/49/frame-3355028_1280.jpg");
+            /* background-repeat: repeat-y;
+            background-size: cover; */
+            background-size: contain;
+        }
+        
+        #mytitle {
+            position: relative;
+            top: 100px;
+            font-size: 100px;
+            text-align: center;
+            color: #401b00;
+            border-radius: 10px;
+            padding: 0px;
+            background: rgb(205, 205, 204, 0.8);
+            width: 70%;
+            margin: auto;
+            z-index: -9;
+        }
+        
+        .content {
+            font-weight: 550;
+            font-size: larger;
+            padding: 20px 15px;
+            background-color: #d2d2d2;
+            border: 3px solid black;
+            border-radius: 10px;
+            width: 70%;
+            margin: 115px auto;
+        }
+        
+        img {
+            margin: auto;
+        }
+        
+        .text-gray-700 {
+            background-color: rgb(8, 61, 41);
+            position: fixed;
+            width: 100%;
+        }
+        
+        a,
+        .ml-3 {
+            color: white;
+        }
+        
+        .container {
+            padding: 10px 10px;
+        }
+        
+        a:hover {
+            color: rgb(160, 156, 156);
+        }
+        
+        h2 {
+            text-align: center;
+            font-size: 50px;
+        }
+        /* table {
+            height: 94px;
+            width: 61%;
+            border-top-width: 1px;
+            border-right-width: 1px;
+            border-bottom-width: 1px;
+            border-left-width: 1px;
+        }
+         */
+        
+        table {
+            margin: auto;
+            display: table;
+            border-collapse: separate;
+            /* border: black; */
+            /* border-width: 2px; */
+            box-sizing: border-box;
+            text-indent: initial;
+            white-space: normal;
+            line-height: normal;
+            font-weight: normal;
+            font-size: medium;
+            font-style: normal;
+            color: -internal-quirk-inherit;
+            text-align: start;
+            border-spacing: 2px;
+            /* border-color: rgb(187, 7, 7); */
+            font-variant: normal;
+        }
+        
+        .border {
+            border-width: 2px;
+            border-color: black;
+            /* background-color: chartreuse; */
+            display: table-cell;
+            vertical-align: inherit;
+        }
+        /*         
+        tr {
+          
+            display: table-row;
+            vertical-align: inherit;
+            border-color: inherit;
+        } */
+        
+        .splitpane-container {
+            background-color: rgb(31, 4, 4);
+        }
+        
+        .app-body {
+            box-sizing: border-box;
+            width: 153%;
+            background-color: rgb(31, 4, 4);
+        }
+        
+        .field-panel {
+            background-color: rgb(31, 4, 4);
+        }
+        
+        .table-scroller-body {
+            /* box-sizing: border-box;
+            width: 100%; */
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+        }
+        
+        .cycle-scope-table {
+            box-sizing: border-box;
+            width: 100%;
+            background-color: rgb(175, 0, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .complete-panel {
+            display: none;
+        }
+        
+        .logic-panel-body {
+            z-index: -15;
+            border: 2px solid black;
+            border-radius: 8px;
+        }
+        
+        h2 {
+            color: blanchedalmond;
+        }
+        
+        label {
+            color: blanchedalmond;
+        }
+        
+        .table-head-cell-small {
+            display: none;
+        }
+        
+        .logic-input-field {
+            text-align: center;
+        }
+        
+        .logic-input {
+            border: 2px solid black;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        table {
+            border: 2px solid black;
+        }
+        
+        .table-head-row {
+            border-radius: 2px solid black;
+            border-radius: 3px;
+            background-color: rgb(31, 4, 4);
+        }
+        
+        .table-head-cell {
+            background-color: rgb(31, 4, 4);
+        }
+        /* .table-body-cell {
+            border-radius: 2px solid black;
+            border-radius: 3px;
+        } */
+        
+        .table-body-row:hover {
+            color: rgb(31, 4, 4);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="text-gray-700 body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-teal-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+                <span class="ml-3 text-xl">DIGITAL LOGIC DESIGN</span>
+            </a>
+            <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+                <a href="./index.html" class="mr-5 hover:text-gray-900">HOME</a>
+                <a href="./boolean_algebra.html" class="mr-5 hover:text-gray-900">BOOLEAN-ALGEBRA</a>
+                <a href="./bol_A_examples.html" class="mr-5 hover:text-gray-900">EXAMPLES</a>
+                <a href="./logic_editor.html" class="mr-5 hover:text-gray-900">TRUTH-TABLE-GENERATOR</a>
+                <a href="./circuits/gates.html" class="mr-5 hover:text-gray-900">GATE-SIMULATION</a>
+            </nav>
+
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+            </svg>
+            </button>
+        </div>
+    </header>
+    <div id="mytitle">TABLE GENERATOR</div>
+    <div class="content">
+        <div id=app></div>
+        <script src='vendors.js'></script>
+        <script src='logicEditor.js'></script>
+    </div>
+
+
+</body>
+
+</html>
