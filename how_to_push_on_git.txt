@@ -12,5 +12,4 @@ to upload on git:-
 git init && git add . && git commit -m "k1 commit" . && git branch -M master && git push -u origin master
 
 website link:-
-https://kartikeyapise.github.io/Binary_Arithmatic_by_kartikeya/
-
+https://kartikeyapise.github.io/DLD-WEBSITE/
