@@ -3,7 +3,6 @@ function insertAfter(newElement, referenceElement) {
 }
 var user_arr;
 
-
 function user_input_over() {
 
     user_arr = []
@@ -15,16 +14,8 @@ function user_input_over() {
             arr_temp.push(document.getElementById(temp_id).value);
         }
         user_arr.push(arr_temp);
-
-
     }
-    console.log("logging user_arr before display_everything():");
-    console.log(user_arr[0]);
     display_everything();
-    console.log("logging user_arr after display_everything():");
-    console.log(user_arr[0]);
-
-
 }
 
 function createTable() {
@@ -128,7 +119,7 @@ function out_put(arr) {
     let indices = find_duplicates(s_arr);
     if (!indices) { return false; }
     console.log("s_arr::", s_arr);
-    console.log("indices::", indices);
+    console.log("s_arr::", indices);
     let fi = indices[0];
     let si = indices[1];
     let state1 = arr[fi][0];
@@ -151,20 +142,6 @@ function display_one_graph() {
     newElement.style.height = "500px";
     $("#allgraphs").append(newElement);
     drawgraph(user_arr, graph_no);
-    console.log("logging user_arr before output:", user_arr);
-    console.log("logging user_arr before output:", user_arr[0]);
-    var unmodified_user_array = [];
-    for (let i = 0; i < user_arr.length; i++) {
-        let temp = [];
-        for (let j = 0; j < user_arr[i].length; j++) {
-            temp.push(user_arr[i][j]);
-        }
-        unmodified_user_array.push(temp);
-    }
-    console.log("logging unmodified_user_arr before output:", unmodified_user_array);
-    console.log("logging unmodified_user_arr before output:", unmodified_user_array[0]);
-
-
     let myout = out_put(user_arr);
     if (!myout) {
         let para = document.createElement("p");
@@ -174,11 +151,8 @@ function display_one_graph() {
     }
     var [fi, state2] = myout;
     console.log("logging user_arr::", user_arr);
-    console.log("logging unmodified_user_arr::", unmodified_user_array);
-    console.log("logging unmodified_user_arr::", unmodified_user_array[0]);
-
     var para = document.createElement("p");
-    para.innerHTML = `STATE ${unmodified_user_array[fi][0]}<br/> x=0 : output state=${unmodified_user_array[fi][1]}, output value ${unmodified_user_array[fi][3]}<br/>x=1 : output state=${unmodified_user_array[fi][2]}, output value ${unmodified_user_array[fi][4]}<br/>` + `STATE ${state2}<br/> x=0 : output state=${unmodified_user_array[fi][1]}, output value ${unmodified_user_array[fi][3]}<br/>x=1 : output state=${unmodified_user_array[fi][2]}, output value ${unmodified_user_array[fi][4]}<br/>` + `As both states are equivalent we will reduce states by replacing state ${state2} by state ${unmodified_user_array[fi][0]} <br/>`;
+    para.innerHTML = `STATE ${user_arr[fi][0]}<br/> x=0 : output state=${user_arr[fi][1]}, output value ${user_arr[fi][3]}<br/>x=1 : output state=${user_arr[fi][2]}, output value ${user_arr[fi][4]}<br/>` + `STATE ${state2}<br/> x=0 : output state=${user_arr[fi][1]}, output value ${user_arr[fi][3]}<br/>x=1 : output state=${user_arr[fi][2]}, output value ${user_arr[fi][4]}<br/>` + `As both states are equivalent we will reduce states by replacing state ${state2} by state ${user_arr[fi][0]} <br/>`;
     $("#allgraphs").append(para);
     let button = document.createElement("button");
     button.innerHTML = "NEXT";
