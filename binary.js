@@ -1,6 +1,5 @@
 
 function addBinary() {
-
     function halfAdder(a, b) {
         const sum = xor(a, b);
         const carry = and(a, b);
